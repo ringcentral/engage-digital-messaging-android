@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.dimelo.dimelosdk</groupId>
+  <artifactId>dimelosdk</artifactId>
+  <version>1.0.0</version>
+  <versioning>
+    <versions>
+      <version>1.0.0</version>
+    </versions>
+    <lastUpdated>20150611173748</lastUpdated>
+  </versioning>
+</metadata>
