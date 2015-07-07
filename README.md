@@ -7,6 +7,8 @@ and receive push notifications and automatic server-provided replies.
 The component integrates nicely in any Android phone or tablet, allows presenting the chat through Fragment or Activity and has rich customization options to fit  
 perfectly in your application.
 
+For more information about Dimelo Mobile, please see [Dimelo Mobile Messaging reference](http://mobile-messaging.dimelo.com)
+
 Getting Started
 ---------------
 
@@ -137,7 +139,7 @@ If you'd like to have the full control on the notification (appearance and behav
 Customizing Mobile Messaging Appearance
 ---------------------------
 
-[see how to customize Dimelo using the Android Resource folders](AndroidResourcesCustomization.md)
+[see how to customize Dimelo using the Android Resource folders](ChatCustomization.md)
 
 You can also customize it programmatically:
 #### As an Activity:
@@ -210,6 +212,6 @@ Update your gradle file in two steps:
 API Reference
 -------------
 
-You will find API documentation in `./JavaDoc` folder.
+Please refer to [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dimelo/Dimelo-Android/master/JavaDoc/index.html) for advanced use.
 
 
