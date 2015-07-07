@@ -6,6 +6,13 @@
   <artifactId>dimelosdk</artifactId>
   <version>1.0.0</version>
   <packaging>aar</packaging>
+  <licenses>
+    <license>
+      <name>Dimelo Mobile SDK</name>
+      <url>https://github.com/dimelo/Dimelo-Android/LICENCE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
   <dependencies>
     <dependency>
       <groupId>com.android</groupId>
