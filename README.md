@@ -196,10 +196,6 @@ Update your gradle file in two steps:
 	repositories {
     	maven {
         	url "https://raw.github.com/dimelo/Dimelo-Android/master"
-        	credentials {
-            	username 'YOUR_GITHUB_USERNAME'
-            	password 'YOUR_GITHUB_PASSWORD'
-        	}
     	}
 	}
 
