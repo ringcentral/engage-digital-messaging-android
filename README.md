@@ -177,7 +177,7 @@ Text bubbles can be colored using properties `userMessageBackgroundColor`, `agen
 If you provide a custom bubble image for text, you should also update  
 message bubble padding properties to arrange your text correctly within a bubble.
 
-Check the **API Reference** to learn about all customization options.
+Check the [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dimelo/Dimelo-Android/master/JavaDoc/index.html) to learn about all customization options.
 
 
 Reacting To Mobile Messaging Events
@@ -187,7 +187,7 @@ You can react to various events in the chat by implementing a `DimeloListener`.
 
 Two particular events that might be interesting to you are `dimeloDidBeginNetworkActivity()` and `dimeloDidEndNetworkActivity()`.
 
-Please refer to **API Reference** documentation for more information.
+Please refer to [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dimelo/Dimelo-Android/master/JavaDoc/index.html) documentation for more information.
 
 How To Install With Gradle build system (Using Android Studio)
 -----------------------------
