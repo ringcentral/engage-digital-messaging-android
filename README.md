@@ -37,6 +37,7 @@ Displaying the Mobile Messaging
 -------------------
 
 Dimelo provides two ways to display the chat.
+
 #### As an Activity:
 Achieved by calling `Dimelo.openChatActivity()` (wich will internally call `Context.startActivity`).  
 This method will display a full screen chat with a Toolbar containing a title.  
