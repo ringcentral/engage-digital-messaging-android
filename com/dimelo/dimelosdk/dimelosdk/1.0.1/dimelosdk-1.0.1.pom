@@ -15,12 +15,6 @@
   </licenses>
   <dependencies>
     <dependency>
-      <groupId>com.android</groupId>
-      <artifactId>volley</artifactId>
-      <version>1.0.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
       <groupId>com.android.support</groupId>
       <artifactId>recyclerview-v7</artifactId>
       <version>22.2.1</version>
@@ -30,6 +24,12 @@
       <groupId>com.android.support</groupId>
       <artifactId>appcompat-v7</artifactId>
       <version>22.2.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.android</groupId>
+      <artifactId>volley</artifactId>
+      <version>1.0.0</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
