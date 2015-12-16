@@ -14,22 +14,24 @@ Getting Started
 
 Follow these steps to integrate the Dimelo Mobile Messaging in your application.
 
-1. Install the Dimelo library via Gradle (see below).
+1. Install the Dimelo library via Gradle (see **How To Install With Gradle build system**).
 
-2. Initialize the SDK with `Dimelo.setup(Context)`, configure it with your API secret (`dimelo.setApiSecret(secret)`), optional user identifier and other user-specific info. (See **Authentication** section)  
+2. Optional - Add a Google Map API Key (see **Activate location messages**)
+
+3. Initialize the SDK with `Dimelo.setup(Context)`, configure it with your API secret (`dimelo.setApiSecret(secret)`), optional user identifier and other user-specific info. (See **Authentication** section)  
 You can also use the Android resources folder (res) to customize the appearance.  
 [See more informations about how to use the Android resources in order to configure Dimelo](ChatCustomization.md)
 
-3. You can optionally specify a listener for `Dimelo` instance with `dimelo.setDimeloListener(listener)`  
+4. You can optionally specify a listener for `Dimelo` instance with `dimelo.setDimeloListener(listener)`  
 To display a chat, open it either as a Fragment `Dimelo.newChatFragment()` or as an Activity `Dimelo.openChatActivity()`.  
 If opening the chat as an Activity is your choice, you must declare it in your AndroidManifest with a name equals to `com.dimelo.dimelosdk.main.ChatActivity`  
 (See **Displaying the Mobile Messaging** section)
 
-4. Setup a `Receiver`, a `Service` (Android APIs) and set `deviceToken` property on your `Dimelo` instance with `setDeviceToken()`.  
+5. Setup a `Receiver`, a `Service` (Android APIs) and set `deviceToken` property on your `Dimelo` instance with `setDeviceToken()`.  
 This will allow your app to receive push notifications from the Dimelo server when your agent replies to a user.  
 See **Push Notifications** for more detail.
 
-5. Also call `Dimelo.consumeReceivedRemoteNotification()` from your Service.
+6. Also call `Dimelo.consumeReceivedRemoteNotification()` from your Service.
 
 These are minimal steps to make your chat work in your app. Read on to learn how to customize the appearance and behaviour of the chat to fit perfectly in your app.
 
@@ -38,7 +40,7 @@ You can see an example by downloading the [Sample App](https://github.com/dimelo
 Displaying the Mobile Messaging
 -------------------
 
-Dimelo provides two ways to display the chat.
+Dimelo provides different ways to display the chat.
 
 #### As an Activity:
 Achieved by calling `Dimelo.openChatActivity()` (wich will internally call `Context.startActivity`).  
@@ -56,6 +58,24 @@ This is the easiest way to display the chat.
 Achieved by calling `Dimelo.newChatFragment()` and using the Android `FragmentManager` and `FragmentTransaction`.  
 This is the most flexible way to display the chat as you can manually place, open and close it like any Fragment.  
 No Toolbar is displayed.
+##### Note: forwarding onBackPressed() events using "Chat.onBackPressed()" is necessary to display the best user experience; "true" will be returned if the event has been consumed
+
+
+#### As a Nested Fragment:
+Dimelo support fragment nesting (i.e: Dimelo Chat fragment can be displayed inside a fragment parent).
+However, in this specific case, the host application needs to care about the following steps.
+
+1. Using Fragment.setUserVisibleHint in order to notify the chat about its visibility state.  
+This will prevent the chat to do background work when unnecessary
+
+2. The chat uses intents for displaying attachments. Forwarding "onActivityResult" will allow the chat to correctly receive the results.
+
+3. The chat is compiled against Android sdk 23 and handle dynamic permissions.  
+To allow optimal behaviors, forwarding "onRequestPermissionsResult" is necessary.
+
+##### Note: forwarding onBackPressed() events using "Chat.onBackPressed()" is necessary to display the best user experience; "true" will be returned if the event has been consumed
+
+Examples are provided within the SampleApp
 
 Authentication
 --------------
@@ -192,7 +212,7 @@ Please refer to [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dim
 How To Install With Gradle build system (Using Android Studio)
 -----------------------------
 
-Update your gradle file in two steps: 
+Update your gradle file in three steps: 
 
 ## repositories
 
@@ -202,12 +222,55 @@ Update your gradle file in two steps:
     	}
 	}
 
+## defaultConfig
+
+	defaultConfig {
+		renderscriptTargetApi 23
+		renderscriptSupportModeEnabled true
+	}
+
 
 ## dependencies
 	dependencies {
-    	compile 'com.dimelo.dimelosdk:dimelosdk:1.0.+'
+    	compile 'com.dimelo.dimelosdk:dimelosdk:1.1.+'
 	}
 
+
+<a name="activate_location_messages"></a>Activate location messages
+-----------------------------
+Activating location messages allow users to send a map containing their location.
+
+**Note**: This feature uses [Google Places API](https://developers.google.com/places/android-api/)  which is by default limited to 1000 requests per day. you can increase this limitation to 150 000 requests per day ([Enable billing to get 150 000 requests per 24 hour period](https://developers.google.com/places/android-api/usage#enable-billing))
+
+
+1. Connect to [Google API console](https://console.developers.google.com/)
+2. Access to API Manager pannel
+3. Search for **Google Maps Android API** and **Google Places API for Android**
+4. Enable both APIs
+5. Access to Credentials pannel and create an API key for Android
+6. Add your API key to your application manifest	
+> &lt;application  
+> &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta-data  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:name="com.google.android.geo.API_KEY"  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:value="YOUR\_API\_KEY"/&gt;  
+> &lt;/application&gt;
+
+
+Migration from Dimelo 1.0 to Dimelo 1.1
+-----------------------------
+Dimelo 1.1 brings attachement support (Gallery, Camera and Location) as well as dynamic permissions.
+
+Here are the steps in order to migrate from 1.0 to 1.1
+
+
+1. Update your dimelo gradle dependency:
+> From 'com.dimelo.dimelosdk:dimelosdk:1.0.+' to 'com.dimelo.dimelosdk:dimelosdk:1.1.+'
+
+2. Add dependency to RenderScript:
+> DefaultConfig {  
+> renderscriptTargetApi 23  
+> renderscriptSupportModeEnabled true  
+> }
 
 API Reference
 -------------
