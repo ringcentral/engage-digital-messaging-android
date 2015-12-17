@@ -254,7 +254,7 @@ Activating location messages allow users to send a map containing their location
   <meta-data
 	android:name="com.google.android.geo.API_KEY"
 	android:value="YOUR_API_KEY">
-  </application>
+</application>
 ```
 Migration from Dimelo 1.0 to Dimelo 1.1
 -----------------------------
