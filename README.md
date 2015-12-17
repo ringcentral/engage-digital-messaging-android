@@ -272,6 +272,9 @@ Here are the steps in order to migrate from 1.0 to 1.1
 > renderscriptSupportModeEnabled true  
 > }
 
+3. Forward callbacks
+To allow optimal behaviors, forwarding "onBackPressed" and "onRequestPermissionsResult" is necessary.
+
 API Reference
 -------------
 
