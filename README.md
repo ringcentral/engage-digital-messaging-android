@@ -249,13 +249,13 @@ Activating location messages allow users to send a map containing their location
 4. Enable both APIs
 5. Access to Credentials pannel and create an API key for Android
 6. Add your API key to your application manifest	
-> &lt;application  
-> &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta-data  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:name="com.google.android.geo.API_KEY"  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:value="YOUR\_API\_KEY"/&gt;  
-> &lt;/application&gt;
-
-
+```
+<application
+  <meta-data
+	android:name="com.google.android.geo.API_KEY"
+	android:value="YOUR_API_KEY">
+  </application>
+```
 Migration from Dimelo 1.0 to Dimelo 1.1
 -----------------------------
 Dimelo 1.1 brings attachement support (Gallery, Camera and Location) as well as dynamic permissions.
