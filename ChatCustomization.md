@@ -68,6 +68,14 @@ Xml attribute name: dimelo\_inputbar\_background\_color
 
 Programmatically: set `Customization.inputbarBackgroundColor` property
 
+### Send Button disabled color
+Define the color the send button when no text is written and no attachment is selected.
+
+Color must be in hex format, e.g. `#007AFF`
+
+Xml attribute name: dimelo\_send\_button\_disabled\_color
+
+Programmmatically: use `Customization.setSendButtonDisabledColor` method
 
 ### ActionBar background color
 ActionBar color (ChatActiviy only)
@@ -141,6 +149,24 @@ Xml attribute name: dimelo\_system\_bubble\_color
 
 Programmatically: set this property by calling `Customization.setSystemMessageBubbleDrawable` method.
 
+### user attachment bubbles BackgroundColor
+Background color for user attachment bubbles.
+
+Color must be in hex format, e.g. `#007AFF`.
+
+Xml attribute name: dimelo\_user\_attachment\_bubble\_color
+
+Programmatically: set this property by calling `Customization.setUserAttachmentBubbleDrawable` method.
+
+### agent attachment bubbles BackgroundColor
+Background color for agent attachment bubbles.
+
+Color must be in hex format, e.g. `#007AFF`.
+
+Xml attribute name: dimelo\_agent\_attachment\_bubble\_color
+
+Programmatically: set this property by calling `Customization.setAgentAttachmentBubbleDrawable` method.
+
 ### date TextColor
 Text color for the date label.
 
@@ -209,6 +235,56 @@ Xml attributes name:
 - dimelo\_system\_message\_bubble\_bottom\_padding
 
 Programmatically: set `Customization.systemMessageBubblePadding` property
+
+
+### User Attachment Bubble padding
+
+Padding of the user's attachment bubble
+
+Xml attributes name:
+
+- dimelo\_user\_attachment\_bubble\_left\_padding
+
+- dimelo\_user\_attachment\_bubble\_right\_padding
+
+- dimelo\_user\_attachment\_bubble\_top\_padding
+
+- dimelo\_user\_attachment\_bubble\_bottom\_padding
+
+Programmatically: set `Customization.userAttachmentBubblePadding` property
+
+### Agent Bubble padding
+
+Padding of the agent's attachment bubble
+
+Xml attributes name:
+
+- dimelo\_agent\_attachment\_bubble\_left\_padding
+
+- dimelo\_agent\_attachment\_bubble\_right\_padding
+
+- dimelo\_agent\_attachment\_bubble\_top\_padding
+
+- dimelo\_agent\_attachment\_bubble\_bottom\_padding
+
+Programmatically: set `Customization.agentAttachmentBubblePadding` property
+
+### System Bubble padding
+
+Padding of the system's attachment bubble
+
+Xml attributes name:
+
+- dimelo\_system\_attachment\_bubble\_left\_padding
+
+- dimelo\_system\_attachment\_bubble\_right\_padding
+
+- dimelo\_system\_attachment\_bubble\_top\_padding
+
+- dimelo\_system\_attachment\_bubble\_bottom\_padding
+
+Programmatically: set `Customization.systemAttachmentBubblePadding` property
+
 
 Typeface
 ----
