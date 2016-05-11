@@ -1,5 +1,8 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.1.3 (May 11th, 2016) ##
+- Fix: compatibility with Android Support Library > 23.1
+
 ## Dimelo Android 1.1.2 (April 14th, 2016) ##
 - Feature: It is now possible to customize text message and attachments background with different bubbles
 - Feature: It is now possible to customize the color the send message arrow when disabled (no text & no attachment selected)
