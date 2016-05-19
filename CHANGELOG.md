@@ -1,5 +1,9 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.1.4 (May 19th, 2016) ##
+- Fix: button geometry with Android API 19
+- FIx: layout size calculation with Android Support Library > 23.3.0
+
 ## Dimelo Android 1.1.3 (May 11th, 2016) ##
 - Fix: compatibility with Android Support Library > 23.1
 
