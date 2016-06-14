@@ -1,5 +1,10 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.2.0 (May 19th, 2016) ##
+- Feature: remove local cache file
+- Feature: Allow customization of attachments icon
+- Fix: Compatibility with a wider range of Android Support libraries
+
 ## Dimelo Android 1.1.4 (May 19th, 2016) ##
 - Fix: button geometry with Android API 19
 - FIx: layout size calculation with Android Support Library > 23.3.0
@@ -11,7 +16,6 @@
 - Feature: It is now possible to customize text message and attachments background with different bubbles
 - Feature: It is now possible to customize the color the send message arrow when disabled (no text & no attachment selected)
 - Fix: Fixed crash which occured when the SDK was used without `com.google.android.geo.API_KEY`
-
 
 ## Dimelo Android 1.1.1 (January 13th, 2016) ##
 - Fix: Fixed crash when calling setUserIdentifier or setJwt after first chat setup.
