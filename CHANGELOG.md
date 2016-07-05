@@ -1,7 +1,12 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.2.1 (July 5th, 2016) ##
+- Fix: "Share" feature (removed hard-coded reference to autorithy `com.dimelo.fileprovider`).
+- Fix: Use custom inherited FileProvider class to prevent conflicts.
+
+
 ## Dimelo Android 1.2.0 (May 19th, 2016) ##
-- Feature: remove local cache file
+- Feature: Remove local cache file
 - Feature: Allow customization of attachments icon
 - Fix: Compatibility with a wider range of Android Support libraries
 
