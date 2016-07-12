@@ -1,5 +1,8 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.2.2 (July 11th, 2016) ##
+- Fix: Upgrade gradle to fix potential issues with native libraries.
+
 ## Dimelo Android 1.2.1 (July 5th, 2016) ##
 - Fix: "Share" feature (removed hard-coded reference to autorithy `com.dimelo.fileprovider`).
 - Fix: Use custom inherited FileProvider class to prevent conflicts.
