@@ -1,5 +1,8 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.2.4 (August 24th, 2016) ##
+- Fix: Messages are now correctly received and sent after internet recovery (when starting offline).
+
 ## Dimelo Android 1.2.3 (August 3rd, 2016) ##
 - Feature: It is now possible to refresh the number of unread messages from anywhere in the application by using the method fetchUnreadCount.
 
