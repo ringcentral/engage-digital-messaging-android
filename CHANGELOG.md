@@ -1,5 +1,8 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.2.2.1 (August 25th, 2016) ##
+- Fix: Messages are now correctly received and sent after internet recovery (when starting offline).
+
 ## Dimelo Android 1.2.2 (July 11th, 2016) ##
 - Fix: Upgrade gradle to fix potential issues with native libraries.
 
