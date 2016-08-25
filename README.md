@@ -1,10 +1,10 @@
 Dimelo-Android
 ==========
 
-Dimelo provides a mobile messaging component that allows users of your app to easily communicate with your customer support agents. You can send text messages   
+Dimelo provides a mobile messaging component that allows users of your app to easily communicate with your customer support agents. You can send text messages
 and receive push notifications and automatic server-provided replies.
 
-The component integrates nicely in any Android phone or tablet, allows presenting the chat through Fragment or Activity and has rich customization options to fit  
+The component integrates nicely in any Android phone or tablet, allows presenting the chat through Fragment or Activity and has rich customization options to fit
 perfectly in your application.
 
 For more information about Dimelo Mobile, please see [Dimelo Mobile Messaging reference](http://mobile-messaging.dimelo.com)
@@ -18,17 +18,17 @@ Follow these steps to integrate the Dimelo Mobile Messaging in your application.
 
 2. Optional - Add a Google Map API Key (see **Activate location messages**)
 
-3. Initialize the SDK with `Dimelo.setup(Context)`, configure it with your API secret (`dimelo.setApiSecret(secret)`), optional user identifier and other user-specific info. (See **Authentication** section)  
-You can also use the Android resources folder (res) to customize the appearance.  
+3. Initialize the SDK with `Dimelo.setup(Context)`, configure it with your API secret (`dimelo.setApiSecret(secret)`), optional user identifier and other user-specific info. (See **Authentication** section)
+You can also use the Android resources folder (res) to customize the appearance.
 [See more informations about how to use the Android resources in order to configure Dimelo](ChatCustomization.md)
 
-4. You can optionally specify a listener for `Dimelo` instance with `dimelo.setDimeloListener(listener)`  
-To display a chat, open it either as a Fragment `Dimelo.newChatFragment()` or as an Activity `Dimelo.openChatActivity()`.  
-If opening the chat as an Activity is your choice, you must declare it in your AndroidManifest with a name equals to `com.dimelo.dimelosdk.main.ChatActivity`  
+4. You can optionally specify a listener for `Dimelo` instance with `dimelo.setDimeloListener(listener)`
+To display a chat, open it either as a Fragment `Dimelo.newChatFragment()` or as an Activity `Dimelo.openChatActivity()`.
+If opening the chat as an Activity is your choice, you must declare it in your AndroidManifest with a name equals to `com.dimelo.dimelosdk.main.ChatActivity`
 (See **Displaying the Mobile Messaging** section)
 
-5. Setup a `Receiver`, a `Service` (Android APIs) and set `deviceToken` property on your `Dimelo` instance with `setDeviceToken()`.  
-This will allow your app to receive push notifications from the Dimelo server when your agent replies to a user.  
+5. Setup a `Receiver`, a `Service` (Android APIs) and set `deviceToken` property on your `Dimelo` instance with `setDeviceToken()`.
+This will allow your app to receive push notifications from the Dimelo server when your agent replies to a user.
 See **Push Notifications** for more detail.
 
 6. Also call `Dimelo.consumeReceivedRemoteNotification()` from your Service.
@@ -43,20 +43,20 @@ Displaying the Mobile Messaging
 Dimelo provides different ways to display the chat.
 
 #### As an Activity:
-Achieved by calling `Dimelo.openChatActivity()` (wich will internally call `Context.startActivity`).  
-This method will display a full screen chat with a Toolbar containing a title.  
-The title and the background (drawable or color) of the Toolbar are customizable.  
-The Navigation Icon can be displayed and customized.  
+Achieved by calling `Dimelo.openChatActivity()` (wich will internally call `Context.startActivity`).
+This method will display a full screen chat with a Toolbar containing a title.
+The title and the background (drawable or color) of the Toolbar are customizable.
+The Navigation Icon can be displayed and customized.
 The user can close the chat (the Activity) by pressing the Navigation Icon or the back button of his device.
 
 By default, the app name is used for the title and the primaryColor (appCompat) is used as the background color of the toolbar.
 
-To make it work, you must declare the Activity in your `AndroidManifest.xml` with a name equals to `com.dimelo.dimelosdk.main.ChatActivity`  
+To make it work, you must declare the Activity in your `AndroidManifest.xml` with a name equals to `com.dimelo.dimelosdk.main.ChatActivity`
 This is the easiest way to display the chat.
 
 #### As a Fragment:
-Achieved by calling `Dimelo.newChatFragment()` and using the Android `FragmentManager` and `FragmentTransaction`.  
-This is the most flexible way to display the chat as you can manually place, open and close it like any Fragment.  
+Achieved by calling `Dimelo.newChatFragment()` and using the Android `FragmentManager` and `FragmentTransaction`.
+This is the most flexible way to display the chat as you can manually place, open and close it like any Fragment.
 No Toolbar is displayed.
 ##### Note: forwarding onBackPressed() events using "Chat.onBackPressed()" is necessary to display the best user experience; "true" will be returned if the event has been consumed
 
@@ -65,12 +65,12 @@ No Toolbar is displayed.
 Dimelo support fragment nesting (i.e: Dimelo Chat fragment can be displayed inside a fragment parent).
 However, in this specific case, the host application needs to care about the following steps.
 
-1. Using Fragment.setUserVisibleHint in order to notify the chat about its visibility state.  
+1. Using Fragment.setUserVisibleHint in order to notify the chat about its visibility state.
 This will prevent the chat to do background work when unnecessary
 
 2. The chat uses intents for displaying attachments. Forwarding "onActivityResult" will allow the chat to correctly receive the results.
 
-3. The chat is compiled against Android sdk 23 and handle dynamic permissions.  
+3. The chat is compiled against Android sdk 23 and handle dynamic permissions.
 To allow optimal behaviors, forwarding "onRequestPermissionsResult" is necessary.
 
 ##### Note: forwarding onBackPressed() events using "Chat.onBackPressed()" is necessary to display the best user experience; "true" will be returned if the event has been consumed
@@ -80,8 +80,8 @@ Examples are provided within the SampleApp
 Authentication
 --------------
 
-With each HTTP request, Dimelo sends a JWT ([JSON Web Token](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)).  
-This token contains user-specific info that you specify (`userIdentifier`, `userName` etc.) and a HMAC signature. User identifier allows Dimelo to identify author of messages from different in the agent's backend.  
+With each HTTP request, Dimelo sends a JWT ([JSON Web Token](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)).
+This token contains user-specific info that you specify (`userIdentifier`, `userName` etc.) and a HMAC signature. User identifier allows Dimelo to identify author of messages from different in the agent's backend.
 If user identifier is missing (`null`), then an autogenerated unique installation identifier is used to identify the user (created automatically).
 
 If your app rely on a uniq imutable technical identifier to identify user use `userIdentifier` to also identify them at the Agent interface level.
@@ -94,23 +94,23 @@ We support two kinds of authentication modes: with server-side secret and a buil
 
 This is a convenient mode for testing and secure enough when user identifiers are unpredictable.
 
-You configure `Dimelo` instance (`Dimelo.createInstance(context)`) with the *secret* key (`dimelo.setApiSecret(secret)`) and it creates and signs JWT automatically when needed (as if it was provided by the server).  
-You simply set necessary user-identifying information and JWT will be computed on the fly.  
+You configure `Dimelo` instance (`Dimelo.createInstance(context)`) with the *secret* key (`dimelo.setApiSecret(secret)`) and it creates and signs JWT automatically when needed (as if it was provided by the server).
+You simply set necessary user-identifying information and JWT will be computed on the fly.
 You do not need any cooperation with your server in this setup.
 
-The security issue here is that built-in secret is rather easy to extract from the app's binary build.  
-Anyone could then sign JWTs with arbitrary user identifying info to access other users'  
-chats and impersonate them. To mitigate that risk make sure to use this mode  
+The security issue here is that built-in secret is rather easy to extract from the app's binary build.
+Anyone could then sign JWTs with arbitrary user identifying info to access other users'
+chats and impersonate them. To mitigate that risk make sure to use this mode
 only during development, or ensure that user identifiers are not predictable (e.g. random UUIDs).
 
 #### 2. Setup with a server-side secret (better security but more complicated)
 
-This is a more secure mode. Dimelo will provide you with two keys: a public API key and a secret key.  
-The public one will be used to configure `Dimelo` instance and identify your app.  
+This is a more secure mode. Dimelo will provide you with two keys: a public API key and a secret key.
+The public one will be used to configure `Dimelo` instance and identify your app.
 The secret key will be stored on your server and used to sign JWT token on your server.
 
-When you configure Dimelo with a public API key (`initWithApiKey(hostname, listener)`),  
-you will have to set `jwt` property manually with a value received from your server.  
+When you configure Dimelo with a public API key (`initWithApiKey(hostname, listener)`),
+you will have to set `jwt` property manually with a value received from your server.
 This way your server will prevent one user from impersonating another.
 
 1. Set authentication-related properties (`userIdentifier`, `userName`, `authenticationInfo`).
@@ -123,8 +123,8 @@ signature. Using hex string as-is will yield incorrect signature.
 5. Send the signed JWT string back to your app.
 6. In the app, set the `Dimelo.jwt` property with a received string.
 
-You have to do this authentication only once per user identifier,  
-but before you try to use Dimelo chat. Your application should prevent  
+You have to do this authentication only once per user identifier,
+but before you try to use Dimelo chat. Your application should prevent
 user from opening a chat until you receive a JWT token.
 
 
@@ -132,7 +132,7 @@ user from opening a chat until you receive a JWT token.
 Push Notifications
 ------------------
 
-Dimelo chat can receive push notifications from Dimelo server.  
+Dimelo chat can receive push notifications from Dimelo server.
 To make them work, a couple of steps must be done on your part:
 
 1. Register to Google GCM service by using for example `GoogleCloudMessaging.register(senderId)`
@@ -145,14 +145,16 @@ To make them work, a couple of steps must be done on your part:
    If this method returns `true`, it means that Dimelo recognized the notification as its own and you should not
    process the notification yourself. The chat will be updated automatically with a new message.
 
-If the notification is received while the app is running, the sdk will display the notification only if the chat is not visible by the user  
+If the notification is received while the app is running, the sdk will display the notification only if the chat is not visible by the user
 You can override the behavior by implementing `dimeloShouldDisplayNotificationWithText` from the listener `DimeloListener`
 
 Prior to Android 5, the notification will be displayed as a Ticker (one line scrolling notification) and is not clickable.
 
-Starting from Android 5, the notification will be displayed as a ([Heads-up](http://developer.android.com/guide/topics/ui/notifiers/notifications.html#Heads-up)).  
-Clicking of the Heads-up will, by default, open the application.  
+Starting from Android 5, the notification will be displayed as a ([Heads-up](http://developer.android.com/guide/topics/ui/notifiers/notifications.html#Heads-up)).
+Clicking of the Heads-up will, by default, open the application.
 If you specify the ([parent activity using the support meta-data tag](http://developer.android.com/training/implementing-navigation/ancestral.html)), clicking the Heads-up will open the chat and provide the up-navigation.
+
+If the chat is opened directly upon clicking the notification, then the `IntentService` managing the notification must ensure to properly configure the `Dimelo` instance (at the minimum, calling `Dimelo.setup` and `dimelo.setApiSecret`).
 
 If you'd like to have the full control on the notification (appearance and behavior on click) you can implement the `Dimelo.NotificationDisplayer` interface.
 
@@ -163,27 +165,27 @@ Customizing Mobile Messaging Appearance
 
 You can also customize it programmatically:
 #### As an Activity:
-1) Implementing `Dimelo.OnActivitySetupAppearanceListener(Chat.Customization chatActivityCustomization)` and modifying `chatActivityCustomization` attributes.  
+1) Implementing `Dimelo.OnActivitySetupAppearanceListener(Chat.Customization chatActivityCustomization)` and modifying `chatActivityCustomization` attributes.
 2) Calling Dimelo.setChatCustomizationListener()
 
-The ChatActivity will call the listener back when creating its layout. 
+The ChatActivity will call the listener back when creating its layout.
 
 You do not need to call customization.apply() as it will be called for you.
 
 #### As a Fragment:
 1) Calling `Chat.getCustomization()` and receiving an istance of `Chat.Customization`
-2) Modifiying its attributes. 
+2) Modifiying its attributes.
 3) Calling customization.apply() to register the changes and update the chat.
 
 We provide a lot of properties for you to make the chat look native to your application.
 
-For your convenience, properties are organized in two groups: Basic and Advanced.  
+For your convenience, properties are organized in two groups: Basic and Advanced.
 In many cases it would be enough to adjust the Basic properties only.
 
-You can customize the inputbar color, the font and the color of any text in the chat view.  
+You can customize the inputbar color, the font and the color of any text in the chat view.
 If you are displaying the chat as an activity you can also cutomize the ActionBar colors and title
 
-Advanced options include background and padding for text bubbles.  
+Advanced options include background and padding for text bubbles.
 We use 3 kinds of messages. Each kind can be customized independently.
 
 1. User's text message.
@@ -194,7 +196,7 @@ All bubble images must be 9-part sliced resizable images or a ([Drawable xml](ht
 
 Text bubbles can be colored using properties `userMessageBackgroundColor`, `agentMessageBackgroundColor` etc.
 
-If you provide a custom bubble image for text, you should also update  
+If you provide a custom bubble image for text, you should also update
 message bubble padding properties to arrange your text correctly within a bubble.
 
 Check the [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dimelo/Dimelo-Android/master/JavaDoc/index.html) to learn about all customization options.
@@ -212,7 +214,7 @@ Please refer to [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dim
 How To Install With Gradle build system (Using Android Studio)
 -----------------------------
 
-Update your gradle file in three steps: 
+Update your gradle file in three steps:
 
 ## repositories
 
@@ -248,7 +250,7 @@ Activating location messages allow users to send a map containing their location
 3. Search for **Google Maps Android API** and **Google Places API for Android**
 4. Enable both APIs
 5. Access to Credentials pannel and create an API key for Android
-6. Add your API key to your application manifest	
+6. Add your API key to your application manifest
 ```
 <application
   <meta-data
@@ -267,12 +269,12 @@ Here are the steps in order to migrate from 1.0 to 1.1
 > From 'com.dimelo.dimelosdk:dimelosdk:1.0.+' to 'com.dimelo.dimelosdk:dimelosdk:1.1.+'
 
 2. Add dependency to RenderScript:
-> DefaultConfig {  
-> renderscriptTargetApi 23  
-> renderscriptSupportModeEnabled true  
+> DefaultConfig {
+> renderscriptTargetApi 23
+> renderscriptSupportModeEnabled true
 > }
 
-3. Forward callbacks:  
+3. Forward callbacks:
 To allow optimal behaviors, forwarding "onBackPressed" and "onRequestPermissionsResult" is necessary.
 
 API Reference
