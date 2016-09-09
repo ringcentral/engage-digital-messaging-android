@@ -1,5 +1,9 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.2.2.2 (September 09th, 2016) ##
+- Fix: Messages are now always correctly received and sent after internet recovery.
+- Fix: Activity mode is now compatible with host applications that are not using AppCompat (Fixed crash when uploading an attachment)
+
 ## Dimelo Android 1.2.2.1 (August 25th, 2016) ##
 - Fix: Messages are now correctly received and sent after internet recovery (when starting offline).
 

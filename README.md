@@ -43,6 +43,7 @@ Displaying the Mobile Messaging
 Dimelo provides different ways to display the chat.
 
 #### As an Activity:
+
 Achieved by calling `Dimelo.openChatActivity()` (wich will internally call `Context.startActivity`).
 This method will display a full screen chat with a Toolbar containing a title.
 The title and the background (drawable or color) of the Toolbar are customizable.
@@ -54,7 +55,15 @@ By default, the app name is used for the title and the primaryColor (appCompat) 
 To make it work, you must declare the Activity in your `AndroidManifest.xml` with a name equals to `com.dimelo.dimelosdk.main.ChatActivity`
 This is the easiest way to display the chat.
 
+If your application doesn't inherit from `AppCompat`, the toolbar and status bar of `Dimelo` will be black.
+In order to fix this, your application needs to set the `ChatActivity` theme to `@style/DimeloTheme` (`AndroidManifest.xml`).
+By default, DimeloTheme will set the Toolbar and status bar to blue.
+
+You can change those by overriding `dimelo_color_primary` and `dimelo_color_primary_dark` in color file resources (`dimelo_color_primary` for toolbar and `dimelo_color_primary_dark` for status bar).
+
 #### As a Fragment:
+
+Your app must use an `AppCompat` theme to be able to use `Dimelo` as a `Fragment`.
 Achieved by calling `Dimelo.newChatFragment()` and using the Android `FragmentManager` and `FragmentTransaction`.
 This is the most flexible way to display the chat as you can manually place, open and close it like any Fragment.
 No Toolbar is displayed.
