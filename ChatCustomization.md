@@ -362,3 +362,54 @@ Font for agent's name.
 Programmatically: set `Customization.agentNameFont` property
 
 Xml attribute name: None
+
+
+</br>
+Text Size
+----
+### messageTextSize
+TextSize for user and agent messages.
+
+Programmatically: set `Customization.messageTextSize` property
+
+Xml attribute name: dimen/dimelo_message_text_size
+
+</br>
+### systemMessageTextSize
+TextSize for system messages.
+
+Programmatically: set `Customization.systemMessageTextSize` property
+
+Xml attribute name: dimen/dimelo_system_message_text_size
+
+</br>
+### DateTextSize
+TextSize for date label.
+
+Programmatically: set `Customization.dateTextSize` property
+
+Xml attribute name: dimen/dimelo_date_text_size
+
+</br>
+### agentNameTextSize
+TextSize for agent name label.
+
+Programmatically: set `Customization.agentNameTextSize` property
+
+Xml attribute name: dimen/dimelo_agent_name_text_size
+
+</br>
+### messageFieldTextSize
+TextSize for the message input.
+
+Programmatically: set `Customization.messageFieldTextSize` property
+
+Xml attribute name: dimen/dimelo_message_field_text_size
+
+</br>
+### defaultSize
+Set a global size to all the elements for which a text size can be set.
+
+Programmatically: None.
+
+Xml attribute name: dimen/dimelo_default_text_size
