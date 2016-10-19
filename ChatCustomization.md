@@ -30,7 +30,7 @@ Programmatically: None
 Attributes < drawable />
 ----
 ### Toolbar Navigation Icon drawable
-Specify a drawable to use for the navigation icon of the toolbar(ChatActiviy only)
+Specify a drawable to use for the navigation icon of the toolbar(ChatActivity only)
 
 Xml attribute name: dimelo\_navigation\_icon
 
@@ -295,7 +295,7 @@ Xml attributes name:
 Programmatically: set `Customization.userAttachmentBubblePadding` property
 
 </br>
-### Agent Bubble padding
+### Agent Attachment Bubble padding
 
 Padding of the agent's attachment bubble
 
@@ -312,7 +312,7 @@ Xml attributes name:
 Programmatically: set `Customization.agentAttachmentBubblePadding` property
 
 </br>
-### System Bubble padding
+### System Attachment Bubble padding
 
 Padding of the system's attachment bubble
 
