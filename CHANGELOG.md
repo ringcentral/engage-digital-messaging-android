@@ -1,6 +1,9 @@
 # Dimelo Android master #
 
-## Dimelo Android 1.2.2.3 (October 11th, 2016) ##
+## Dimelo Android 1.3.0 (October 19th, 2016) ##
+- Feature: Add the UnreadCount feature to poll the number of unread messages.
+
+## Dimelo Android 1.2.3 (October 11th, 2016) ##
 - Feature: Allow customization of text size.
 
 ## Dimelo Android 1.2.2.2 (September 09th, 2016) ##
