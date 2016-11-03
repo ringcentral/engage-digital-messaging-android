@@ -1,5 +1,8 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.3.1 (November 3rd, 2016) ##
+- Fix: Do not strip whitespaces and newlines from JWT dictionary
+
 ## Dimelo Android 1.3.0 (October 19th, 2016) ##
 - Feature: Add the UnreadCount feature to poll the number of unread messages.
 
