@@ -1,5 +1,9 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.4.0 (November 24th, 2016) ##
+- Feature: Add ability to define a welcome message which is automatically displayed when a conversation is empty.
+- Improvements: Some performance, security and accessibility improvements.
+
 ## Dimelo Android 1.3.1 (November 3rd, 2016) ##
 - Fix: Do not strip whitespaces and newlines from JWT dictionary
 
