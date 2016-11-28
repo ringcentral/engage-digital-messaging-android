@@ -1,5 +1,8 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.4.1 (November 28th, 2016) ##
+- Fix: In the case no welcome message has been defined, the application was displaying a message containg the string "null". This is now fixed.
+
 ## Dimelo Android 1.4.0 (November 24th, 2016) ##
 - Feature: Add ability to define a welcome message which is automatically displayed when a conversation is empty.
 - Improvements: Some performance, security and accessibility improvements.
