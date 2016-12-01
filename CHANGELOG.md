@@ -1,7 +1,7 @@
 # Dimelo Android master #
 
-## Dimelo Android 1.4.2 (November 30th, 2016) ##
-- Improvement: Improve the SDK size (drop the size from 3.0M to 312K) by making the blur feature optionnal: renderscript shared libraries are not packaged anymore in the SDK and it is up to the client to determine whether he wants to have the blur feature at the cost of an heavier APK.
+## Dimelo Android 1.4.2 (December 1st, 2016) ##
+- Improvement: Improve the SDK size (drop the size from 3.0M to 312K) by removing dependency to renderscript.
 
 ## Dimelo Android 1.4.1 (November 28th, 2016) ##
 - Fix: In the case no welcome message has been defined, the application was displaying a message containg the string "null". This is now fixed.

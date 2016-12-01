@@ -233,25 +233,6 @@ Update your gradle file in three steps:
     	}
 	}
 
-## defaultConfig
-
-Dimelo-SDK uses the renderscript library to blur some images (for example, blurring images currently being sent). Renderscript is an official android library that provides optimized tools for image processing.
-
-In order to make the SDK smaller, we decided not to provide the renderscript dependencies in the .aar package.
-
-Thus you have the choice:
-
-* Either you do not enable renderscript: you will have a smaller APK but no blur feature
-* Either you enable renderscript: you will have a larger APK but blur feature will work
-
-If you want to have the blur feature in your application, you can enable renderscript as follow:
-
-	defaultConfig {
-		renderscriptTargetApi 23 // or any other version of your choice
-		renderscriptSupportModeEnabled true
-	}
-
-
 ## dependencies
 	dependencies {
 	    	compile 'com.dimelo.dimelosdk:dimelosdk:1.4.+'
