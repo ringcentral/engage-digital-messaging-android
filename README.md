@@ -233,17 +233,9 @@ Update your gradle file in three steps:
     	}
 	}
 
-## defaultConfig
-
-	defaultConfig {
-		renderscriptTargetApi 23
-		renderscriptSupportModeEnabled true
-	}
-
-
 ## dependencies
 	dependencies {
-    	compile 'com.dimelo.dimelosdk:dimelosdk:1.1.+'
+	    	compile 'com.dimelo.dimelosdk:dimelosdk:1.4.+'
 	}
 
 
