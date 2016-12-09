@@ -1,5 +1,9 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.4.2 (December 9th, 2016) ##
+- Change: Bump GMS dependency from v8.1.0 to v9.8.0.
+- Fix: Check installationId when receiving a new notification. Only process notifications where the notificationId matches the current installationId.
+
 ## Dimelo Android 1.4.1 (November 28th, 2016) ##
 - Fix: In the case no welcome message has been defined, the application was displaying a message containg the string "null". This is now fixed.
 
