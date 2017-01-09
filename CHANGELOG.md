@@ -1,5 +1,8 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.4.4 (January 9th, 2016) ##
+- Improvement: Reduce .aar size to ~320KB by removing dependency to RenderScript. Client apps do not need to include RenderScript anymore.
+
 ## Dimelo Android 1.4.3 (December 19th, 2016) ##
 - Fix: Patch blinking effect of the welcome message at application startup.
 
