@@ -74,6 +74,18 @@ Xml attribute name: dimelo\_inputbar\_background\_color
 Programmatically: set `Customization.inputbarBackgroundColor` property
 
 </br>
+### Send Button enabled color
+Define the color the send button when a message can be sent
+
+If not specified, main theme color is applied
+
+Color must be in hex format, e.g. `#007AFF`
+
+Xml attribute name: dimelo\_send\_button\_enabled\_color
+
+Programmmatically: use `Customization.setSendButtonEnabledColor` method
+
+</br>
 ### Send Button disabled color
 Define the color the send button when no text is written and no attachment is selected.
 
@@ -87,11 +99,23 @@ Programmmatically: use `Customization.setSendButtonDisabledColor` method
 ### Bottom sheet enabled state icons color
 Define the color the icons icons placed in the bottom sheet when they are enabled
 
+If not specified, main theme color is applied
+
 Color must be in hex format, e.g. `#007AFF`
 
 Xml attribute name: dimelo\_bottom\_sheet\_icons\_enabled\_color
 
 Programmmatically: use `Customization.setBottomSheetIconsEnabledColor` method
+
+</br>
+### Bottom sheet disabled state icons color
+Define the color the icons icons placed in the bottom sheet when they are disabled
+
+Color must be in hex format, e.g. `#007AFF`
+
+Xml attribute name: dimelo\_bottom\_sheet\_icons\_disabled\_color
+
+Programmmatically: use `Customization.setBottomSheetIconsDisabledColor` method
 
 </br>
 ### Bottom sheet disabled state icons color
