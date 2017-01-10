@@ -228,22 +228,14 @@ Update your gradle file in three steps:
 ## repositories
 
 	repositories {
-    	maven {
-        	url "https://raw.github.com/dimelo/Dimelo-Android/master"
-    	}
+ 	   	maven {
+        	      url "https://raw.github.com/dimelo/Dimelo-Android/master"
+		}
 	}
-
-## defaultConfig
-
-	defaultConfig {
-		renderscriptTargetApi 23
-		renderscriptSupportModeEnabled true
-	}
-
 
 ## dependencies
 	dependencies {
-    	compile 'com.dimelo.dimelosdk:dimelosdk:1.1.+'
+    		compile 'com.dimelo.dimelosdk:dimelosdk:1.4.+'
 	}
 
 
@@ -282,6 +274,8 @@ Here are the steps in order to migrate from 1.0 to 1.1
 > renderscriptTargetApi 23
 > renderscriptSupportModeEnabled true
 > }
+
+Note that RenderScript is no longer necessary after v1.4.4.
 
 3. Forward callbacks:
 To allow optimal behaviors, forwarding "onBackPressed" and "onRequestPermissionsResult" is necessary.
