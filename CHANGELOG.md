@@ -1,5 +1,14 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.5.0 (January 18th, 2016) ##
+- Feature: Add ability to disable attachments. It is now possible to disable the ability to send images and/or photos and/or location.
+- Improvement: GMS is now an optional library. By default, the library is provided, but it can be excluded: the application will still work but location attachments will be disabled. Note that disabling location will not remove GMS from the dependencies.
+- Fix: issue #13. Provide translation for the app_name provided in our strings.xml
+- Fix: issue #14. Fix default color of the button in disable state
+- Feature: related to issue #14. Add ability to customize the color of the send button is enabled state (see setSendButtonEnabledcolor)
+- Fix: issue #15. setDeviceToken can now be run in a background thread without throwing exception.
+- Fix: Rollback installationId fix of v1.4.2 and provide another instead. Now check the userIdenfier: notifications with a userIdentifier different from the current one will be skipped.
+
 ## Dimelo Android 1.4.4 (January 9th, 2016) ##
 - Improvement: Reduce .aar size to ~320KB by removing dependency to RenderScript. Client apps do not need to include RenderScript anymore.
 
