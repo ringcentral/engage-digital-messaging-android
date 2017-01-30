@@ -1,5 +1,12 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.5.1 (January 30th, 2016) ##
+- Feature: Add feature asked in #17. You can now specify which activity should be launched when a notification has been clicked thanks to the new `consumeReceivedRemoteNotification` method:
+
+```java
+public static boolean consumeReceivedRemoteNotification(@NonNull Context context, @NonNull Bundle payload, @Nullable NotificationDisplayer notifDisplayer, @Nullable Class<?> activity);
+```
+
 ## Dimelo Android 1.5.0 (January 18th, 2016) ##
 - Feature: Add ability to disable attachments. It is now possible to disable the ability to send images and/or photos and/or location.
 - Improvement: GMS is now an optional library. By default, the library is provided, but it can be excluded: the application will still work but location attachments will be disabled. Note that disabling location will not remove GMS from the dependencies.
