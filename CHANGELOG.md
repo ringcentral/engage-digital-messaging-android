@@ -1,5 +1,11 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.5.2 (January 31st, 2016) ##
+- Fix: library attachment button was not clickable
+- Enhancement: better handling of runtime permissions for attachment. Please don't forget to specify appropriate permissions in your AndroidManifest.
+- Enhancement: check that camera device is available, otherwise disable camera attachment
+- Fix: possible blinking effect of welcome message on multi-user installations
+
 ## Dimelo Android 1.5.1 (January 30th, 2016) ##
 - Feature: Add feature asked in #17. You can now specify which activity should be launched when a notification has been clicked thanks to the new `consumeReceivedRemoteNotification` method:
 
