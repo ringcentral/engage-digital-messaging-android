@@ -1,19 +1,22 @@
 # Dimelo Android master #
 
-## Dimelo Android 1.5.2 (January 31st, 2016) ##
+## Dimelo Android 1.5.3 (February 6th, 2017) ##
+- Fix: nullPointException when stoping the app if attachments are disabled (#18)
+
+## Dimelo Android 1.5.2 (January 31st, 2017) ##
 - Fix: library attachment button was not clickable
 - Enhancement: better handling of runtime permissions for attachment. Please don't forget to specify appropriate permissions in your AndroidManifest.
 - Enhancement: check that camera device is available, otherwise disable camera attachment
 - Fix: possible blinking effect of welcome message on multi-user installations
 
-## Dimelo Android 1.5.1 (January 30th, 2016) ##
+## Dimelo Android 1.5.1 (January 30th, 2017) ##
 - Feature: Add feature asked in #17. You can now specify which activity should be launched when a notification has been clicked thanks to the new `consumeReceivedRemoteNotification` method:
 
 ```java
 public static boolean consumeReceivedRemoteNotification(@NonNull Context context, @NonNull Bundle payload, @Nullable NotificationDisplayer notifDisplayer, @Nullable Class<?> activity);
 ```
 
-## Dimelo Android 1.5.0 (January 18th, 2016) ##
+## Dimelo Android 1.5.0 (January 18th, 2017) ##
 - Feature: Add ability to disable attachments. It is now possible to disable the ability to send images and/or photos and/or location.
 - Improvement: GMS is now an optional library. By default, the library is provided, but it can be excluded: the application will still work but location attachments will be disabled. Note that disabling location will not remove GMS from the dependencies.
 - Fix: issue #13. Provide translation for the app_name provided in our strings.xml
@@ -22,7 +25,7 @@ public static boolean consumeReceivedRemoteNotification(@NonNull Context context
 - Fix: issue #15. setDeviceToken can now be run in a background thread without throwing exception.
 - Fix: Rollback installationId fix of v1.4.2 and provide another instead. Now check the userIdenfier: notifications with a userIdentifier different from the current one will be skipped.
 
-## Dimelo Android 1.4.4 (January 9th, 2016) ##
+## Dimelo Android 1.4.4 (January 9th, 2017) ##
 - Improvement: Reduce .aar size to ~320KB by removing dependency to RenderScript. Client apps do not need to include RenderScript anymore.
 
 ## Dimelo Android 1.4.3 (December 19th, 2016) ##
