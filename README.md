@@ -132,6 +132,8 @@ signature. Using hex string as-is will yield incorrect signature.
 5. Send the signed JWT string back to your app.
 6. In the app, set the `Dimelo.jwt` property with a received string.
 
+/!\ `Dimelo.setUserIdentifier();`, `Dimelo.setAuthenticationInfo();` and `Dimelo.setUserName();` must only be called **BEFORE** `Dimelo.setJwt();` otherwise your JWT will be emptied and your request will end up in a 404 error.
+
 You have to do this authentication only once per user identifier,
 but before you try to use Dimelo chat. Your application should prevent
 user from opening a chat until you receive a JWT token.
