@@ -1,5 +1,10 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.6.0 (July 19th, 2017) ##
+- Enhancement: add GIF support
+- Fix: add camera files support for Android 7.0 (API 24) and above (#20)
+- Fix: remove android:label in SDK manifest and app_name/sdk_name values in strings.xml
+
 ## Dimelo Android 1.5.3 (February 6th, 2017) ##
 - Fix: nullPointException when stoping the app if attachments are disabled (#18)
 
