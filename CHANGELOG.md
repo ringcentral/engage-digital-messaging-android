@@ -1,5 +1,8 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.6.1 (July 25th, 2017) ##
+- Fix: crash when displaying messages with attached photo
+
 ## Dimelo Android 1.6.0 (July 19th, 2017) ##
 - Enhancement: add GIF support
 - Fix: add camera files support for Android 7.0 (API 24) and above (#20)
