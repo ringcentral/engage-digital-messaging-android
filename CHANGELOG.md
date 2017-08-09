@@ -1,5 +1,9 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.6.2 (August 9th, 2017) ##
+- Fix: check if camera permission is present in the manifest before display or hide the camera button
+- Fix: prevent some push notifications to be lost if the SDK is not properly initialized (no userIdentifier)
+
 ## Dimelo Android 1.6.1 (July 25th, 2017) ##
 - Fix: crash when displaying messages with attached photo
 
