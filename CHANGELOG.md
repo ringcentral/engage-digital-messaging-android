@@ -1,5 +1,11 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.6.3 (September 18th, 2017) ##
+- Fix: Improve image quality (attachment + thumbnail)
+- Fix: Add the JWT payload parsing in order to fill the attributes (mUserIdentifier, mUserName and mAuthenticationInfo)
+- Fix: Add attachmentIcon customization option
+- Fix: Remove scroll down animation when the message list is loaded for the first time
+
 ## Dimelo Android 1.6.2 (August 9th, 2017) ##
 - Fix: check if camera permission is present in the manifest before display or hide the camera button
 - Fix: prevent some push notifications to be lost if the SDK is not properly initialized (no userIdentifier)

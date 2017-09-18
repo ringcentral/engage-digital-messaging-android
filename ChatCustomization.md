@@ -108,6 +108,12 @@ Xml attribute name: dimelo\_bottom\_sheet\_icons\_enabled\_color
 Programmmatically: use `Customization.setBottomSheetIconsEnabledColor` method
 
 </br>
+### attachment Icon Button
+Specify a drawable to use for the attachment icon
+
+Programmmatically: use `Customization.setAttachmentIcon` method
+
+</br>
 ### Bottom sheet disabled state icons color
 Define the color the icons icons placed in the bottom sheet when they are disabled
 
