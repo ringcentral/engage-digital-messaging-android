@@ -181,6 +181,20 @@ extends java.lang.Object</pre>
  Called when a network activity ended.</div>
 </td>
 </tr>
+<tr id="i10" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/dimelo/dimelosdk/main/Dimelo.DimeloListener.html#onOpen-com.dimelo.dimelosdk.main.Dimelo-">onOpen</a></span>(<a href="../../../../com/dimelo/dimelosdk/main/Dimelo.html" title="class in com.dimelo.dimelosdk.main">Dimelo</a>&nbsp;dimelo)</code>
+<div class="block">
+ Called when the chat view is opened.</div>
+</td>
+</tr>
+<tr id="i11" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/dimelo/dimelosdk/main/Dimelo.DimeloListener.html#onClose-com.dimelo.dimelosdk.main.Dimelo-">onClose</a></span>(<a href="../../../../com/dimelo/dimelosdk/main/Dimelo.html" title="class in com.dimelo.dimelosdk.main">Dimelo</a>&nbsp;dimelo)</code>
+<div class="block">
+ Called when the chat view is closed.</div>
+</td>
+</tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/dimelo/dimelosdk/main/Dimelo.DimeloListener.html#dimeloShouldDisplayNotificationWithText-com.dimelo.dimelosdk.main.Dimelo-java.lang.String-">dimeloShouldDisplayNotificationWithText</a></span>(<a href="../../../../com/dimelo/dimelosdk/main/Dimelo.html" title="class in com.dimelo.dimelosdk.main">Dimelo</a>&nbsp;dimelo,
@@ -282,6 +296,38 @@ extends java.lang.Object</pre>
  Called when a network activity ended.
  This method can be called multiple times, for each network request.
  This call is guaranteed to balance every `dimeloDidBeginNetworkActivity:`.
+ </pre></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>dimelo</code> - A `Dimelo` API instance.</dd>
+</dl>
+</li>
+</ul>
+<a name="onOpen-com.dimelo.dimelosdk.main.Dimelo-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onOpen</h4>
+<pre>public&nbsp;void&nbsp;onOpen(<a href="../../../../com/dimelo/dimelosdk/main/Dimelo.html" title="class in com.dimelo.dimelosdk.main">Dimelo</a>&nbsp;dimelo)</pre>
+<div class="block"><pre>
+ Called when the chat view is opened.
+ </pre></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>dimelo</code> - A `Dimelo` API instance.</dd>
+</dl>
+</li>
+</ul>
+<a name="onClose-com.dimelo.dimelosdk.main.Dimelo-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onClose</h4>
+<pre>public&nbsp;void&nbsp;onClose(<a href="../../../../com/dimelo/dimelosdk/main/Dimelo.html" title="class in com.dimelo.dimelosdk.main">Dimelo</a>&nbsp;dimelo)</pre>
+<div class="block"><pre>
+ Called when the chat view is closed.
  </pre></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
