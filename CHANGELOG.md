@@ -1,4 +1,10 @@
 # Dimelo Android master #
+ 
+## Dimelo Android 1.6.4 (November 7th, 2017) ##
+- Feature: add onOpen and onClose callback
+- Feature: Support any kind of attachment for agent only
+- Enhancement: Add the interactive push notification with direct reply
+- Feature: Add new API to send a customer message
 
 ## Dimelo Android 1.6.3 (September 18th, 2017) ##
 - Fix: Improve image quality (attachment + thumbnail)

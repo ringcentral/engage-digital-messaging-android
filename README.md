@@ -155,6 +155,7 @@ To make them work, a couple of steps must be done on your part:
 5. Let Dimelo consume the notification using `Dimelo.consumeReceivedRemoteNotification()`.
    If this method returns `true`, it means that Dimelo recognized the notification as its own and you should not
    process the notification yourself. The chat will be updated automatically with a new message.
+6. If your Android version is at least Android N, you'll receive an interactive push notification with direct reply. To disable this, use `Dimelo.interactiveNotification = false;`.
 
 If the notification is received while the app is running, the sdk will display the notification only if the chat is not visible by the user
 You can override the behavior by implementing `dimeloShouldDisplayNotificationWithText` from the listener `DimeloListener`
@@ -219,6 +220,8 @@ Reacting To Mobile Messaging Events
 You can react to various events in the chat by implementing a `DimeloListener`.
 
 Two particular events that might be interesting to you are `dimeloDidBeginNetworkActivity()` and `dimeloDidEndNetworkActivity()`.
+
+Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when the chat view is just opened or closed.
 
 Please refer to [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dimelo/Dimelo-Android/master/JavaDoc/index.html) documentation for more information.
 
