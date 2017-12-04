@@ -1,5 +1,9 @@
 # Dimelo Android master #
  
+## Dimelo Android 1.6.5 (December 4th, 2017) ##
+- Fix: nullPointException when saving instance state (#31)
+- Fix: refresh chat view on main thread
+
 ## Dimelo Android 1.6.4 (November 7th, 2017) ##
 - Feature: add onOpen and onClose callback
 - Feature: Support any kind of attachment for agent only
