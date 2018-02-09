@@ -1,5 +1,11 @@
 # Dimelo Android master #
- 
+
+## Dimelo Android 1.6.6 (February 9th, 2018) ##
+- Fix: nullPointException when sending message using the inline reply and the application is killed
+- Fix: empty content when opening chat from notification and the application is killed
+- Feature: add navigationBarTitleColor and navigationBarItemTintColor to customize the navigationBar title and the navigationBarItem tint color
+- Fix: standard Activity crash on landscape mode
+
 ## Dimelo Android 1.6.5 (December 4th, 2017) ##
 - Fix: nullPointException when saving instance state (#31)
 - Fix: refresh chat view on main thread

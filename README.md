@@ -243,13 +243,6 @@ Update your gradle file in three steps:
     		compile 'com.dimelo.dimelosdk:dimelosdk:1.4.+'
 	}
 
-## :warning: ProGuard warnings
-If you are using ProGuard during your compilation process you might get a lot of warnings caused by the Dimelo Mobile SDK.
-
-In order to fix them you will need to tell ProGuard that the Dimelo dependency is fine and shouldn't trigger any warning, you can do so by adding the following lines to your ProGuard file:
-
-    -dontwarn com.dimelo.**
-    -dontwarn com.squareup.picasso.**
 
 <a name="activate_location_messages"></a>Activate location messages
 -----------------------------
