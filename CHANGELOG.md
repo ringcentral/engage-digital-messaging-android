@@ -1,4 +1,8 @@
 # Dimelo Android master #
+ 
+## Dimelo Android 1.6.7 (February 23th, 2018) ##
+- Enhancement: change Volley request to support retry number and back off multiplier
+- Fix: notifications are not working with Firebase for API >= 26
 
 ## Dimelo Android 1.6.6 (February 9th, 2018) ##
 - Fix: nullPointException when sending message using the inline reply and the application is killed

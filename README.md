@@ -20,7 +20,7 @@ Follow these steps to integrate the Dimelo Mobile Messaging in your application.
 
 3. Initialize the SDK with `Dimelo.setup(Context)`, configure it with your API secret (`dimelo.setApiSecret(secret)`), optional user identifier and other user-specific info. (See **Authentication** section)
 You can also use the Android resources folder (res) to customize the appearance.
-[See more informations about how to use the Android resources in order to configure Dimelo](ChatCustomization.md)
+[See more informations about how to use the Android resources in order to configure Dimelo](Customization.md)
 
 4. You can optionally specify a listener for `Dimelo` instance with `dimelo.setDimeloListener(listener)`
 To display a chat, open it either as a Fragment `Dimelo.newChatFragment()` or as an Activity `Dimelo.openChatActivity()`.
@@ -173,7 +173,7 @@ If you'd like to have the full control on the notification (appearance and behav
 Customizing Mobile Messaging Appearance
 ---------------------------
 
-[see how to customize Dimelo using the Android Resource folders](ChatCustomization.md)
+[see how to customize Dimelo using the Android Resource folders](Customization.md)
 
 You can also customize it programmatically:
 #### As an Activity:
