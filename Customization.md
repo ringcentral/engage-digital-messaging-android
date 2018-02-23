@@ -14,6 +14,15 @@ Xml attribute name: dimelo\_toolbar\_title
 
 Programmatically: None
 
+### Notification Channel Name
+Name of the notification Channel (android_version >= 26)
+
+Xml attribute name: dimelo\_notification\_channel\_name
+
+Programmatically: None
+
+Default: Application name
+
 # Attributes < bool />
 
 ### Toolbar Title display
