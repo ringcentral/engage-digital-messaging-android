@@ -1,4 +1,10 @@
 # Dimelo Android master #
+
+## Dimelo Android 1.6.8 (April 19th, 2018) ##
+- Feature: add navigationBarTitleFont to customize the navigationBar title font (minimum android SDK version equal to 18 when using Dimelo as Fragment)
+- Fix: mapView crash on landscape mode when trying to select location
+- Fix: crash when taking photo from camera or gallery then rotating the screen
+- Fix: prevent multiple tap on attachements from opening multiple zoom views
  
 ## Dimelo Android 1.6.7 (February 23th, 2018) ##
 - Enhancement: change Volley request to support retry number and back off multiplier
