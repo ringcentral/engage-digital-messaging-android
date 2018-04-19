@@ -395,7 +395,7 @@ Programmatically: set `Customization.systemAttachmentBubblePadding` property
 # Typeface
 
 ### navigationBarTitleFont
-Font for navigation bar title. (minimum android SDK version equal to 18 when using Dimelo as Fragment, otherwise we use the default font)
+Font for navigation bar title. (minimum android SDK version equal to 18 when using Dimelo as Fragment, otherwise we use the default font).
 
 Programmatically: set `Customization.navigationBarTitleFont` property
 
