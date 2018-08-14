@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>com.dimelo</groupId>
-  <artifactId>volley</artifactId>
+  <artifactId>glide</artifactId>
   <versioning>
     <release>1.0.0</release>
     <versions>

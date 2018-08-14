@@ -1,13 +1,21 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.6.9 (August 14th, 2018) ##
+- Improvement: image upload resilience to low memory devices (#37)
+- Improvement: make dimelo notifications processing more robust
+- Fix: prevent sending empty body in send message request
+- Improvement: limit input text height to 20% of screen height when text is entered
+- Feature: namespace Glide library to avoid conflicts
+- Feature: add deep links support
+
 ## Dimelo Android 1.6.8 (April 19th, 2018) ##
 - Feature: add navigationBarTitleFont to customize the navigationBar title font (minimum android SDK version equal to 18 when using Dimelo as Fragment)
 - Fix: mapView crash on landscape mode when trying to select location
 - Fix: crash when taking photo from camera or gallery then rotating the screen
 - Fix: prevent multiple tap on attachements from opening multiple zoom views
- 
+
 ## Dimelo Android 1.6.7 (February 23th, 2018) ##
-- Enhancement: change Volley request to support retry number and back off multiplier
+- Improvement: change Volley request to support retry number and back off multiplier
 - Fix: notifications are not working with Firebase for API >= 26
 
 ## Dimelo Android 1.6.6 (February 9th, 2018) ##
@@ -23,7 +31,7 @@
 ## Dimelo Android 1.6.4 (November 7th, 2017) ##
 - Feature: add onOpen and onClose callback
 - Feature: Support any kind of attachment for agent only
-- Enhancement: Add the interactive push notification with direct reply
+- Improvement: Add the interactive push notification with direct reply
 - Feature: Add new API to send a customer message
 
 ## Dimelo Android 1.6.3 (September 18th, 2017) ##
@@ -40,7 +48,7 @@
 - Fix: crash when displaying messages with attached photo
 
 ## Dimelo Android 1.6.0 (July 19th, 2017) ##
-- Enhancement: add GIF support
+- Improvement: add GIF support
 - Fix: add camera files support for Android 7.0 (API 24) and above (#20)
 - Fix: remove android:label in SDK manifest and app_name/sdk_name values in strings.xml
 
@@ -49,8 +57,8 @@
 
 ## Dimelo Android 1.5.2 (January 31st, 2017) ##
 - Fix: library attachment button was not clickable
-- Enhancement: better handling of runtime permissions for attachment. Please don't forget to specify appropriate permissions in your AndroidManifest.
-- Enhancement: check that camera device is available, otherwise disable camera attachment
+- Improvement: better handling of runtime permissions for attachment. Please don't forget to specify appropriate permissions in your AndroidManifest.
+- Improvement: check that camera device is available, otherwise disable camera attachment
 - Fix: possible blinking effect of welcome message on multi-user installations
 
 ## Dimelo Android 1.5.1 (January 30th, 2017) ##
