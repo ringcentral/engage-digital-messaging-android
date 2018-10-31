@@ -1,5 +1,15 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.7.0 (October 31th, 2018) ##
+- BREAKING CHANGE: new mandatory domain name configuration (first part of your Dimelo Digital URL: **domain-name**.engagement.dimelo.com):
+  * `setApiSecret(String apiSecret)` is now deprecated in favor of `initWithApiSecret(String secret, String domainName, DimeloListener dimeloListener)`.
+  * `setApiKey(String apiKey)` is now deprecated in favor of `initWithApiKey(String apiKey, String domainName, DimeloListener dimeloListener)`.
+  * `setHostname(String  hostname)` is not available anymore.
+- Improvement: Dimelo instance setup no longer require to be run in the main thread when receiving notifications
+- Feature: add local draft saving for unsent text messages
+- Fix: dimelo notifications crash on android jelly bean (android api 15)
+- Improvement: log a warning when an invalid key is used for installations or users extra values
+
 ## Dimelo Android 1.6.9 (August 14th, 2018) ##
 - Improvement: image upload resilience to low memory devices (#37)
 - Improvement: make dimelo notifications processing more robust

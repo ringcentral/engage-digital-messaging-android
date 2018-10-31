@@ -1,92 +1,73 @@
+
 Dimelo-Android
 ==========
 
 Dimelo provides a mobile messaging component that allows users of your app to easily communicate with your customer support agents. You can send text messages
 and receive push notifications and automatic server-provided replies.
 
-The component integrates nicely in any Android phone or tablet, allows presenting the chat through Fragment or Activity and has rich customization options to fit
+The component integrates nicely in any Android phone or tablet, allows presenting the Mobile Messaging through Fragment or Activity and has rich customization options to fit
 perfectly in your application.
 
 For more information about Dimelo Mobile, please see [Dimelo Mobile Messaging reference](http://mobile-messaging.dimelo.com)
 
+
+API Reference
+-------------
+
+Please refer to [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dimelo/Dimelo-Android/master/JavaDoc/index.html) for advanced use.
+
+
 Getting Started
 ---------------
 
-Follow these steps to integrate the Dimelo Mobile Messaging in your application.
+Follow these three **mandatory** steps to integrate the Dimelo Mobile Messaging in your application:
 
-1. Install the Dimelo library via Gradle (see **How To Install With Gradle build system**).
+1. [Install the Dimelo library using Gradle](#how-to-install-with-gradle-build-system-using-android-studio).
+2. [Choose your authentication method and initialize the SDK](#authentication-and-sdk-initialization).
+3. [Display the Mobile Messaging in your application](#displaying-the-mobile-messaging).
 
-2. Optional - Add a Google Map API Key (see **Activate location messages**)
+\
+These are minimal steps to make the Mobile Messaging work in your app.\
+Read on how to customize the appearance and the behavior of the Mobile Messaging to perfectly fit in your app:
+- [Customize the Mobile Messaging appearance](#customizing-mobile-messaging-appearance)
+- [Add push notifications support](#push-notifications)
+- [Enable message location using the Google APIs](#activate-location-messages)
+- [Add a Dimelo listener to react to SDK triggered events](#reacting-to-mobile-messaging-events)
 
-3. Initialize the SDK with `Dimelo.setup(Context)`, configure it with your API secret (`dimelo.setApiSecret(secret)`), optional user identifier and other user-specific info. (See **Authentication** section)
-You can also use the Android resources folder (res) to customize the appearance.
-[See more informations about how to use the Android resources in order to configure Dimelo](Customization.md)
-
-4. You can optionally specify a listener for `Dimelo` instance with `dimelo.setDimeloListener(listener)`
-To display a chat, open it either as a Fragment `Dimelo.newChatFragment()` or as an Activity `Dimelo.openChatActivity()`.
-If opening the chat as an Activity is your choice, you must declare it in your AndroidManifest with a name equals to `com.dimelo.dimelosdk.main.ChatActivity`
-(See **Displaying the Mobile Messaging** section)
-
-5. Setup a `Receiver`, a `Service` (Android APIs) and set `deviceToken` property on your `Dimelo` instance with `setDeviceToken()`.
-This will allow your app to receive push notifications from the Dimelo server when your agent replies to a user.
-See **Push Notifications** for more detail.
-
-6. Also call `Dimelo.consumeReceivedRemoteNotification()` from your Service.
-
-These are minimal steps to make your chat work in your app. Read on to learn how to customize the appearance and behaviour of the chat to fit perfectly in your app.
-
-You can see an example by downloading the [Sample App](https://github.com/dimelo/Dimelo-Android-SampleApp).
-
-Displaying the Mobile Messaging
--------------------
-
-Dimelo provides different ways to display the chat.
-
-#### As an Activity:
-
-Achieved by calling `Dimelo.openChatActivity()` (wich will internally call `Context.startActivity`).
-This method will display a full screen chat with a Toolbar containing a title.
-The title and the background (drawable or color) of the Toolbar are customizable.
-The Navigation Icon can be displayed and customized.
-The user can close the chat (the Activity) by pressing the Navigation Icon or the back button of his device.
-
-By default, the app name is used for the title and the primaryColor (appCompat) is used as the background color of the toolbar.
-
-To make it work, you must declare the Activity in your `AndroidManifest.xml` with a name equals to `com.dimelo.dimelosdk.main.ChatActivity`
-This is the easiest way to display the chat.
-
-If your application doesn't inherit from `AppCompat`, the toolbar and status bar of `Dimelo` will be black.
-In order to fix this, your application needs to set the `ChatActivity` theme to `@style/DimeloTheme` (`AndroidManifest.xml`).
-By default, DimeloTheme will set the Toolbar and status bar to blue.
-
-You can change those by overriding `dimelo_color_primary` and `dimelo_color_primary_dark` in color file resources (`dimelo_color_primary` for toolbar and `dimelo_color_primary_dark` for status bar).
-
-#### As a Fragment:
-
-Your app must use an `AppCompat` theme to be able to use `Dimelo` as a `Fragment`.
-Achieved by calling `Dimelo.newChatFragment()` and using the Android `FragmentManager` and `FragmentTransaction`.
-This is the most flexible way to display the chat as you can manually place, open and close it like any Fragment.
-No Toolbar is displayed.
-##### Note: forwarding onBackPressed() events using "Chat.onBackPressed()" is necessary to display the best user experience; "true" will be returned if the event has been consumed
+You can see an example of Dimelo Mobile Messaging implementation by downloading the [Sample App](https://github.com/dimelo/Dimelo-Android-SampleApp).
 
 
-#### As a Nested Fragment:
-Dimelo support fragment nesting (i.e: Dimelo Chat fragment can be displayed inside a fragment parent).
-However, in this specific case, the host application needs to care about the following steps.
+How To Install With Gradle build system (Using Android Studio)
+-----------------------------
 
-1. Using Fragment.setUserVisibleHint in order to notify the chat about its visibility state.
-This will prevent the chat to do background work when unnecessary
+Add these to your Grade file:
 
-2. The chat uses intents for displaying attachments. Forwarding "onActivityResult" will allow the chat to correctly receive the results.
+#### repositories
+```
+  repositories {
+      maven {
+                url "https://raw.github.com/dimelo/Dimelo-Android/master"
+    }
+  }
+```
 
-3. The chat is compiled against Android sdk 23 and handle dynamic permissions.
-To allow optimal behaviors, forwarding "onRequestPermissionsResult" is necessary.
+#### dependencies
+```
+  dependencies {
+        compile 'com.dimelo.dimelosdk:dimelosdk:1.7.+'
+  }
+```
 
-##### Note: forwarding onBackPressed() events using "Chat.onBackPressed()" is necessary to display the best user experience; "true" will be returned if the event has been consumed
 
-Examples are provided within the SampleApp
+Migration to Dimelo 1.7.0
+-----------------------------
+Dimelo 1.7.0 uses a new mandatory domain name setting (first part of your Dimelo Digital URL: **domain-name**.engagement.dimelo.com), so these changes **must** be taken into consideration:
+* `setApiSecret(String apiSecret)` is now deprecated in favor of `initWithApiSecret(String secret, String domainName, DimeloListener dimeloListener)`.
+* `setApiKey(String apiKey)` is now deprecated in favor of `initWithApiKey(String apiKey, String domainName, DimeloListener dimeloListener)`.
+* `setHostname(String  hostname)` is not available anymore.
 
-Authentication
+
+Authentication and SDK initialization
 --------------
 
 With each HTTP request, Dimelo sends a JWT ([JSON Web Token](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)).
@@ -97,13 +78,25 @@ If your app rely on a uniq imutable technical identifier to identify user use `u
 
 Use `userName` to provide to agent a human name for the user.
 
-We support two kinds of authentication modes: with server-side secret and a built-in secret.
+We support two kinds of authentication modes: with **built-in secret** and with a **server-side secret**.
 
 #### 1. Setup with a built-in secret
 
 This is a convenient mode for testing and secure enough when user identifiers are unpredictable.
 
-You configure `Dimelo` instance (`Dimelo.createInstance(context)`) with the *secret* key (`dimelo.setApiSecret(secret)`) and it creates and signs JWT automatically when needed (as if it was provided by the server).
+Here's how to create the Dimelo instance and initialize it using a built-in secret:
+```java
+Dimelo dimelo = Dimelo.setup(Context);
+dimelo.initWithApiSecret(SOURCE_API_SECRET, DIMELO_DOMAIN_NAME, DIMELO_LISTENER);
+/*
+  SOURCE_API_SECRET can be found in your source configuration
+  DIMELO_DOMAIN_NAME is your domain name (e.g. DIMELO_DOMAIN_NAME.engagement.dimelo.com)
+  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+*/
+```
+
+Then it will create and sign JWT automatically when needed (as if it was provided by the server).
+
 You simply set necessary user-identifying information and JWT will be computed on the fly.
 You do not need any cooperation with your server in this setup.
 
@@ -118,8 +111,18 @@ This is a more secure mode. Dimelo will provide you with two keys: a public API 
 The public one will be used to configure `Dimelo` instance and identify your app.
 The secret key will be stored on your server and used to sign JWT token on your server.
 
-When you configure Dimelo with a public API key (`initWithApiKey(hostname, listener)`),
-you will have to set `jwt` property manually with a value received from your server.
+Here's how create the Dimelo instance and initialize it using a server-side secret:
+```java
+Dimelo dimelo = Dimelo.setup(Context);
+dimelo.initWithApiKey(SOURCE_API_KEY, DIMELO_DOMAIN_NAME, DIMELO_LISTENER);
+/*
+  SOURCE_API_KEY can be found in your source configuration
+  DIMELO_DOMAIN_NAME is your domain name (e.g. DIMELO_DOMAIN_NAME.engagement.dimelo.com)
+  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+*/
+```
+
+Once this is done you will have to set `jwt` property manually with a value received from your server.
 This way your server will prevent one user from impersonating another.
 
 1. Set authentication-related properties (`userIdentifier`, `userName`, `authenticationInfo`).
@@ -135,45 +138,64 @@ signature. Using hex string as-is will yield incorrect signature.
 /!\ `Dimelo.setUserIdentifier();`, `Dimelo.setAuthenticationInfo();` and `Dimelo.setUserName();` must only be called **BEFORE** `Dimelo.setJwt();` otherwise your JWT will be emptied and your request will end up in a 404 error.
 
 You have to do this authentication only once per user identifier,
-but before you try to use Dimelo chat. Your application should prevent
-user from opening a chat until you receive a JWT token.
+but before you try to use Dimelo Mobile Messaging. Your application should prevent
+user from opening a Mobile Messaging until you receive a JWT token.
 
 
+Displaying the Mobile Messaging
+-------------------
 
-Push Notifications
-------------------
+Dimelo provides different ways to display the Mobile Messaging.
 
-Dimelo chat can receive push notifications from Dimelo server.
-To make them work, a couple of steps must be done on your part:
+#### As an Activity:
 
-1. Register to Google GCM service by using for example `GoogleCloudMessaging.register(senderId)`
-2. Set `Dimelo.deviceToken` property with the value returned by the `GoogleCloudMessaging.register(senderId)`
-3. Your app must register for remote notifications for example by declaring and implementing a `Receiver` and a `Service` (Android APIs).
-4. Optionally implement `Dimelo.BasicNotificationDisplayer` abstract class.
-   It allows you to specify a title, an icone and how to display the chat when the user click the notification.
-   If you want to handle the entire process of displaying notifications you can directly implement `Dimelo.NotificationDisplayer` interface.
-5. Let Dimelo consume the notification using `Dimelo.consumeReceivedRemoteNotification()`.
-   If this method returns `true`, it means that Dimelo recognized the notification as its own and you should not
-   process the notification yourself. The chat will be updated automatically with a new message.
-6. If your Android version is at least Android N, you'll receive an interactive push notification with direct reply. To disable this, use `Dimelo.interactiveNotification = false;`.
+Achieved by calling `Dimelo.openChatActivity()` (wich will internally call `Context.startActivity`).
+This method will display a full screen Mobile Messaging with a Toolbar containing a title.
+The title and the background (drawable or color) of the Toolbar are customizable.
+The Navigation Icon can be displayed and customized.
+The user can close the Mobile Messaging (the Activity) by pressing the Navigation Icon or the back button of his device.
 
-If the notification is received while the app is running, the sdk will display the notification only if the chat is not visible by the user
-You can override the behavior by implementing `dimeloShouldDisplayNotificationWithText` from the listener `DimeloListener`
+By default, the app name is used for the title and the primaryColor (appCompat) is used as the background color of the toolbar.
 
-Prior to Android 5, the notification will be displayed as a Ticker (one line scrolling notification) and is not clickable.
+To make it work, you **must** declare the Activity in your `AndroidManifest.xml` with a name equals to `com.dimelo.dimelosdk.main.ChatActivity`
+This is the easiest way to display the Mobile Messaging.
 
-Starting from Android 5, the notification will be displayed as a ([Heads-up](http://developer.android.com/guide/topics/ui/notifiers/notifications.html#Heads-up)).
-Clicking of the Heads-up will, by default, open the application.
-If you specify the ([parent activity using the support meta-data tag](http://developer.android.com/training/implementing-navigation/ancestral.html)), clicking the Heads-up will open the chat and provide the up-navigation.
+If your application doesn't inherit from `AppCompat`, the toolbar and status bar of `Dimelo` will be black.
+In order to fix this, your application needs to set the `ChatActivity` theme to `@style/DimeloTheme` (`AndroidManifest.xml`).
+By default, DimeloTheme will set the Toolbar and status bar to blue.
 
-If the chat is opened directly upon clicking the notification, then the `IntentService` managing the notification must ensure to properly configure the `Dimelo` instance (at the minimum, calling `Dimelo.setup` and `dimelo.setApiSecret`).
+You can change those by overriding `dimelo_color_primary` and `dimelo_color_primary_dark` in color file resources (`dimelo_color_primary` for toolbar and `dimelo_color_primary_dark` for status bar).
 
-If you'd like to have the full control on the notification (appearance and behavior on click) you can implement the `Dimelo.NotificationDisplayer` interface.
+#### As a Fragment:
+
+Your app must use an `AppCompat` theme to be able to use `Dimelo` as a `Fragment`.
+Achieved by calling `Dimelo.newChatFragment()` and using the Android `FragmentManager` and `FragmentTransaction`.
+This is the most flexible way to display the Mobile Messaging as you can manually place, open and close it like any Fragment.
+No Toolbar is displayed.
+##### Note: forwarding onBackPressed() events using "Chat.onBackPressed()" is necessary to display the best user experience; "true" will be returned if the event has been consumed
+
+
+#### As a Nested Fragment:
+Dimelo support fragment nesting (i.e: Dimelo Chat fragment can be displayed inside a fragment parent).
+However, in this specific case, the host application needs to care about the following steps.
+
+1. Using Fragment.setUserVisibleHint in order to notify the Mobile Messaging about its visibility state.
+This will prevent the Mobile Messaging to do background work when unnecessary
+
+2. The Mobile Messaging uses intents for displaying attachments. Forwarding "onActivityResult" will allow the Mobile Messaging to correctly receive the results.
+
+3. The Mobile Messaging is compiled against Android sdk 23 and handle dynamic permissions.
+To allow optimal behaviors, forwarding "onRequestPermissionsResult" is necessary.
+
+##### Note: forwarding onBackPressed() events using "Chat.onBackPressed()" is necessary to display the best user experience; "true" will be returned if the event has been consumed
+
+Examples are provided within the SampleApp
+
 
 Customizing Mobile Messaging Appearance
 ---------------------------
 
-[see how to customize Dimelo using the Android Resource folders](Customization.md)
+[See how to customize Dimelo using the Android Resource folders](Customization.md).
 
 You can also customize it programmatically:
 #### As an Activity:
@@ -187,15 +209,15 @@ You do not need to call customization.apply() as it will be called for you.
 #### As a Fragment:
 1) Calling `Chat.getCustomization()` and receiving an istance of `Chat.Customization`
 2) Modifiying its attributes.
-3) Calling customization.apply() to register the changes and update the chat.
+3) Calling customization.apply() to register the changes and update the Mobile Messaging.
 
-We provide a lot of properties for you to make the chat look native to your application.
+We provide a lot of properties for you to make the Mobile Messaging look native to your application.
 
 For your convenience, properties are organized in two groups: Basic and Advanced.
 In many cases it would be enough to adjust the Basic properties only.
 
-You can customize the inputbar color, the font and the color of any text in the chat view.
-If you are displaying the chat as an activity you can also cutomize the ActionBar colors and title
+You can customize the inputbar color, the font and the color of any text in the Mobile Messaging view.
+If you are displaying the Mobile Messaging as an activity you can also cutomize the ActionBar colors and title
 
 Advanced options include background and padding for text bubbles.
 We use 3 kinds of messages. Each kind can be customized independently.
@@ -214,37 +236,109 @@ message bubble padding properties to arrange your text correctly within a bubble
 Check the [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dimelo/Dimelo-Android/master/JavaDoc/index.html) to learn about all customization options.
 
 
-Reacting To Mobile Messaging Events
------------------------
+Push Notifications
+------------------
 
-You can react to various events in the chat by implementing a `DimeloListener`.
+Dimelo Mobile Messaging can receive push notifications from Dimelo server.
+To make them work, a couple of steps must be done on your part:
 
-Two particular events that might be interesting to you are `dimeloDidBeginNetworkActivity()` and `dimeloDidEndNetworkActivity()`.
+### Using Google Cloud Messaging (GCM):
+1. Register to Google GCM service by using for example `GoogleCloudMessaging.register(senderId)`
+2. Set `Dimelo.deviceToken` property with the value returned by the `GoogleCloudMessaging.register(senderId)`
+3. Your app must register for remote notifications for example by declaring and implementing a `Receiver` and a `Service` (Android APIs).
+4. Optionally implement `Dimelo.BasicNotificationDisplayer` abstract class.
+   It allows you to specify a title, an icone and how to display the Mobile Messaging when the user click the notification.
+   If you want to handle the entire process of displaying notifications you can directly implement `Dimelo.NotificationDisplayer` interface.
+5. Let Dimelo consume the notification using `Dimelo.consumeReceivedRemoteNotification()`.
+   If this method returns `true`, it means that Dimelo recognized the notification as its own and you should not
+   process the notification yourself. The Mobile Messaging will be updated automatically with a new message.
+6. If your Android version is at least Android N, you'll receive an interactive push notification with direct reply. To disable this, use `Dimelo.interactiveNotification = false;`.
 
-Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when the chat view is just opened or closed.
+If the notification is received while the app is running, the sdk will display the notification only if the Mobile Messaging is not visible by the user
+You can override the behavior by implementing `dimeloShouldDisplayNotificationWithText` from the listener `DimeloListener`
 
-Please refer to [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dimelo/Dimelo-Android/master/JavaDoc/index.html) documentation for more information.
+Prior to Android 5, the notification will be displayed as a Ticker (one line scrolling notification) and is not clickable.
 
-How To Install With Gradle build system (Using Android Studio)
------------------------------
+Starting from Android 5, the notification will be displayed as a ([Heads-up](http://developer.android.com/guide/topics/ui/notifiers/notifications.html#Heads-up)).
+Clicking of the Heads-up will, by default, open the application.
+If you specify the ([parent activity using the support meta-data tag](http://developer.android.com/training/implementing-navigation/ancestral.html)), clicking the Heads-up will open the Mobile Messaging and provide the up-navigation.
 
-Update your gradle file in three steps:
+If the Mobile Messaging is opened directly upon clicking the notification, then the `IntentService` managing the notification must ensure to properly configure the `Dimelo` instance (at the minimum, calling `Dimelo.setup` and `dimelo.setApiSecret`).
 
-## repositories
+If you'd like to have the full control on the notification (appearance and behavior on click) you can implement the `Dimelo.NotificationDisplayer` interface.
 
-	repositories {
- 	   	maven {
-        	      url "https://raw.github.com/dimelo/Dimelo-Android/master"
-		}
-	}
+<br>
 
-## dependencies
-	dependencies {
-    		compile 'com.dimelo.dimelosdk:dimelosdk:1.4.+'
-	}
+### Using [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/android/client) (FCM):
+*Note:* This is an example on how to initialize the Dimelo instance:
+```java
+public class MainActivity extends AppCompatActivity {
 
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.your_layout);
+    // Setup Dimelo
+    Dimelo dimelo = setupDimelo(this);
+  }
 
-<a name="activate_location_messages"></a>Activate location messages
+  public static Dimelo setupDimelo(Context context) {
+        Dimelo.setup(context);
+        Dimelo dimelo = Dimelo.getInstance();
+        dimelo.initWithApiSecret(SOURCE_API_SECRET, DIMELO_DOMAIN_NAME, DIMELO_LISTENER);
+        dimelo.setUserName("USER_NAME");
+        dimelo.setUserIdentifier("USER_IDENTIFIER");
+        JSONObject authInfo = new JSONObject();
+        try {
+            authInfo.put("CustomerId", "0123456789");
+            authInfo.put("Dimelo", "Rocks!");
+        } catch (JSONException e) {
+        }
+        dimelo.setAuthenticationInfo(authInfo);
+        return dimelo;
+  }
+
+  // ...
+}
+```
+1. Download the `google-services.json` file from your [firebase console](https://support.google.com/firebase/answer/7015592) and copy it in your project's `/app` folder
+2. Declare a `FirebaseMessagingService` [service](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessagingService) in your project's `AndroidManifest.xml`:
+```xml
+<service
+    android:name=".MyFirebaseMessagingService">
+    <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+    </intent-filter>
+</service>
+```
+3. Create a class that extends FirebaseMessagingService:
+```java
+public class MyFirebaseMessagingService extends FirebaseMessagingService
+```
+4. Retrieve the device token and pass it to your Dimelo instance by overriding the `onNewToken` method:
+```java
+@Override
+public void onNewToken(String token) {
+  if (Dimelo.isInstantiated())
+    Dimelo.getInstance().setDeviceToken(token);
+}
+```
+5.  Finally intercept the notification and pass it to your Dimelo instance by overring the `onMessageReceived` method:
+```java
+@Override
+public void onMessageReceived(RemoteMessage remoteMessage) {
+  // You have to configure the Dimelo instance before calling the Dimelo.consumeReceivedRemoteNotification() method.
+  MainActivity.setupDimelo(MyFirebaseMessagingService.this);
+  if (Dimelo.consumeReceivedRemoteNotification(MyFirebaseMessagingService.this, remoteMessage.getData(), null)){
+    // The notification will be handled by the Dimelo instance
+  }
+  else {
+    // It is not a Dimelo notification.
+  }
+}
+```
+
+Activate location messages
 -----------------------------
 Activating location messages allow users to send a map containing their location.
 
@@ -260,34 +354,19 @@ Activating location messages allow users to send a map containing their location
 ```
 <application
   <meta-data
-	android:name="com.google.android.geo.API_KEY"
-	android:value="YOUR_API_KEY">
+  android:name="com.google.android.geo.API_KEY"
+  android:value="YOUR_API_KEY">
 </application>
 ```
-Migration from Dimelo 1.0 to Dimelo 1.1
------------------------------
-Dimelo 1.1 brings attachement support (Gallery, Camera and Location) as well as dynamic permissions.
-
-Here are the steps in order to migrate from 1.0 to 1.1
 
 
-1. Update your dimelo gradle dependency:
-> From 'com.dimelo.dimelosdk:dimelosdk:1.0.+' to 'com.dimelo.dimelosdk:dimelosdk:1.1.+'
+Reacting To Mobile Messaging Events
+-----------------------
 
-2. Add dependency to RenderScript:
-> DefaultConfig {
-> renderscriptTargetApi 23
-> renderscriptSupportModeEnabled true
-> }
+You can react to various events in the Mobile Messaging by implementing a `DimeloListener`.
 
-Note that RenderScript is no longer necessary after v1.4.4.
+Two particular events that might be interesting to you are `dimeloDidBeginNetworkActivity()` and `dimeloDidEndNetworkActivity()`.
 
-3. Forward callbacks:
-To allow optimal behaviors, forwarding "onBackPressed" and "onRequestPermissionsResult" is necessary.
+Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when the Mobile Messaging view is just opened or closed.
 
-API Reference
--------------
-
-Please refer to [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dimelo/Dimelo-Android/master/JavaDoc/index.html) for advanced use.
-
-
+Please refer to [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dimelo/Dimelo-Android/master/JavaDoc/index.html) documentation for more information.
