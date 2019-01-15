@@ -1,5 +1,12 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.7.1 (January 15th, 2019) ##
+- Improvement: Bump GMS dependency from v11.0.4 to v16.0.0 (#43)
+- Fix: apache no class def found error on Android 9 (API 28) (#44)
+- Fix: message deeplink parsing was sometimes crashing app on low-performance devices
+- Feature: now display an error icon alongside the message when the sending request failed and allow to customize its tint color using the `errorIconColor` option.
+- Improvement: disable network calls to Dimelo mobile API when source is disabled
+
 ## Dimelo Android 1.7.0 (October 31th, 2018) ##
 - BREAKING CHANGE: new mandatory domain name configuration (first part of your Dimelo Digital URL: **domain-name**.engagement.dimelo.com):
   * `setApiSecret(String apiSecret)` is now deprecated in favor of `initWithApiSecret(String secret, String domainName, DimeloListener dimeloListener)`.

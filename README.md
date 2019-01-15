@@ -26,6 +26,15 @@ Follow these three **mandatory** steps to integrate the Dimelo Mobile Messaging 
 2. [Choose your authentication method and initialize the SDK](#authentication-and-sdk-initialization).
 3. [Display the Mobile Messaging in your application](#displaying-the-mobile-messaging).
 
+#### **Note: Specify requirement for Apache HTTP Legacy library for dimelo version < 1.7.1**
+If your app is targeting API level 28 (Android 9.0) or above, you must include the following declaration within the ```<application>``` element of ```AndroidManifest.xml```.
+
+```xml
+<uses-library
+      android:name="org.apache.http.legacy"
+      android:required="false" />
+```
+
 \
 These are minimal steps to make the Mobile Messaging work in your app.\
 Read on how to customize the appearance and the behavior of the Mobile Messaging to perfectly fit in your app:
