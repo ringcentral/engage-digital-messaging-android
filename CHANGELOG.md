@@ -1,5 +1,9 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.7.2 (June 18th, 2019) ##
+- Fix: gallery thumbnails were shrinking when opening attachment menu multiple times
+- Fix: namespace Picasso library to avoid conflicts (#49)
+
 ## Dimelo Android 1.7.1 (January 15th, 2019) ##
 - Improvement: Bump GMS dependency from v11.0.4 to v16.0.0 (#43)
 - Fix: apache no class def found error on Android 9 (API 28) (#44)

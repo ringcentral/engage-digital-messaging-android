@@ -16,6 +16,10 @@ API Reference
 
 Please refer to [Dimelo Mobile SDK Android API Reference](https://rawgit.com/dimelo/Dimelo-Android/master/JavaDoc/index.html) for advanced use.
 
+Supported Versions
+------------------
+
+The Dimelo Mobile SDK Android is currently supporting **Android 4.0.3 (API 15) and above**.
 
 Getting Started
 ---------------
@@ -345,6 +349,24 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
     // It is not a Dimelo notification.
   }
 }
+```
+
+*Note:* You can also retrieve the current device token by calling `FirebaseInstanceId.getInstance().getInstanceId()`. Here is an example on how to retrieve the device token and pass it to the Dimelo instance (as [described here](https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token)):
+```java
+FirebaseInstanceId.getInstance().getInstanceId()
+        .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+            @Override
+            public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                if (!task.isSuccessful()) {
+                    Log.w(TAG, "getInstanceId failed", task.getException());
+                    return;
+                }
+
+                // Get new Instance ID token
+                String token = task.getResult().getToken();
+                Dimelo.getInstance().setDeviceToken(token);
+            }
+        });
 ```
 
 Activate location messages
