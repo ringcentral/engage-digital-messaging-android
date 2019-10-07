@@ -14,7 +14,7 @@ For more information about Engage Digital Messaging, please see [Engage Digital 
 API Reference
 -------------
 
-Please refer to [Engage Digital Messaging SDK Android API Reference](https://rawgit.com/ringcentral/engage-digital-messaging-android/master/JavaDoc/index.html) for advanced use.
+Please refer to [Engage Digital Messaging SDK Android API Reference](https://rawcdn.githack.com/ringcentral/engage-digital-messaging-android/7d284444a3704d0faa72c1aa6ba24975fb81a90c/JavaDoc/index.html) for advanced use.
 
 Supported Versions
 ------------------
@@ -247,7 +247,7 @@ Text bubbles can be colored using properties `userMessageBackgroundColor`, `agen
 If you provide a custom bubble image for text, you should also update
 message bubble padding properties to arrange your text correctly within a bubble.
 
-Check the [Engage Digital Messaging SDK Android API Reference](https://rawgit.com/ringcentral/engage-digital-messaging-android/master/JavaDoc/index.html) to learn about all customization options.
+Check the [Engage Digital Messaging SDK Android API Reference](https://rawcdn.githack.com/ringcentral/engage-digital-messaging-android/7d284444a3704d0faa72c1aa6ba24975fb81a90c/JavaDoc/index.html) to learn about all customization options.
 
 
 Push Notifications
@@ -401,4 +401,4 @@ Two particular events that might be interesting to you are `dimeloDidBeginNetwor
 
 Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when Engage Digital Messaging view is just opened or closed.
 
-Please refer to [Engage Digital Messaging SDK Android API Reference](https://rawgit.com/ringcentral/engage-digital-messaging-android/master/JavaDoc/index.html) documentation for more information.
+Please refer to [Engage Digital Messaging SDK Android API Reference](https://rawcdn.githack.com/ringcentral/engage-digital-messaging-android/7d284444a3704d0faa72c1aa6ba24975fb81a90c/JavaDoc/index.html) documentation for more information.
