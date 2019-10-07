@@ -1,5 +1,12 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.8.0 (October 7th, 2019) ##
+- BREAKING CHANGE: Bump minimal supported Android version (`minSdkVersion`) to **API 16** (was API 15)
+- Improvement: Upgrade google place API from `com.google.android.gms:play-services-places:16.0.0` to `com.google.android.libraries.places:places-compat:1.1.0`
+- Improvement: Remove duplicated attachment preview screen when sending location or an image from the gallery
+- Fix: attachment weren't clickable anymore after opening another non-image attachment
+- Improvement: add prefix to the layouts file name to prevent conflicts
+
 ## Dimelo Android 1.7.2 (June 18th, 2019) ##
 - Fix: gallery thumbnails were shrinking when opening attachment menu multiple times
 - Fix: namespace Picasso library to avoid conflicts (#49)
