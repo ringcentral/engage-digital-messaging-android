@@ -1,5 +1,15 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.9.0 (January 20th, 2020) ##
+- Improvement: add ([`Localization.md`](Localization.md)) to describe how to customize strings in Engage Digital Messaging SDK
+- Improvement: prefix all the strings key (in `res/values/strings.xml`) with `rc_` and display a warning if the not-prefixed key is used
+- Improvement: add `rc_attachment_size_label_megabyte_unit` and `rc_attachment_size_label_kilobyte_unit` keys to customize the size unit of the attachment.
+-  Feature: allow to initialize the `Dimelo` instance using a hostname:
+  	*  add `initializeWithApiKeyAndHostName(String apiKey, String hostName, DimeloListener dimeloListener)`  method to configure Dimelo with an api key and a host name.
+  	*  add `initializeWithApiSecretAndHostName(String apiSecret, String hostName, DimeloListener dimeloListener)`  method to configure Dimelo with an api secret and a host name.
+- BREAKING CHANGE: remove deprecated methods related to welcome message (`setWelcomeMessage(String welcomeMessage)` and `getWelcomeMessage()`). The welcome messages are retrieved from the Engage Digital source configuration thus these methods being removed.
+- Fix: content of "To" is incorrect when sharing file with Gmail
+
 ## Dimelo Android 1.8.0 (October 7th, 2019) ##
 - BREAKING CHANGE: Bump minimal supported Android version (`minSdkVersion`) to **API 16** (was API 15)
 - Improvement: Upgrade google place API from `com.google.android.gms:play-services-places:16.0.0` to `com.google.android.libraries.places:places-compat:1.1.0`

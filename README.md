@@ -104,7 +104,20 @@ Dimelo dimelo = Dimelo.setup(Context);
 dimelo.initWithApiSecret(SOURCE_API_SECRET, DIMELO_DOMAIN_NAME, DIMELO_LISTENER);
 /*
   SOURCE_API_SECRET can be found in your source configuration
-  DIMELO_DOMAIN_NAME is your domain name (e.g. DIMELO_DOMAIN_NAME.engagement.dimelo.com)
+  DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
+  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+*/
+```
+
+*Note:* To support hostname configuration, here's how to create the Dimelo instance and initialize it using a built-in secret:
+
+Here's how to create the Dimelo instance and initialize it using a built-in secret:
+```java
+Dimelo dimelo = Dimelo.setup(Context);
+dimelo.initializeWithApiSecretAndHostName(SOURCE_API_SECRET, DIMELO_HOST_NAME, DIMELO_LISTENER);
+/*
+  SOURCE_API_SECRET can be found in your source configuration
+  DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
   DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
 */
 ```
@@ -131,7 +144,19 @@ Dimelo dimelo = Dimelo.setup(Context);
 dimelo.initWithApiKey(SOURCE_API_KEY, DIMELO_DOMAIN_NAME, DIMELO_LISTENER);
 /*
   SOURCE_API_KEY can be found in your source configuration
-  DIMELO_DOMAIN_NAME is your domain name (e.g. DIMELO_DOMAIN_NAME.engagement.dimelo.com)
+  DIMELO_DOMAIN_NAME is your Dimelo Digital domain name (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your domainName will be "DIMELO_DOMAIN_NAME")
+  DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
+*/
+```
+
+*Note:* To support hostname configuration, here's how to create the Dimelo instance and initialize it using a server-side secret:
+
+```java
+Dimelo dimelo = Dimelo.setup(Context);
+dimelo.initializeWithApiKeyAndHostName(SOURCE_API_KEY, DIMELO_HOST_NAME, DIMELO_LISTENER);
+/*
+  SOURCE_API_KEY can be found in your source configuration
+  DIMELO_HOST_NAME is your hostname (e.g. if your Dimelo Digital url is "DIMELO_DOMAIN_NAME.engagement.dimelo.com", then your hostName will be "DIMELO_DOMAIN_NAME.messaging.dimelo.com")
   DIMELO_LISTENER is an optionnal parameter that we will cover later in this document
 */
 ```
@@ -204,6 +229,12 @@ To allow optimal behaviors, forwarding "onRequestPermissionsResult" is necessary
 ##### Note: forwarding onBackPressed() events using "Chat.onBackPressed()" is necessary to display the best user experience; "true" will be returned if the event has been consumed
 
 Examples are provided within the SampleApp
+
+
+Localization
+------------
+
+Please refer to [Localization.md](Localization.md) for guidance on strings customization
 
 
 Customizing Engage Digital Messaging Appearance
