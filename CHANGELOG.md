@@ -1,5 +1,8 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.9.1 (September 21th, 2020) ##
+- Minor: Bump `targetSdkVersion` to **API 29** (was API 26)
+
 ## Dimelo Android 1.9.0 (January 20th, 2020) ##
 - Improvement: add ([`Localization.md`](Localization.md)) to describe how to customize strings in Engage Digital Messaging SDK
 - Improvement: prefix all the strings key (in `res/values/strings.xml`) with `rc_` and display a warning if the not-prefixed key is used

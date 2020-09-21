@@ -3,8 +3,18 @@ Engage Digital Messaging SDK localization
 
 - add these keys to strings.xml file if you want to change the default Engage Digital Messaging translation
 
+### dimelo_toolbar_title
+Title of the toolbar that appears in the chat view and attachment view (ChatActivity only).
+
+This will be used as `<string name="dimelo_toolbar_title">Mobile Support</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/YCX5Q108/dimelo-toolbar-title.png"/>
+</p>
+
 ### rc_share
-Content description of the share button. 
+Content description of the share button.
 
 This will be used as `<string name="rc_share">message</string>`.
 
@@ -14,7 +24,7 @@ This will be used as `<string name="rc_share">message</string>`.
 </p>
 
 ### rc_send_message_image
-Content description of the chat send button. 
+Content description of the chat send button.
 
 This will be used as `<string name="rc_send_message_image">message</string>`.
 
@@ -24,7 +34,7 @@ This will be used as `<string name="rc_send_message_image">message</string>`.
 </p>
 
 ### rc_send_attachment_img
-Content description of the attachment button. 
+Content description of the attachment button.
 
 This will be used as `<string name="rc_send_attachment_img">message</string>`.
 
@@ -34,7 +44,7 @@ This will be used as `<string name="rc_send_attachment_img">message</string>`.
 </p>
 
 ### rc_select_from_camera_img
-Content description of the photo button. 
+Content description of the photo button.
 
 This will be used as `<string name="rc_select_from_camera_img">message</string>`.
 
@@ -44,7 +54,7 @@ This will be used as `<string name="rc_select_from_camera_img">message</string>`
 </p>
 
 ### rc_select_from_map_img
-Content description of the location button. 
+Content description of the location button.
 
 This will be used as `<string name="rc_select_from_map_img">message</string>`.
 
@@ -54,7 +64,7 @@ This will be used as `<string name="rc_select_from_map_img">message</string>`.
 </p>
 
 ### rc_select_from_album_img
-Content description of the gallery button. 
+Content description of the gallery button.
 
 This will be used as `<string name="rc_select_from_album_img">message</string>`.
 
@@ -64,7 +74,7 @@ This will be used as `<string name="rc_select_from_album_img">message</string>`.
 </p>
 
 ### rc_row_gallery_img
-Content description of the round gallery button. 
+Content description of the round gallery button.
 
 This will be used as `<string name="rc_row_gallery_img">message</string>`.
 
@@ -74,7 +84,7 @@ This will be used as `<string name="rc_row_gallery_img">message</string>`.
 </p>
 
 ### rc_select_attachment_img
-Content description of the attachment button. 
+Content description of the attachment button.
 
 This will be used as `<string name="rc_select_attachment_img">message</string>`.
 
@@ -84,7 +94,7 @@ This will be used as `<string name="rc_select_attachment_img">message</string>`.
 </p>
 
 ### rc_reload_img
-Content description of the reload button. 
+Content description of the reload button.
 
 This will be used as `<string name="rc_reload_img">message</string>`.
 
@@ -124,7 +134,7 @@ This will be used as `<string name="rc_notification_reply_response">message</str
 </p>
 
 ### rc_attachment_size_label_megabyte_unit
-Attachment size label, in megabytes (Mo in French, MB otherwise)
+Attachment size label, in megabytes (Mo in French, MB otherwise).
 
 This will be used as `<string name="rc_attachment_size_label_megabyte_unit">message</string>`.
 
@@ -134,7 +144,7 @@ This will be used as `<string name="rc_attachment_size_label_megabyte_unit">mess
 </p>
 
 ### rc_attachment_size_label_kilobyte_unit
-Attachment size label, in kilobytes (Ko in French, KB otherwise)
+Attachment size label, in kilobytes (Ko in French, KB otherwise).
 
 This will be used as `<string name="rc_attachment_size_label_kilobyte_unit">message</string>`.
 
@@ -144,7 +154,7 @@ This will be used as `<string name="rc_attachment_size_label_kilobyte_unit">mess
 </p>
 
 ### rc_loading
-Content description of the loading progress bar. 
+Content description of the loading progress bar.
 
 This will be used as `<string name="rc_loading">message</string>`.
 
@@ -154,7 +164,7 @@ This will be used as `<string name="rc_loading">message</string>`.
 </p>
 
 ### rc_permission_explanation_title
-Title of the permission alert. 
+Title of the permission alert.
 
 This will be used as `<string name="rc_permission_explanation_title">message</string>`.
 
@@ -164,7 +174,7 @@ This will be used as `<string name="rc_permission_explanation_title">message</st
 </p>
 
 ### rc_permission_location_explanation
-Description of the location alert permission. 
+Description of the location alert permission.
 
 This will be used as `<string name="rc_permission_location_explanation">message</string>`.
 
@@ -174,7 +184,7 @@ This will be used as `<string name="rc_permission_location_explanation">message<
 </p>
 
 ### rc_permission_camera_explanation
-Description of the camera alert permission. 
+Description of the camera alert permission.
 
 This will be used as `<string name="rc_permission_camera_explanation">message</string>`.
 
@@ -184,7 +194,7 @@ This will be used as `<string name="rc_permission_camera_explanation">message</s
 </p>
 
 ### rc_permission_library_explanation
-Description of the library alert permission. 
+Description of the library alert permission.
 
 This will be used as `<string name="rc_permission_library_explanation">message</string>`.
 
