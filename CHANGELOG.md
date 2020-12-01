@@ -1,6 +1,6 @@
 # Dimelo Android master #
 
-## Dimelo Android 1.9.2 (December 1st, 2020) ##
+## Dimelo Android 2.0.0 (December 1st, 2020) ##
 - Improvement: retry a few times and display the error icon when the internet is down. RD-10547
 - Feature: add `dateFormatter` to customize the date format for the date label. RD-11359
 - Feature: taping the error icon alongside a message now allows to retry the message sending request. RD-9309
