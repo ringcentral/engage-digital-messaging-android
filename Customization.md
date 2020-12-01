@@ -1,21 +1,14 @@
-Dimelo Chat Customization
-==========================
+Engage Digital Messaging Customization
+======================================
 
-Dimelo chat is customizable either from Android resource folder (XML) or programmatically
+Engage Digital Messaging is customizable either from Android resource folder (XML) or programmatically
 
 This file shows a list of attributes you can override in order to customize the chat.
 
 # Attributes < string />
 
-### Toolbar Title String
-Title of the conversation window (ChatActiviy only)
-
-Xml attribute name: dimelo\_toolbar\_title
-
-Programmatically: None
-
 ### Notification Channel Name
-Name of the notification Channel (android_version >= 26)
+Name of the notification Channel (android_version >= 26).
 
 Xml attribute name: dimelo\_notification\_channel\_name
 
@@ -26,7 +19,7 @@ Default: Application name
 # Attributes < bool />
 
 ### Toolbar Title display
-Specify if the title of the toolbar must be displayed (ChatActiviy only)
+Specify if the title of the toolbar must be displayed (ChatActivity only).
 
 Xml attribute name: dimelo\_toolbar\_display\_title
 
@@ -35,14 +28,14 @@ Programmatically: None
 # Attributes < drawable />
 
 ### Toolbar Navigation Icon drawable
-Specify a drawable to use for the navigation icon of the toolbar(ChatActivity only)
+Specify a drawable to use for the navigation icon of the toolbar (ChatActivity only).
 
 Xml attribute name: dimelo\_navigation\_icon
 
 Programmatically: None
 
 ### Toolbar Background drawable
-Specify a drawable to use for the toolbar. (ChatActiviy only)  
+Specify a drawable to use for the toolbar (ChatActivity only).
 The drawable can be tinted with dimelo\_toolbar\_background\_drawable\_tint.
 
 Xml attribute name: dimelo\_toolbar\_background\_drawable
@@ -52,21 +45,21 @@ Programmatically: None
 # Attributes < color />
 
 ### Toolbar Background drawable tint
-Specify a tint for the drawable used as a background for the toolbar.(ChatActiviy only)
+Specify a tint for the drawable used as a background for the toolbar (ChatActivity only).
 
 Xml attribute name: dimelo\_toolbar\_background\_drawable\_tint
 
 Programmatically: None
 
 ### Toolbar Background color
-Background color of toolbar (ChatActiviy only)
+Background color of toolbar (ChatActivity only).
 
 Xml attribute name: dimelo\_toolbar\_background\_color
 
 Programmatically: None
 
 ### InputBar background color
-Background color for the input bar
+Background color for the input bar.
 
 Color must be in hex format, e.g. `#007AFF`.
 Xml attribute name: dimelo\_inputbar\_background\_color
@@ -74,7 +67,7 @@ Xml attribute name: dimelo\_inputbar\_background\_color
 Programmatically: set `Customization.inputbarBackgroundColor` property
 
 ### Send Button enabled color
-Define the color the send button when a message can be sent
+Define the color of the send button when a message can be sent.
 
 If not specified, main theme color is applied
 
@@ -94,9 +87,9 @@ Xml attribute name: dimelo\_send\_button\_disabled\_color
 Programmmatically: use `Customization.setSendButtonDisabledColor` method
 
 ### Bottom sheet enabled state icons color
-Define the color the icons icons placed in the bottom sheet when they are enabled
+Define the color of the icons placed in the bottom sheet when they are enabled.
 
-If not specified, main theme color is applied
+If not specified, main theme color is applied.
 
 Color must be in hex format, e.g. `#007AFF`
 
@@ -105,12 +98,12 @@ Xml attribute name: dimelo\_bottom\_sheet\_icons\_enabled\_color
 Programmmatically: use `Customization.setBottomSheetIconsEnabledColor` method
 
 ### attachment Icon Button
-Specify a drawable to use for the attachment icon
+Specify a drawable to use for the attachment icon.
 
 Programmmatically: use `Customization.setAttachmentIcon` method
 
 ### Bottom sheet disabled state icons color
-Define the color the icons icons placed in the bottom sheet when they are disabled
+Define the color of the icons placed in the bottom sheet when they are disabled.
 
 Color must be in hex format, e.g. `#007AFF`
 
@@ -119,7 +112,7 @@ Xml attribute name: dimelo\_bottom\_sheet\_icons\_disabled\_color
 Programmmatically: use `Customization.setBottomSheetIconsDisabledColor` method
 
 ### Bottom sheet disabled state icons color
-Define the color the icons icons placed in the bottom sheet when they are disabled
+Define the color of the icons placed in the bottom sheet when they are disabled.
 
 Color must be in hex format, e.g. `#007AFF`
 
@@ -128,7 +121,7 @@ Xml attribute name: dimelo\_bottom\_sheet\_icons\_disabled\_color
 Programmmatically: use `Customization.setBottomSheetIconsDisabledColor` method
 
 ### ActionBar background color
-ActionBar color (ChatActiviy only)
+ActionBar color (ChatActivity only).
 
 Color must be in hex format, e.g. `#007AFF`.
 
@@ -171,6 +164,15 @@ Color must be in hex format, e.g. `#007AFF`.
 Xml attribute name: dimelo\_system\_message\_text\_color
 
 Programmatically: set `Customization.systemMessageTextColor` property
+
+### error icon color
+Define the color of the error icon when the message is not sent.
+
+Color must be in hex format, e.g. `#007AFF`
+
+Xml attribute name:  dimelo\_error\_icon\_color
+
+Programmmatically: use `Customization.errorIconColor` method
 
 ### navigation bar title color
 Text color for navigation bar title.
@@ -240,6 +242,84 @@ Xml attribute name: dimelo\_user\_bubble\_color
 
 Programmatically: set this property by calling `Customization.setUserMessageBubbleDrawable` method.
 
+### welcomeMessageTextColor
+Text color for welcome message.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_welcome\_message\_text\_color
+
+Programmatically: set `Customization.welcomeMessageTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/rsGf5nNp/welcome-Message-Text-Color.png"/>
+</p>
+
+### agentTimeColor
+Text color for the agent time text view.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_agent\_time\_color
+
+Programmatically: set `Customization.agentTimeColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/MT77LcMP/agent-Time-Color.png"/>
+</p>
+
+### hourTimeTextColor
+Text color for the hour text view.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_hour\_time\_text\_color
+
+Programmatically: set `Customization.hourTimeTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/05Jh7w1j/hour-Time-Text-Color.png"/>
+</p>
+
+### agentTemplateBorderColor
+Border color for agent structured message bubbles.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_agent\_template\_border\_color
+
+Programmatically: set `Customization.agentTemplateBorderColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/g0DcBmcy/agent-Template-Border-Color.png"/>
+</p>
+
+### agentTemplateWithImageBodyBackgroundColor
+Background color for agent structured message. Only applies when there is an image, otherwise, please see `agentStructuredMessageBodyBackgroundColor`.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_agent\_template\_with\_image\_body\_background\_color
+
+Programmatically: set `Customization.agentTemplateWithImageBodyBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/D0bTFThM/agent-Template-With-Image-Body-Background-Color.png"/>
+</p>
+
+### agentStructuredMessageBodyBackgroundColor
+Background color for body agent structured message view. Only applies when there is no image, otherwise, please see `agentTemplateWithImageBodyBackgroundColor`.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_agent\_structured\_message\_body\_background\_color
+
+Programmatically: set `Customization.agentStructuredMessageBodyBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/R0FC82Wj/agent-Structured-Message-Body-Background-Color.png"/>
+</p>
+
 ### agent message BackgroundColor
 Background color for agent message bubbles.
 
@@ -276,6 +356,216 @@ Xml attribute name: dimelo\_agent\_attachment\_bubble\_color
 
 Programmatically: set this property by calling `Customization.setAgentAttachmentBubbleDrawable` method.
 
+### agentStructuredMessageUrlMarginTop
+Margin top for structured message url text view.
+
+Xml attribute name: dimen/rc_agent_structured_message_url_margin_top
+
+Programmatically: set `Customization.agentStructuredMessageUrlMarginTop` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/c1nDwmxW/agent-Structured-Message-Url-Margin-Top.png"/>
+</p>
+
+### agentStructuredMessageSubtitleMarginTop
+Margin top for structured message subtitle text view.
+
+Xml attribute name: dimen/rc_agent_structured_message_subtitle_margin_top
+
+Programmatically: set `Customization.agentStructuredMessageSubtitleMarginTop` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/NFkmbLC6/agent-Structured-Message-Subtitle-Margin-Top.png"/>
+</p>
+
+### agentStructuredMessageTitleColor
+Foreground color for agent's structured message title text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_agent\_structured\_message\_title\_color
+
+Programmatically: set `Customization.agentStructuredMessageTitleColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/xdQYVC6J/Capture-d-e-cran-2020-11-22-a-15-25-17.png"/>
+</p>
+
+### agentStructuredMessageSubtitleColor
+Foreground color for agent's structured message subtitle text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_agent\_structured\_message\_subtitle\_color
+
+Programmatically: set `Customization.agentStructuredMessageSubtitleColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/Kc1YN1wx/agent-Structured-Message-Subtitle-Color.png"/>
+</p>
+
+### agentStructuredMessageUrlColor
+Foreground color for agent's structured message url text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_agent\_structured\_message\_url\_color
+
+Programmatically: set `Customization.agentStructuredMessageUrlColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/NFXBwHvX/agent-Structured-Message-Url-Color.png"/>
+</p>
+
+### agentStructuredMessageItemColor
+Foreground color for agent's structured message item text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_agent\_structured\_message\_item\_color
+
+Programmatically: set `Customization.agentStructuredMessageItemColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/3x85t6Nm/agent-Structured-Message-Item-Color.png"/>
+</p>
+
+### agentStructuredMessageItemTappedColor
+Foreground color for agent's structured message tapped item text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Programmatically: set `Customization.agentStructuredMessageItemTappedColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/3x85t6Nm/agent-Structured-Message-Item-Color.png"/>
+</p>
+
+### agentStructuredMessageItemBackgroundColor
+Background color for agent's structured message item text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_agent\_structured\_message\_item\_background\_color
+
+Programmatically: set `Customization.agentStructuredMessageItemBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/xCH4fyq9/agent-Structured-Message-Item-Background-Color.png"/>
+</p>
+
+### agentStructuredMessageItemTappedBackgroundColor
+Background color for agent's structured message tapped item.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_agent\_structured\_message\_item\_tapped\_background\_color
+
+Programmatically: set `Customization.agentStructuredMessageItemTappedBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/xCH4fyq9/agent-Structured-Message-Item-Background-Color.png"/>
+</p>
+
+### quickRepliesBorderWidth
+Border width for quick replies.
+
+Xml attribute name: dimen/rc_quick_replies_border_width
+
+Programmatically: set `Customization.quickRepliesBorderWidth` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/4y2z810M/quick-replies-border-width.png"/>
+</p>
+
+### quickRepliesHorizontalSpacing
+Horizontal spacing for quick replies.
+
+Xml attribute name: dimen/rc_quick_replies_horizontal_spacing
+
+Programmatically: set `Customization.quickRepliesHorizontalSpacing` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/7YZsmGpS/quick-replies-horizontal-spacing.png"/>
+</p>
+
+### quickRepliesVerticalSpacing
+Vertical spacing for quick replies.
+
+Xml attribute name: dimen/rc_quick_replies_vertical_spacing
+
+Programmatically: set `Customization.quickRepliesVerticalSpacing` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/3rjpd3J6/quick-replies-vertical-spacing.png"/>
+</p>
+
+### quickRepliesBorderColor
+Border color for quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_quick\_replies\_border\_color
+
+Programmatically: set `Customization.quickRepliesBorderColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/v84LBJ6w/quick-replies-border-color.png"/>
+</p>
+
+### quickRepliesTappedBorderColor
+ Border color for tapped quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_quick\_replies\_tapped\_border\_color
+
+Programmatically: set `Customization.quickRepliesTappedBorderColor` property.
+
+### quickRepliesTextColor
+Text color for quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_quick\_replies\_text\_color
+
+Programmatically: set `Customization.quickRepliesTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/8zN6h9s5/quick-replies-text-color.png"/>
+</p>
+
+### quickRepliesTappedTextColor
+Text color for tapped quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_quick\_replies\_tapped\_text\_color
+
+Programmatically: set `Customization.quickRepliesTappedTextColor` property.
+
+### quickRepliesBackgroundColor
+Background color for quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_quick\_replies\_background\_color
+
+Programmatically: set `Customization.quickRepliesBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/hvRjKQdj/quick-replies-background-color.png"/>
+</p>
+
+### quickRepliesTappedBackgroundColor
+Background color for tapped quick replies.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_quick\_replies\_tapped\_background\_color
+
+Programmatically: set `Customization.quickRepliesTappedBackgroundColor` property.
+
 ### date TextColor
 Text color for the date label.
 
@@ -284,6 +574,93 @@ Color must be in hex format, e.g. `#007AFF`.
 Xml attribute name: dimelo\_date\_color
 
 Programmatically: set `Customization.dateTextColor` property.
+
+### showAgentAvatarImage
+Show or hide the agent avatar image.
+
+Must be a boolean, default is `true`.
+
+Programmatically: set `Customization.showAgentAvatarImage` property.
+
+Xml attribute name: None
+
+`showAgentAvatarImage=true`:
+
+<p align="center">
+<img src="https://i.postimg.cc/7ZGctkDC/1.png"/>
+</p>
+
+`showAgentAvatarImage=false`:
+
+<p align="center">
+<img src="https://i.postimg.cc/pdvZQbdM/2.png"/>
+</p>
+
+### agentStructuredMessageTitleFont
+Font for agent's structured message title.
+
+Programmatically: set `Customization.agentStructuredMessageTitleFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/htZmjk70/agent-Structured-Message-Title-Font.png"/>
+</p>
+
+### agentStructuredMessageSubTitleFont
+Font for agent's structured message subtitle.
+
+Programmatically: set `Customization.agentStructuredMessageSubTitleFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/JnLz4xKq/agent-Structured-Message-Sub-Title-Font.png"/>
+</p>
+
+### agentStructuredMessageUrlFont
+Font for agent's structured message url.
+
+Programmatically: set `Customization.agentStructuredMessageUrlFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/j5ctqbDx/agent-Structured-Message-Url-Font.png"/>
+</p>
+
+### agentStructuredMessageItemFont
+Font for agent's structured message item.
+
+Programmatically: set `Customization.agentStructuredMessageItemFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/6QLNzXLr/agent-Structured-Message-Item-Font.png"/>
+</p>
+
+### agentTimeFont
+Font for the agent time text view.
+
+Programmatically: set `Customization.agentTimeFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/ncQg0xnX/agent-Time-Font.png"/>
+</p>
+
+### hourTimeFont
+Font for the hour text view.
+
+Programmatically: set `Customization.hourTimeFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/MXkshczv/hour-Time-Font.png"/>
+</p>
 
 ### agent Name color
 Text color for agent's name.
@@ -298,7 +675,7 @@ Programmatically: set `Customization.agentNameColor`  property
 
 ### User Bubble padding
 
-Padding of the user's message bubble
+Padding of the user's message bubble.
 
 Xml attributes name:
 
@@ -314,7 +691,7 @@ Programmatically: set `Customization.userMessageBubblePadding` property
 
 ### Agent Bubble padding
 
-Padding of the agent's message bubble
+Padding of the agent's message bubble.
 
 Xml attributes name:
 
@@ -330,7 +707,7 @@ Programmatically: set `Customization.agentMessageBubblePadding` property
 
 ### System Bubble padding
 
-Padding of the system's message bubble
+Padding of the system's message bubble.
 
 Xml attributes name:
 
@@ -346,7 +723,7 @@ Programmatically: set `Customization.systemMessageBubblePadding` property
 
 ### User Attachment Bubble padding
 
-Padding of the user's attachment bubble
+Padding of the user's attachment bubble.
 
 Xml attributes name:
 
@@ -362,7 +739,7 @@ Programmatically: set `Customization.userAttachmentBubblePadding` property
 
 ### Agent Attachment Bubble padding
 
-Padding of the agent's attachment bubble
+Padding of the agent's attachment bubble.
 
 Xml attributes name:
 
@@ -378,7 +755,7 @@ Programmatically: set `Customization.agentAttachmentBubblePadding` property
 
 ### System Attachment Bubble padding
 
-Padding of the system's attachment bubble
+Padding of the system's attachment bubble.
 
 Xml attributes name:
 
@@ -392,10 +769,102 @@ Xml attributes name:
 
 Programmatically: set `Customization.systemAttachmentBubblePadding` property
 
+### agentStructuredMessageBodyPadding
+Padding of the agent structured message bubbles.
+
+Xml attributes name:
+
+- rc\_agent\_structured\_message\_body\_left\_padding
+
+- rc\_agent\_structured\_message\_body\_right\_padding
+
+- rc\_agent\_structured\_message\_body\_top\_padding
+
+- rc\_agent\_structured\_message\_body\_bottom\_padding
+
+Programmatically: set `Customization.agentStructuredMessageBodyPadding` property
+
+<p align="center">
+   <img src="https://i.postimg.cc/JzXyrsMR/agent-Structured-Message-Body-Padding.png"/>
+</p>
+
+### agentStructuredMessageItemPadding
+Padding of the agent structured message item.
+
+Xml attributes name:
+
+- rc\_agent\_structured\_message\_item\_left\_padding
+
+- rc\_agent\_structured\_message\_item\_right\_padding
+
+- rc\_agent\_structured\_message\_item\_top\_padding
+
+- rc\_agent\_structured\_message\_item\_bottom\_padding
+
+Programmatically: set `Customization.agentStructuredMessageItemPadding` property
+
+<p align="center">
+   <img src="https://i.postimg.cc/L6Y5DJqj/agent-Structured-Message-Item-Padding.png"/>
+</p>
+
+### quickRepliesItemPadding
+Padding of the quick replies item.
+
+Xml attributes name:
+
+- rc\_quick\_replies\_item\_left\_padding
+
+- rc\_quick\_replies\_item\_right\_padding
+
+- rc\_quick\_replies\_item\_top\_padding
+
+- rc\_quick\_replies\_item\_bottom\_padding
+
+Programmatically: set `Customization.quickRepliesItemPadding` property
+
+<p align="center">
+   <img src="https://i.postimg.cc/bYBWLmVH/quick-replies-item-padding.png"/>
+</p>
+
+### agentTimePadding
+Padding for agent time text view.
+
+Xml attributes name:
+
+- rc\_agent\_time\_left\_padding
+
+- rc\_agent\_time\_right\_padding
+
+- rc\_agent\_time\_top\_padding
+
+- rc\_agent\_time\_bottom\_padding
+
+Programmatically: set `Customization.agentTimePadding` property
+
+<p align="center">
+   <img src="https://i.postimg.cc/BvVQ2sqm/agent-Time-Padding.png"/>
+</p>
+
+# Date Format
+
+### dateFormatter
+Date format for the date label (should be a `SimpleDateFormat`).
+
+Programmatically: set `Customization.dateFormatter` property
+
+Xml attribute name: None
+
+*Note:* This is an example on how to initialize `Customization.dateFormatter`:
+```java
+SimpleDateFormat dateFormatter = new SimpleDateFormat("dd-MM-yyyy");
+Chat.Customization customisation = Chat.getCustomization();
+customisation.dateFormatter = dateFormatter;
+```
+
 # Typeface
 
 ### navigationBarTitleFont
-Font for navigation bar title. (minimum android SDK version equal to 18 when using Dimelo as Fragment, otherwise we use the default font).
+Font for the navigation bar title (minimum android SDK version equal to 18 when using Dimelo as Fragment, otherwise we use the default font).
 
 Programmatically: set `Customization.navigationBarTitleFont` property
 
@@ -465,6 +934,28 @@ TextSize for the message input.
 Programmatically: set `Customization.messageFieldTextSize` property
 
 Xml attribute name: dimen/dimelo_message_field_text_size
+
+### agentTimeTextSize
+TextSize for agent time text view.
+
+Programmatically: set `Customization.agentTimeTextSize` property
+
+Xml attribute name: dimen/rc_agent_time_text_size
+
+<p align="center">
+   <img src="https://i.postimg.cc/d1kppcGN/agent-Time-Text-Size.png"/>
+</p>
+
+### hourTimeTextSize
+TextSize for the hour text view.
+
+Programmatically: set `Customization.hourTimeTextSize` property
+
+Xml attribute name: dimen/rc_hour_time_text_size
+
+<p align="center">
+   <img src="https://i.postimg.cc/bY1FtTgn/hour-Time-Text-Size.png"/>
+</p>
 
 ### defaultSize
 Set a global size to all the elements for which a text size can be set.
