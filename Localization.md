@@ -30,17 +30,7 @@ This will be used as `<string name="rc_send_message_image">message</string>`.
 
 
 <p align="center">
-<img src="https://i.postimg.cc/768LXh2C/dimelo-send-message-image.jpg"/>
-</p>
-
-### rc_send_attachment_img
-Content description of the attachment button.
-
-This will be used as `<string name="rc_send_attachment_img">message</string>`.
-
-
-<p align="center">
-<img src="https://i.postimg.cc/66LdpmFs/dimelo-send-attachment-img.jpg"/>
+<img src="https://i.postimg.cc/vBZfZG0X/rc-send-message-image.png"/>
 </p>
 
 ### rc_select_from_camera_img
@@ -50,7 +40,7 @@ This will be used as `<string name="rc_select_from_camera_img">message</string>`
 
 
 <p align="center">
-<img src="https://i.postimg.cc/R0hfRZWB/dimelo-select-from-camera-img.jpg"/>
+<img src="https://i.postimg.cc/mD1MHmGF/rc-select-from-camera-img.png"/>
 </p>
 
 ### rc_select_from_map_img
@@ -60,7 +50,7 @@ This will be used as `<string name="rc_select_from_map_img">message</string>`.
 
 
 <p align="center">
-<img src="https://i.postimg.cc/J4jQD0kY/dimelo-select-from-map-img.jpg"/>
+<img src="https://i.postimg.cc/Qt79tVpQ/rc-select-from-map-img.png"/>
 </p>
 
 ### rc_select_from_album_img
@@ -70,7 +60,7 @@ This will be used as `<string name="rc_select_from_album_img">message</string>`.
 
 
 <p align="center">
-<img src="https://i.postimg.cc/3xHnnmhH/dimelo-select-from-album-img.jpg"/>
+<img src="https://i.postimg.cc/MZyfJMZx/rc-select-from-album-img.png"/>
 </p>
 
 ### rc_row_gallery_img
@@ -80,7 +70,7 @@ This will be used as `<string name="rc_row_gallery_img">message</string>`.
 
 
 <p align="center">
-<img src="https://i.postimg.cc/Qtvs90T7/dimelo-row-gallery-img.jpg"/>
+<img src="https://i.postimg.cc/FzmRHpFv/rc-row-gallery-img.png"/>
 </p>
 
 ### rc_select_attachment_img
@@ -90,7 +80,7 @@ This will be used as `<string name="rc_select_attachment_img">message</string>`.
 
 
 <p align="center">
-<img src="https://i.postimg.cc/hjm40kgs/dimelo-select-attachment-img.jpg"/>
+<img src="https://i.postimg.cc/fW35cvvC/rc-send-attachment-img.png"/>
 </p>
 
 ### rc_reload_img
@@ -114,13 +104,13 @@ This will be used as `<string name="rc_notification_reply_title">message</string
 </p>
 
 ### rc_attachment_img
-Content description of the attachment button.
+Content description of the user/agent image view.
 
 This will be used as `<string name="rc_attachment_img">message</string>`.
 
 
 <p align="center">
-<img src="https://i.postimg.cc/hjm40kgs/dimelo-select-attachment-img.jpg"/>
+<img src="https://i.postimg.cc/pdTrXtcw/rc-attachment-img.png"/>
 </p>
 
 ### rc_notification_reply_response
@@ -140,7 +130,7 @@ This will be used as `<string name="rc_attachment_size_label_megabyte_unit">mess
 
 
 <p align="center">
-<img src="https://i.postimg.cc/26t43cfh/dimelo-attachment-size-label-mega-byte-unit.jpg"/>
+<img src="https://i.postimg.cc/Xqwswj0F/rc-attachment-size-label-megabyte-unit.png"/>
 </p>
 
 ### rc_attachment_size_label_kilobyte_unit
@@ -150,7 +140,7 @@ This will be used as `<string name="rc_attachment_size_label_kilobyte_unit">mess
 
 
 <p align="center">
-<img src="https://i.postimg.cc/nzrzjnHw/dimelo-attachment-size-label-kilo-byte-unit.jpg"/>
+<img src="https://i.postimg.cc/XvHmJYVY/rc-attachment-size-label-kilobyte-unit.png"/>
 </p>
 
 ### rc_loading
@@ -160,7 +150,7 @@ This will be used as `<string name="rc_loading">message</string>`.
 
 
 <p align="center">
-<img src="https://i.postimg.cc/wMpggzbr/dimelo-loading.jpg"/>
+<img src="https://i.postimg.cc/tg5vcC1z/rc-loading.png"/>
 </p>
 
 ### rc_permission_explanation_title
@@ -170,7 +160,7 @@ This will be used as `<string name="rc_permission_explanation_title">message</st
 
 
 <p align="center">
-<img src="https://i.postimg.cc/RZ7fB1VC/dimelo-permission-explanation-title.jpg"/>
+<img src="https://i.postimg.cc/D0Kgf9bz/rc-permission-explanation-title.png"/>
 </p>
 
 ### rc_permission_location_explanation
@@ -180,7 +170,7 @@ This will be used as `<string name="rc_permission_location_explanation">message<
 
 
 <p align="center">
-<img src="https://i.postimg.cc/J0trT8tH/dimelo-permission-location-explanation.jpg"/>
+<img src="https://i.postimg.cc/8PpRyBRx/rc-permission-location-explanation.png"/>
 </p>
 
 ### rc_permission_camera_explanation
@@ -190,7 +180,7 @@ This will be used as `<string name="rc_permission_camera_explanation">message</s
 
 
 <p align="center">
-<img src="https://i.postimg.cc/GpRfLjFX/dimelo-permission-camera-explanation.jpg"/>
+<img src="https://i.postimg.cc/QCXTyhTc/rc-permission-camera-explanation.png"/>
 </p>
 
 ### rc_permission_library_explanation
@@ -200,5 +190,35 @@ This will be used as `<string name="rc_permission_library_explanation">message</
 
 
 <p align="center">
-<img src="https://i.postimg.cc/zGMqf6tq/dimelo-permission-library-explanation.jpg"/>
+<img src="https://i.postimg.cc/Vkbd4dV3/rc-permission-library-explanation.png"/>
+</p>
+
+### rc_hint_input_text
+Hint of the input text.
+
+This will be used as `<string name="rc_hint_input_text">Send a message...</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/rwcttMPP/rc-hint-input-text.png"/>
+</p>
+
+### rc_today
+Text of the date text view.
+
+This will be used as `<string name="rc_today">Today</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/HsysNnGP/rc-today.png"/>
+</p>
+
+### rc_retry_button_title
+Text of the retry button (retry alert dialog).
+
+This will be used as `<string name="rc_retry_button_title">Resend</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/PfRLK1FY/rc-retry-button-title.png"/>
 </p>

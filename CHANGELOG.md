@@ -1,72 +1,93 @@
 # Dimelo Android master #
 
+## Dimelo Android 1.9.2 (December 1st, 2020) ##
+- Improvement: retry a few times and display the error icon when the internet is down. RD-10547
+- Feature: add `dateFormatter` to customize the date format for the date label. RD-11359
+- Feature: taping the error icon alongside a message now allows to retry the message sending request. RD-9309
+- Feature: add support for the structured messages (quick reply, template, carousel and rich link). RD-12832:
+    - add multiple customization keys ([listed in Customization.md](Customization.md))
+    - the input accessory view is hidden when a quick reply disabling it is sent
+    - support gif and deeplinks in structured messages
+- Feature: new design. RD-12835:
+    - support agent avatar (`showAgentAvatarImage = true | false` defaults to `true`)
+    - add `hourTimeFont`, `hourTimeTextColor` and `hourTimeTextSize` keys to customize the hour part of the date
+    - add `agentTimeFont`, `agentTimeColor`, `agentTimePadding` and `agentTimeTextSize` keys to customize the time next to the agent name
+    - replace the current send button icon. Use the existing `sendButtonEnabledColor` (when active) and `sendButtonDisabledColor` keys to customize the send icon
+    - add `rc_hint_input_text` localization key to customize the hint text in the input accessory view
+    - add `rc_today` localization key for the date
+    - automatically apply system date and time to the chat date and time
+    - welcome message is now displayed in the middle of the screen
+    - add `welcomeMessageTextColor` key to customize the text Color of the welcome message
+    - make the default colors compatible with the dark mode
+    - remove `rc_send_attachment_img` localization key
+
 ## Dimelo Android 1.9.1 (September 21th, 2020) ##
-- Minor: Bump `targetSdkVersion` to **API 29** (was API 26)
+- Minor: Bump `targetSdkVersion` to **API 29** (was API 26). RD-14789
 
 ## Dimelo Android 1.9.0 (January 20th, 2020) ##
-- Improvement: add ([`Localization.md`](Localization.md)) to describe how to customize strings in Engage Digital Messaging SDK
-- Improvement: prefix all the strings key (in `res/values/strings.xml`) with `rc_` and display a warning if the not-prefixed key is used
-- Improvement: add `rc_attachment_size_label_megabyte_unit` and `rc_attachment_size_label_kilobyte_unit` keys to customize the size unit of the attachment.
--  Feature: allow to initialize the `Dimelo` instance using a hostname:
+- Improvement: add ([`Localization.md`](Localization.md)) to describe how to customize strings in Engage Digital Messaging SDK. RD-11671
+- Improvement: prefix all the strings key (in `res/values/strings.xml`) with `rc_` and display a warning if the not-prefixed key is used. RD-11671
+- Improvement: add `rc_attachment_size_label_megabyte_unit` and `rc_attachment_size_label_kilobyte_unit` keys to customize the size unit of the attachment. RD-11671
+-  Feature: allow to initialize the `Dimelo` instance using a hostname RD-10821:
   	*  add `initializeWithApiKeyAndHostName(String apiKey, String hostName, DimeloListener dimeloListener)`  method to configure Dimelo with an api key and a host name.
   	*  add `initializeWithApiSecretAndHostName(String apiSecret, String hostName, DimeloListener dimeloListener)`  method to configure Dimelo with an api secret and a host name.
-- BREAKING CHANGE: remove deprecated methods related to welcome message (`setWelcomeMessage(String welcomeMessage)` and `getWelcomeMessage()`). The welcome messages are retrieved from the Engage Digital source configuration thus these methods being removed.
-- Fix: content of "To" is incorrect when sharing file with Gmail
+- BREAKING CHANGE: remove deprecated methods related to welcome message (`setWelcomeMessage(String welcomeMessage)` and `getWelcomeMessage()`). The welcome messages are retrieved from the Engage Digital source configuration thus these methods being removed. RD-11736
+- Fix: content of "To" is incorrect when sharing file with Gmail. RD-11559
 
 ## Dimelo Android 1.8.0 (October 7th, 2019) ##
-- BREAKING CHANGE: Bump minimal supported Android version (`minSdkVersion`) to **API 16** (was API 15)
-- Improvement: Upgrade google place API from `com.google.android.gms:play-services-places:16.0.0` to `com.google.android.libraries.places:places-compat:1.1.0`
-- Improvement: Remove duplicated attachment preview screen when sending location or an image from the gallery
+- BREAKING CHANGE: Bump minimal supported Android version (`minSdkVersion`) to **API 16** (was API 15). RD-10562
+- Improvement: Upgrade google place API from `com.google.android.gms:play-services-places:16.0.0` to `com.google.android.libraries.places:places-compat:1.1.0`. RD-10562
+- Improvement: Remove duplicated attachment preview screen when sending location or an image from the gallery. RD-10946
 - Fix: attachment weren't clickable anymore after opening another non-image attachment
 - Improvement: add prefix to the layouts file name to prevent conflicts
 
 ## Dimelo Android 1.7.2 (June 18th, 2019) ##
-- Fix: gallery thumbnails were shrinking when opening attachment menu multiple times
-- Fix: namespace Picasso library to avoid conflicts (#49)
+- Fix: gallery thumbnails were shrinking when opening attachment menu multiple times. RD-10508
+- Fix: namespace Picasso library to avoid conflicts (#49). RD-10583
 
 ## Dimelo Android 1.7.1 (January 15th, 2019) ##
-- Improvement: Bump GMS dependency from v11.0.4 to v16.0.0 (#43)
-- Fix: apache no class def found error on Android 9 (API 28) (#44)
-- Fix: message deeplink parsing was sometimes crashing app on low-performance devices
-- Feature: now display an error icon alongside the message when the sending request failed and allow to customize its tint color using the `errorIconColor` option.
-- Improvement: disable network calls to Dimelo mobile API when source is disabled
+- Improvement: Bump GMS dependency from v11.0.4 to v16.0.0 (#43). RD-10063
+- Fix: apache no class def found error on Android 9 (API 28) (#44) RD-10113
+- Fix: message deeplink parsing was sometimes crashing app on low-performance devices. RD-10064
+- Feature: now display an error icon alongside the message when the sending request failed and allow to customize its tint color using the `errorIconColor` option. RD-9309
+- Improvement: disable network calls to Dimelo mobile API when source is disabled. RD-9139
 
 ## Dimelo Android 1.7.0 (October 31th, 2018) ##
-- BREAKING CHANGE: new mandatory domain name configuration (first part of your Dimelo Digital URL: **domain-name**.engagement.dimelo.com):
+- BREAKING CHANGE: new mandatory domain name configuration (first part of your Dimelo Digital URL: **domain-name**.engagement.dimelo.com) RD-9197:
   * `setApiSecret(String apiSecret)` is now deprecated in favor of `initWithApiSecret(String secret, String domainName, DimeloListener dimeloListener)`.
   * `setApiKey(String apiKey)` is now deprecated in favor of `initWithApiKey(String apiKey, String domainName, DimeloListener dimeloListener)`.
   * `setHostname(String  hostname)` is not available anymore.
-- Improvement: Dimelo instance setup no longer require to be run in the main thread when receiving notifications
-- Feature: add local draft saving for unsent text messages
-- Fix: dimelo notifications crash on android jelly bean (android api 15)
-- Improvement: log a warning when an invalid key is used for installations or users extra values
+- Improvement: Dimelo instance setup no longer require to be run in the main thread when receiving notifications. RD-9934
+- Feature: add local draft saving for unsent text messages. RD-9024
+- Fix: dimelo notifications crash on android jelly bean (android api 15). RD-9850
+- Improvement: log a warning when an invalid key is used for installations or users extra values. RD-9765
 
 ## Dimelo Android 1.6.9 (August 14th, 2018) ##
-- Improvement: image upload resilience to low memory devices (#37)
+- Improvement: image upload resilience to low memory devices (#37). RD-9216
 - Improvement: make dimelo notifications processing more robust
-- Fix: prevent sending empty body in send message request
+- Fix: prevent sending empty body in send message request. RD-9226
 - Improvement: limit input text height to 20% of screen height when text is entered
-- Feature: namespace Glide library to avoid conflicts
-- Feature: add deep links support
+- Feature: namespace Glide library to avoid conflicts. RD-9629
+- Feature: add deep links support. RD-9425
 
 ## Dimelo Android 1.6.8 (April 19th, 2018) ##
-- Feature: add navigationBarTitleFont to customize the navigationBar title font (minimum android SDK version equal to 18 when using Dimelo as Fragment)
-- Fix: mapView crash on landscape mode when trying to select location
-- Fix: crash when taking photo from camera or gallery then rotating the screen
-- Fix: prevent multiple tap on attachements from opening multiple zoom views
+- Feature: add navigationBarTitleFont to customize the navigationBar title font (minimum android SDK version equal to 18 when using Dimelo as Fragment). RD-9357
+- Fix: mapView crash on landscape mode when trying to select location. RD-9337
+- Fix: crash when taking photo from camera or gallery then rotating the screen. RD-9339
+- Fix: prevent multiple tap on attachements from opening multiple zoom views. RD-9268
 
 ## Dimelo Android 1.6.7 (February 23th, 2018) ##
-- Improvement: change Volley request to support retry number and back off multiplier
-- Fix: notifications are not working with Firebase for API >= 26
+- Improvement: change Volley request to support retry number and back off multiplier. RD-8987
+- Fix: notifications are not working with Firebase for API >= 26. RD-9183
 
 ## Dimelo Android 1.6.6 (February 9th, 2018) ##
-- Fix: nullPointException when sending message using the inline reply and the application is killed
+- Fix: nullPointException when sending message using the inline reply and the application is killed. RD-9082
 - Fix: empty content when opening chat from notification and the application is killed
-- Feature: add navigationBarTitleColor and navigationBarItemTintColor to customize the navigationBar title and the navigationBarItem tint color
-- Fix: standard Activity crash on landscape mode
+- Feature: add navigationBarTitleColor and navigationBarItemTintColor to customize the navigationBar title and the navigationBarItem tint color. RD-9095
+- Fix: standard Activity crash on landscape mode. RD-9097
 
 ## Dimelo Android 1.6.5 (December 4th, 2017) ##
-- Fix: nullPointException when saving instance state (#31)
+- Fix: nullPointException when saving instance state (#31). RD-8976
 - Fix: refresh chat view on main thread
 
 ## Dimelo Android 1.6.4 (November 7th, 2017) ##
