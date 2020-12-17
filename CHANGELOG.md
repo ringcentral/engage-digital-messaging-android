@@ -1,5 +1,10 @@
 # Dimelo Android master #
 
+## Dimelo Android 2.0.1 (December 17th, 2020) ##
+- Fix: some words were wrongly underlined when mixed with deep links containing \n or \r. RD-12675
+- Improvement: move the cursor to the last position in the input text after screen rotation or resuming the chat. RD-15714
+- Improvement: keep the keyboard draft when rotating the screen on a fragment. RD-15714
+
 ## Dimelo Android 2.0.0 (December 1st, 2020) ##
 - Improvement: retry a few times and display the error icon when the internet is down. RD-10547
 - Feature: add `dateFormatter` to customize the date format for the date label. RD-11359
