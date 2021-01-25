@@ -1,5 +1,9 @@
 # Dimelo Android master #
 
+
+## Dimelo Android 2.0.2 (January 25th, 2021) ##
+- Improvement: drop `picasso` dependency. RD-16311 RD-16345
+
 ## Dimelo Android 2.0.1 (December 17th, 2020) ##
 - Fix: some words were wrongly underlined when mixed with deep links containing \n or \r. RD-12675
 - Improvement: move the cursor to the last position in the input text after screen rotation or resuming the chat. RD-15714

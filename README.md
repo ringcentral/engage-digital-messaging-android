@@ -68,7 +68,7 @@ Add these to your Grade file:
 #### dependencies
 ```
   dependencies {
-        compile 'com.dimelo.dimelosdk:dimelosdk:1.7.+'
+        compile 'com.dimelo.dimelosdk:dimelosdk:2.0.2'
   }
 ```
 
