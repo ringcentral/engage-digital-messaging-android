@@ -1,5 +1,7 @@
 # Dimelo Android master #
 
+## Dimelo Android 2.0.3 (March 1st, 2021) ##
+- Improvement: disable `glide` modules for our namespaced singleton. RD-16974
 
 ## Dimelo Android 2.0.2 (January 25th, 2021) ##
 - Improvement: drop `picasso` dependency. RD-16311 RD-16345
