@@ -1,5 +1,10 @@
 # Dimelo Android master #
 
+## Dimelo Android 2.0.4 (April 6th, 2021) ##
+- Fix: Handle structured messages sent from system. RD-17116
+- Fix the gray screen when opening camera on android 10 (API 29). RD-13580
+- Fix: prevent automatic generation of a gray image in recent photo and gallery app after taking a photo or canceling it on android 10+ (API 29+). RD-17442
+
 ## Dimelo Android 2.0.3 (March 1st, 2021) ##
 - Improvement: disable `glide` modules for our namespaced singleton. RD-16974
 
