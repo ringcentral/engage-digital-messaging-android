@@ -42,6 +42,15 @@ Xml attribute name: dimelo\_toolbar\_background\_drawable
 
 Programmatically: None
 
+### Open gallery drawable icon
+Specify a drawable to use for the open gallery icon.
+
+Programmatically: use `Customization.setOpenGalleryIcon` method
+
+<p align="center">
+   <img src="https://i.postimg.cc/WtLQ8cbf/Open-Gallery-Icon.png"/>
+</p>
+
 # Attributes < color />
 
 ### Toolbar Background drawable tint
@@ -66,6 +75,36 @@ Xml attribute name: dimelo\_inputbar\_background\_color
 
 Programmatically: set `Customization.inputbarBackgroundColor` property
 
+### Open gallery icon color
+Define the icon color of the open gallery button.
+
+If not specified, white color is applied
+
+Color must be in hex format, e.g. `#007AFF`
+
+Xml attribute name: rc\_open\_gallery\_icon\_color
+
+Programmatically: set `Customization.openGalleryIconColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/gk2RcLzj/open-Gallery-Icon-Color.png"/>
+</p>
+
+### Open gallery background color
+Define the background color of the open gallery button.
+
+If not specified, `#4481EB` color is applied
+
+Color must be in hex format, e.g. `#007AFF`
+
+Xml attribute name: rc\_open\_gallery\_background\_color
+
+Programmatically: set `Customization.openGalleryBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/5NdGZ1bs/open-Gallery-Background-Color.png"/>
+</p>
+
 ### Send Button enabled color
 Define the color of the send button when a message can be sent.
 
@@ -75,7 +114,7 @@ Color must be in hex format, e.g. `#007AFF`
 
 Xml attribute name: dimelo\_send\_button\_enabled\_color
 
-Programmmatically: use `Customization.setSendButtonEnabledColor` method
+Programmatically: use `Customization.setSendButtonEnabledColor` method
 
 ### Send Button disabled color
 Define the color the send button when no text is written and no attachment is selected.
@@ -84,7 +123,7 @@ Color must be in hex format, e.g. `#007AFF`
 
 Xml attribute name: dimelo\_send\_button\_disabled\_color
 
-Programmmatically: use `Customization.setSendButtonDisabledColor` method
+Programmatically: use `Customization.setSendButtonDisabledColor` method
 
 ### Bottom sheet enabled state icons color
 Define the color of the icons placed in the bottom sheet when they are enabled.
@@ -95,12 +134,12 @@ Color must be in hex format, e.g. `#007AFF`
 
 Xml attribute name: dimelo\_bottom\_sheet\_icons\_enabled\_color
 
-Programmmatically: use `Customization.setBottomSheetIconsEnabledColor` method
+Programmatically: use `Customization.setBottomSheetIconsEnabledColor` method
 
 ### attachment Icon Button
 Specify a drawable to use for the attachment icon.
 
-Programmmatically: use `Customization.setAttachmentIcon` method
+Programmatically: use `Customization.setAttachmentIcon` method
 
 ### Bottom sheet disabled state icons color
 Define the color of the icons placed in the bottom sheet when they are disabled.
@@ -109,7 +148,7 @@ Color must be in hex format, e.g. `#007AFF`
 
 Xml attribute name: dimelo\_bottom\_sheet\_icons\_disabled\_color
 
-Programmmatically: use `Customization.setBottomSheetIconsDisabledColor` method
+Programmatically: use `Customization.setBottomSheetIconsDisabledColor` method
 
 ### Bottom sheet disabled state icons color
 Define the color of the icons placed in the bottom sheet when they are disabled.
@@ -118,7 +157,7 @@ Color must be in hex format, e.g. `#007AFF`
 
 Xml attribute name: dimelo\_bottom\_sheet\_icons\_disabled\_color
 
-Programmmatically: use `Customization.setBottomSheetIconsDisabledColor` method
+Programmatically: use `Customization.setBottomSheetIconsDisabledColor` method
 
 ### ActionBar background color
 ActionBar color (ChatActivity only).
@@ -172,7 +211,7 @@ Color must be in hex format, e.g. `#007AFF`
 
 Xml attribute name:  dimelo\_error\_icon\_color
 
-Programmmatically: use `Customization.errorIconColor` method
+Programmatically: use `Customization.errorIconColor` method
 
 ### navigation bar title color
 Text color for navigation bar title.

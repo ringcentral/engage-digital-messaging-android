@@ -1,5 +1,9 @@
 # Dimelo Android master #
 
+## Dimelo Android 2.0.5 (April 8th, 2021) ##
+- Improvement: Add `openGalleryBackgroundColor`, `openGalleryIconColor` keys and `setOpenGalleryIcon()` method to customize the open gallery button. RD-17275
+- Minor BREAKING CHANGE: `openGalleryBackgroundColor` no longer uses the theme color. RD-17275
+
 ## Dimelo Android 2.0.4 (April 6th, 2021) ##
 - Fix: Handle structured messages sent from system. RD-17116
 - Fix the gray screen when opening camera on android 10 (API 29). RD-13580
