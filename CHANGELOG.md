@@ -1,5 +1,8 @@
 # Dimelo Android master #
 
+## Dimelo Android 2.0.6 (April 19th, 2021) ##
+- Fix: Cannot send a photo from recent photos gallery on android 10 (API 29). RD-17666
+
 ## Dimelo Android 2.0.5 (April 8th, 2021) ##
 - Improvement: Add `openGalleryBackgroundColor`, `openGalleryIconColor` keys and `setOpenGalleryIcon()` method to customize the open gallery button. RD-17275
 - Minor BREAKING CHANGE: `openGalleryBackgroundColor` no longer uses the theme color. RD-17275
