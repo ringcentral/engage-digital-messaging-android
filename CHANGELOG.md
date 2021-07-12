@@ -1,5 +1,23 @@
 # Dimelo Android master #
 
+## Dimelo Android 2.1.0 (July 12th, 2021) ##
+- BREAKING CHANGE: When integrating the SDK as a fragment:
+    - The `newChatFragment()` method has been removed in favor of the new `newRcFragment()` method. RD-16261
+    - The `Chat` type has been removed in favor of the new `RcFragment` type. RD-16261
+    - The `newRcFragment()` method will either instantiate the chat or the conversations list based on the threading activation/deactivation. RD-16261
+    - To customize the conversations list or the chat, use `RcFragment.Customization` (`Chat.Customization` will no longer be available). RD-14564
+- BREAKING CHANGE: When integrating the SDK as an activity:
+    - The `openChatActivity()` method has been removed in favor of the new `openRcActivity()` method. RD-16261
+    - The `openChatActivityNoActionBar()` method has been removed in favor of the new `openRcActivityNoActionBar()` method. RD-16261
+    - `setOnActivitySetupAppearenceListener.onSetupAppearance` now expects a `RcFragment.Customization` to be passed as argument (it was previously expecting a `Chat.Customization`). RD-14564
+- Feature: add threading support. RD-16261:
+    - Add `enableThreads` flag to enable or disable the threading. RD-16275
+    - Add threads-related customization keys ([listed in Customization.md](Customization.md)). RD-14564
+    - Set a context_data `identity_initiated_thread: true` when clicking on the "new conversation" button. RD-16234
+    - Hide the "new conversation" button based on the "Allow multiple conversations in parallel" ED configuration with a maximum of three parallel open threads. RD-16248
+    - Handle server parallel threads creation anti-flood error. RD-16245
+    - Support local draft by thread. RD-16279
+
 ## Dimelo Android 2.0.6 (April 19th, 2021) ##
 - Fix: Cannot send a photo from recent photos gallery on android 10 (API 29). RD-17666
 

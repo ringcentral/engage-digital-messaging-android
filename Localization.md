@@ -222,3 +222,43 @@ This will be used as `<string name="rc_retry_button_title">Resend</string>`.
 <p align="center">
 <img src="https://i.postimg.cc/PfRLK1FY/rc-retry-button-title.png"/>
 </p>
+
+### rc_threads_title
+Title of the threads list window.
+
+This will be used as `<string name="rc_threads_title">Chats</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/CKD2Z41F/rc-threads-title.png"/>
+</p>
+
+### rc_you
+Prefix added to user message preview in the threads list.
+
+This will be used as `<string name="rc_you">You:</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/GtBG2XLK/rc-you.png"/>
+</p>
+
+### rc_waiting_for_agent
+"Waiting For Agent" title in the thread list when no agent has responded yet.
+
+This will be used as `<string name="rc_waiting_for_agent">Waiting for agent</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/MTnmM6t1/rc-waiting-for-agent.png"/>
+</p>
+
+### rc_back_to_all_chats
+"Back button" title to return to the threads list when the sdk is embedded as a fragment.
+
+This will be used as `<string name="rc_waiting_for_agent">Back to all chats</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/QxJ1MKsR/rc-back-to-all-chats.png"/>
+</p>

@@ -3,7 +3,7 @@ Engage Digital Messaging Customization
 
 Engage Digital Messaging is customizable either from Android resource folder (XML) or programmatically
 
-This file shows a list of attributes you can override in order to customize the chat.
+This file shows a list of attributes you can override in order to customize the threads list and the chat.
 
 # Attributes < string />
 
@@ -26,6 +26,43 @@ Xml attribute name: dimelo\_toolbar\_display\_title
 Programmatically: None
 
 # Attributes < drawable />
+
+### createNewThreadImage
+A drawable for the create new conversation button.
+
+Xml attribute name: None
+
+Programmatically: use `Customization.setCreateNewThreadImage` method
+
+<p align="center">
+   <img src="https://i.postimg.cc/7YFCSpy8/create-New-Thread-Background-Color.png"/>
+</p>
+
+### backToAllChatsImage
+A drawable to replace the arrow displayed next to the "Back to all chats" text displayed in the header.
+
+Xml attribute name: None
+
+Programmatically: use `Customization.setBackToAllChatsImage` method
+
+<p align="center">
+   <img src="https://i.postimg.cc/z3YrnrB2/back-To-All-Chats-Image.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/SRTzCsfm/back-To-All-Chats-Image.png"/>
+</p>
+
+### lockedThreadImage
+A drawable to indicate that the thread is locked in the threads list view.
+
+Xml attribute name: None
+
+Programmatically: use `Customization.setLockedThreadImage` method
+
+<p align="center">
+   <img src="https://i.postimg.cc/PxXTmMxk/locked-Thread-Image-Tint-Color.png"/>
+</p>
 
 ### Toolbar Navigation Icon drawable
 Specify a drawable to use for the navigation icon of the toolbar (ChatActivity only).
@@ -52,6 +89,178 @@ Programmatically: use `Customization.setOpenGalleryIcon` method
 </p>
 
 # Attributes < color />
+
+### badgeTextColor
+Text color for the badge text view.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_badge\_text\_color
+
+Programmatically: set `Customization.badgeTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/nVW07cRd/badge.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/Xvn83Zqv/badge.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/500SYZwd/badge.png"/>
+</p>
+
+### badgeBackgroundColor
+Background color for the badge text view.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_badge\_background\_color
+
+Programmatically: set `Customization.badgeBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/nVW07cRd/badge.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/Xvn83Zqv/badge.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/500SYZwd/badge.png"/>
+</p>
+
+### createNewThreadImageColor
+Color for the create new thread image.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_create\_new\_thread\_image\_color
+
+Programmatically: set `Customization.createNewThreadImageColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/432bRs07/create-New-Thread-Image-Color.png"/>
+</p>
+
+### threadsListSeparatorColor
+Color for the threads list separator.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_threads\_list\_separator\_color
+
+Programmatically: set `Customization.threadsListSeparatorColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/9FJTTxQc/threads-List-Separator-Color.png"/>
+</p>
+
+### lockedThreadImageTintColor
+Tint color for the locked thread image in the threads list view.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_locked\_thread\_image\_tint\_color
+
+Programmatically: set `Customization.lockedThreadImageTintColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/PxXTmMxk/locked-Thread-Image-Tint-Color.png"/>
+</p>
+
+### threadsListRefreshControlTintColors
+Tint colors array for the threads list refresh control.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: None
+
+Programmatically: set `Customization.threadsListRefreshControlTintColors` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/76w00j0Y/threads-List-Refresh-Control-Tint-Color.png"/>
+</p>
+
+### createNewThreadBackgroundColor
+Background color for the create new conversation button.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_create\_new\_thread\_background\_color
+
+Programmatically: set `Customization.createNewThreadBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/7YFCSpy8/create-New-Thread-Background-Color.png"/>
+</p>
+
+### threadsListBackgroundColorSelection
+Background color for the threads list selected item.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_threads\_list\_background\_color\_selection
+
+Programmatically: set `Customization.threadsListBackgroundColorSelection` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/5tNFt8V6/threads-List-Background-Color-Selection.png"/>
+</p>
+
+### threadsListAgentNameTextColor
+Text color for the agent name displayed in the threads list.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_threads\_list\_agent\_name\_text\_color
+
+Programmatically: set `Customization.threadsListAgentNameTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/qBLVsnVk/threads-List-Agent-Name-Text-Color.png"/>
+</p>
+
+### threadsListMessageTextColor
+Text color for the message displayed in the threads list.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_threads\_list\_message\_text\_color
+
+Programmatically: set `Customization.threadsListMessageTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/bYLWDhkr/threads-List-Message-Text-Color.png"/>
+</p>
+
+### threadsListDateTextColor
+Text color for the date displayed in the threads list.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_threads\_list\_date\_text\_color
+
+Programmatically: set `Customization.threadsListDateTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/L50xym3V/threads-List-Date-Text-Color.png"/>
+</p>
+
+### fragmentHeaderColor
+Color for the fragment header.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_fragment\_header\_color
+
+Programmatically: set `Customization.fragmentHeaderColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/VvL7pZhs/fragment-Header-Color.png"/>
+</p>
 
 ### Toolbar Background drawable tint
 Specify a tint for the drawable used as a background for the toolbar (ChatActivity only).
@@ -614,27 +823,6 @@ Xml attribute name: dimelo\_date\_color
 
 Programmatically: set `Customization.dateTextColor` property.
 
-### showAgentAvatarImage
-Show or hide the agent avatar image.
-
-Must be a boolean, default is `true`.
-
-Programmatically: set `Customization.showAgentAvatarImage` property.
-
-Xml attribute name: None
-
-`showAgentAvatarImage=true`:
-
-<p align="center">
-<img src="https://i.postimg.cc/7ZGctkDC/1.png"/>
-</p>
-
-`showAgentAvatarImage=false`:
-
-<p align="center">
-<img src="https://i.postimg.cc/pdvZQbdM/2.png"/>
-</p>
-
 ### agentStructuredMessageTitleFont
 Font for agent's structured message title.
 
@@ -896,11 +1084,74 @@ Xml attribute name: None
 *Note:* This is an example on how to initialize `Customization.dateFormatter`:
 ```java
 SimpleDateFormat dateFormatter = new SimpleDateFormat("dd-MM-yyyy");
-Chat.Customization customisation = Chat.getCustomization();
+RcFragment.Customization customisation = RcFragment.getCustomization();
 customisation.dateFormatter = dateFormatter;
 ```
 
 # Typeface
+
+### badgeFont
+Badge text font.
+
+Programmatically: set `Customization.badgeFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/nVW07cRd/badge.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/Xvn83Zqv/badge.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/500SYZwd/badge.png"/>
+</p>
+
+### backToAllChatsFont
+Font for the backToAllChats text view (in the header fragment).
+
+Programmatically: set `Customization.backToAllChatsFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/VvL7pZhs/fragment-Header-Color.png"/>
+</p>
+
+### threadsListAgentNameFont
+Font for the agent name displayed in the threads list.
+
+Programmatically: set `Customization.threadsListAgentNameFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/qBLVsnVk/threads-List-Agent-Name-Text-Color.png"/>
+</p>
+
+### threadsListMessageFont
+Font for the message displayed in the threads list.
+
+Programmatically: set `Customization.threadsListMessageFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/bYLWDhkr/threads-List-Message-Text-Color.png"/>
+</p>
+
+### threadsListDateFont
+Font for the date displayed in the threads list.
+
+Programmatically: set `Customization.threadsListDateFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/L50xym3V/threads-List-Date-Text-Color.png"/>
+</p>
 
 ### navigationBarTitleFont
 Font for the navigation bar title (minimum android SDK version equal to 18 when using Dimelo as Fragment, otherwise we use the default font).
@@ -938,6 +1189,41 @@ Programmatically: set `Customization.agentNameFont` property
 Xml attribute name: None
 
 # Text Size
+
+### badgeTextSize
+Badge text size.
+
+Programmatically: set `Customization.badgeTextSize` property
+
+Xml attribute name: dimen/rc_badge_text_size
+
+### backToAllChatsTextSize
+Back to all chats text size.
+
+Programmatically: set `Customization.backToAllChatsTextSize` property
+
+Xml attribute name: dimen/rc_back_to_all_chats_text_size
+
+### threadsListAgentNameTextSize
+Text size for the agent name displayed in the threads list.
+
+Programmatically: set `Customization.threadsListAgentNameTextSize` property
+
+Xml attribute name: dimen/rc_threads_list_agent_name_text_size
+
+### threadsListMessageTextSize
+Text size of the message displayed in the threads list.
+
+Programmatically: set `Customization.threadsListMessageTextSize` property
+
+Xml attribute name: dimen/rc_threads_list_message_text_size
+
+### threadsListDateTextSize
+Text size of the date displayed in the threads list.
+
+Programmatically: set `Customization.threadsListDateTextSize` property
+
+Xml attribute name: dimen/rc_threads_list_date_text_size
 
 ### messageTextSize
 TextSize for user and agent messages.
@@ -1002,3 +1288,26 @@ Set a global size to all the elements for which a text size can be set.
 Programmatically: None.
 
 Xml attribute name: dimen/dimelo_default_text_size
+
+# Boolean
+
+### showAgentAvatarImage
+Show or hide the agent avatar image.
+
+Must be a boolean, default is `true`.
+
+Programmatically: set `Customization.showAgentAvatarImage` property.
+
+Xml attribute name: None
+
+`showAgentAvatarImage=true`:
+
+<p align="center">
+<img src="https://i.postimg.cc/7ZGctkDC/1.png"/>
+</p>
+
+`showAgentAvatarImage=false`:
+
+<p align="center">
+<img src="https://i.postimg.cc/pdvZQbdM/2.png"/>
+</p>
