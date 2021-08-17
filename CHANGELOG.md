@@ -1,5 +1,11 @@
 # Dimelo Android master #
 
+## Dimelo Android 2.1.1 (August 17th, 2021) ##
+- Improvement: Change the disabled color of the send/attachment button. RD-18578
+- Improvement: Add the ability to zoom in/out when opening pictures. RD-12597
+- Improvement: Send the file extension with the filename when sending an attachment. RD-16647
+- Fix: Update media "Authorization required" alert to redirect to the application setting. RD-17562
+
 ## Dimelo Android 2.1.0 (July 12th, 2021) ##
 - BREAKING CHANGE: When integrating the SDK as a fragment:
     - The `newChatFragment()` method has been removed in favor of the new `newRcFragment()` method. RD-16261

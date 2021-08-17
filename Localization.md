@@ -190,7 +190,17 @@ This will be used as `<string name="rc_permission_library_explanation">message</
 
 
 <p align="center">
-<img src="https://i.postimg.cc/Vkbd4dV3/rc-permission-library-explanation.png"/>
+<img src="https://i.postimg.cc/ncxqjgKr/rc-permission-library-explanation.png"/>
+</p>
+
+### rc_settings
+Text of the positive alert permission button.
+
+This will be used as `<string name="rc_settings">Settings</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/fyTXFhgb/rc-settings.png"/>
 </p>
 
 ### rc_hint_input_text
