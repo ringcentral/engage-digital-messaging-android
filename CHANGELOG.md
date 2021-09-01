@@ -1,4 +1,6 @@
 # Dimelo Android master #
+## Dimelo Android 2.1.2 (September 1st, 2021) ##
+- Minor: Bump `targetSdkVersion` to **API 30** (was API 29). RD-16629
 
 ## Dimelo Android 2.1.1 (August 17th, 2021) ##
 - Improvement: Change the disabled color of the send/attachment button. RD-18578
