@@ -379,19 +379,12 @@ public class MainActivity extends AppCompatActivity {
   }
 
   public static Dimelo setupDimelo(Context context) {
-        Dimelo.setup(context);
-        Dimelo dimelo = Dimelo.getInstance();
-        dimelo.initWithApiSecret(SOURCE_API_SECRET, DIMELO_DOMAIN_NAME, DIMELO_LISTENER);
-        dimelo.setUserName("USER_NAME");
-        dimelo.setUserIdentifier("USER_IDENTIFIER");
-        JSONObject authInfo = new JSONObject();
-        try {
-            authInfo.put("CustomerId", "0123456789");
-            authInfo.put("Dimelo", "Rocks!");
-        } catch (JSONException e) {
-        }
-        dimelo.setAuthenticationInfo(authInfo);
-        return dimelo;
+    Dimelo.setup(context);
+    Dimelo dimelo = Dimelo.getInstance();
+
+    dimelo.initWithApiSecret(CHANNEL_API_SECRET, ENGAGE_DIGITAL_DOMAIN_NAME, DIMELO_LISTENER);
+    dimelo.setPushNotificationService("fcm");
+    return dimelo;
   }
 
   // ...
@@ -450,6 +443,189 @@ FirebaseInstanceId.getInstance().getInstanceId()
                 Dimelo.getInstance().setDeviceToken(token);
             }
         });
+```
+
+<br>
+
+### Using [Huawei Push Kit](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-app-quickstart-0000001071490422) (HMS):
+*Note:* This is an example on how to initialize the Dimelo instance:
+```java
+public class MainActivity extends AppCompatActivity {
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.your_layout);
+    // Setup Dimelo
+    Dimelo dimelo = setupDimelo(this);
+  }
+
+  public static Dimelo setupDimelo(Context context) {
+    Dimelo.setup(context);
+    Dimelo dimelo = Dimelo.getInstance();
+    dimelo.initWithApiSecret(CHANNEL_API_SECRET, ENGAGE_DIGITAL_DOMAIN_NAME, DIMELO_LISTENER);
+    dimelo.setPushNotificationService("hms");
+    return dimelo;
+  }
+
+  // ...
+}
+```
+
+1. Add `Dimelo.setPushNotificationService("hms")` to your rc configuration to support the Huawei push notifications (Default is `fcm`)
+
+2. Configuring App Information in [AppGallery Connect](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-config-agc-0000001050170137)
+- Sign in to AppGallery Connect and click My projects.
+- Find your app project and click the app that needs to integrate the HMS Core SDK.
+<p align="center">
+  <img src="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20210802090814.80931510641674637684723202830368:50520801015821:2800:FF259F927F95CBD1CD9152A63AF4D20D9BEC1063B202121BBFE1A8B6D2D67383.png?needInitFileName=true?needInitFileName=true"/>
+</p>
+
+3. Download the `agconnect-services.json` file from your [AppGallery Connect](https://developer.huawei.com/consumer/en/doc/development/quickApp-Guides/quickapp-get-agconnectfile-0000001117853750) and copy it in your project's `/app` folder
+
+<p align="center">
+  <img src="https://i.postimg.cc/hjCJ2mHm/agconnect-services.png"/>
+</p>
+
+4. Configuring the Maven Repository Address for the [HMS Core SDK](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-integrating-sdk-0000001050040084#section813910382284)
+- Add the AppGallery Connect plugin and the Maven repository.
+- Go to buildscript > repositories and configure the Maven repository address for the HMS Core SDK.
+- Go to allprojects > repositories and configure the Maven repository address for the HMS Core SDK.
+- If the agconnect-services.json file has been added to the app, go to buildscript > dependencies and add the AppGallery Connect plugin configuration.
+```
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        // Configure the Maven repository address for the HMS Core SDK.
+        maven {url 'https://developer.huawei.com/repo/'}
+    }
+    dependencies {
+        ...
+        // Add the AppGallery Connect plugin configuration.
+        classpath 'com.huawei.agconnect:agcp:1.4.2.300'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        // Configure the Maven repository address for the HMS Core SDK.
+        maven {url 'https://developer.huawei.com/repo/'}
+    }
+}
+```
+
+5. Add the [build dependencies](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-integrating-sdk-0000001050040084#section12051333182410)
+- Add a build dependency in the dependencies block.
+```
+dependencies {
+    implementation 'com.huawei.hms:push:{version}'
+}
+```
+
+- Add the AppGallery Connect plugin configuration:
+```
+apply plugin: 'com.huawei.agconnect'
+```
+
+6. Configure the signing information in the build.gradle File https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-integrating-sdk-0000001050040084
+- Copy the keystore file generated in Generating a Signing Certificate Fingerprint to the app directory of your project and configure the signing information in the build.gradle file in the directory.
+```
+android {
+     signingConfigs {
+         config {
+             // Set the parameters based on the actual signing information.
+             keyAlias 'xxx'
+             keyPassword 'xxxx'
+             storeFile file('xxx.jks')
+             storePassword 'xxxx'
+         }
+     }
+     buildTypes {
+         debug {
+             signingConfig signingConfigs.config
+         }
+         release {
+             signingConfig signingConfigs.config
+             minifyEnabled false
+             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+         }
+     }
+ }
+ ```
+
+7. set the `minSdkVersion` to 17 or above in the build.gradle File
+
+8. Declare a `HmsMessageService` [service](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/hmsmessageservice-0000001050173839) in your project's `AndroidManifest.xml`:
+```xml
+<service
+    android:name=".MyHmsMessageService"
+    android:exported="false">
+    <intent-filter>
+        <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+    </intent-filter>
+</service>
+```
+
+9. Declare a `push_kit_auto_init_enabled` meta data (https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-client-dev-0000001050042041) in your project's `AndroidManifest.xml`:
+```xml
+<manifest ...>
+...
+    <application ...>
+        <meta-data
+            android:name="push_kit_auto_init_enabled"
+            android:value="true"/>
+        ...
+    </application>
+...
+</manifest>
+```
+10. Create a class that extends `HmsMessageService`:
+```java
+public class MyHmsMessageService extends HmsMessageService
+```
+11. Retrieve the device token and pass it to your Dimelo instance by overriding the `onNewToken` method if `push_kit_auto_init_enabled=true`:
+```java
+@Override
+public void onNewToken(String token) {
+  if (Dimelo.isInstantiated())
+    Dimelo.getInstance().setDeviceToken(token);
+}
+```
+12. Finally intercept the notification and pass it to your Engage Digital Messaging SDK by overriding the `onMessageReceived` method:
+```java
+@Override
+public void onMessageReceived(RemoteMessage remoteMessage) {
+  // You have to configure the Dimelo instance before calling the Dimelo.consumeReceivedRemoteNotification() method.
+  MainActivity.setupDimelo(MyFirebaseMessagingService.this);
+  if (Dimelo.consumeReceivedRemoteNotification(MyHmsMessageService.this, remoteMessage.getDataOfMap(), null)){
+    // The notification will be handled by the Engage Digital Messaging SDK
+  }
+  else {
+    // It is not a RingCentral Engage Digital Messaging notification.
+  }
+}
+```
+*Note:* You can also retrieve the current device token by calling `HmsInstanceId.getInstance(Context).getToken(appId, tokenScope)` if `push_kit_auto_init_enabled=false`. Here is an example on how to retrieve the device token and pass it to the Dimelo instance (as [described here](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-client-dev-0000001050042041#section11455525765)):
+```java
+private void getToken() {
+    new Thread() {
+        @Override
+        public void run() {
+          try {
+            String appId = "your_app_gallery_connect_app_id";
+            String tokenScope = "HCM";
+            String token = HmsInstanceId.getInstance(MainActivity.this).getToken(appId, tokenScope);
+
+            if (!TextUtils.isEmpty(token) && Dimelo.isInstantiated()) {
+                Dimelo.getInstance().setDeviceToken(token);
+            }
+          } catch (ApiException e) {}
+        }
+    }.start();
+}
 ```
 
 Activate location messages

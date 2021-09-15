@@ -1,4 +1,9 @@
 # Dimelo Android master #
+## Dimelo Android 2.2.0 (September 15th, 2021) ##
+- Improvement: remove location message and replace it with an url message in the chat view. RD-18952
+- Improvement: remove deprecated dependency `com.google.android.gms:play-services-location:16.0.0`. RD-18952
+- Feature: Add support for Huawei push notifications (HMS). RD-18475 RD-18476 RD-18477 RD-18885
+
 ## Dimelo Android 2.1.2 (September 1st, 2021) ##
 - Minor: Bump `targetSdkVersion` to **API 30** (was API 29). RD-16629
 
