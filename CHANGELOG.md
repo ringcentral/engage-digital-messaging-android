@@ -1,4 +1,8 @@
 # Dimelo Android master #
+## Dimelo Android 2.2.1 (September 30th, 2021) ##
+- Fix: Prevent tapping on template and carousel item reply when the input text is disabled. RD-18408
+- Fix: Back button now closes the gallery if opened when threading is enabled. RD-19183
+
 ## Dimelo Android 2.2.0 (September 15th, 2021) ##
 - Improvement: remove location message and replace it with an url message in the chat view. RD-18952
 - Improvement: remove deprecated dependency `com.google.android.gms:play-services-location:16.0.0`. RD-18952
