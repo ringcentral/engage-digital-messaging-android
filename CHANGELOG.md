@@ -1,4 +1,11 @@
 # Dimelo Android master #
+
+## Dimelo Android 2.2.2 (October 20th, 2021) ##
+- Minor: Bump `targetSdkVersion` to **API 31** (was **API 30**). RD-19785
+- Fix: Add `PendingIntent.FLAG_MUTABLE` to prevent a crash when receiving an interactive push notification on application targeting Android 12 and higher. RD-19785
+- Fix: Add `PendingIntent.FLAG_IMMUTABLE` to prevent a crash when receiving a push notification on application targeting Android 12 and higher. RD-19794
+- Fix: Add `android:exported="false"` to Manifest to resolve the incompatibility with application targeting Android 12 and higher. RD-19794
+
 ## Dimelo Android 2.2.1 (September 30th, 2021) ##
 - Fix: Prevent tapping on template and carousel item reply when the input text is disabled. RD-18408
 - Fix: Back button now closes the gallery if opened when threading is enabled. RD-19183

@@ -660,3 +660,17 @@ Two particular events that might be interesting to you are `dimeloDidBeginNetwor
 Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when Engage Digital Messaging view is just opened or closed.
 
 Please refer to [Engage Digital Messaging SDK Android API Reference](https://rawcdn.githack.com/ringcentral/engage-digital-messaging-android/7d284444a3704d0faa72c1aa6ba24975fb81a90c/JavaDoc/index.html) documentation for more information.
+
+
+Enabling the camera in Android 11+
+-----------------------
+
+Starting in Android 11, you must add the <queries> to your manifest application for the camera to work.
+
+```
+<queries>
+   <intent>
+     <action android:name="android.media.action.IMAGE_CAPTURE" />
+   </intent>
+</queries>
+```
