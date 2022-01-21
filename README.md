@@ -1,6 +1,5 @@
-
 Engage Digital Messaging - Android
-==========
+==================================
 
 Engage Digital provides a mobile messaging component that allows users of your app to easily communicate with your customer support agents. You can send text messages
 and receive push notifications and automatic server-provided replies.
@@ -45,36 +44,37 @@ These are minimal steps to make Engage Digital Messaging work in your app.\
 Read on how to customize the appearance and the behavior of Engage Digital Messaging to perfectly fit in your app:
 - [Customize Engage Digital Messaging appearance](#customizing-mobile-messaging-appearance)
 - [Add push notifications support](#push-notifications)
-- [Enable message location using the Google APIs](#activate-location-messages)
+- [Enable location messages using the Google APIs](#enable-location-messages)
+- [Enable static maps display for location messages](#enable-static-maps-for-location-messages)
 - [Add a listener to react to SDK triggered events](#reacting-to-mobile-messaging-events)
 
 You can see an example of Engage Digital Messaging implementation by downloading the [Sample App](https://github.com/ringcentral-tutorials/engage-digital-messaging-android-demo).
 
 
 How To Install With Gradle build system (Using Android Studio)
------------------------------
+--------------------------------------------------------------
 
 Add these to your Grade file:
 
-#### repositories
-```
-  repositories {
-      maven {
-                url "https://raw.github.com/ringcentral/engage-digital-messaging-android/master"
+### Repositories
+```java
+repositories {
+    maven {
+        url "https://raw.github.com/ringcentral/engage-digital-messaging-android/master"
     }
-  }
+}
 ```
 
-#### dependencies
-```
-  dependencies {
-        compile 'com.dimelo.dimelosdk:dimelosdk:2.1.0'
-  }
+### Dependencies
+```java
+dependencies {
+    compile 'com.dimelo.dimelosdk:dimelosdk:2.1.0'
+}
 ```
 
 
 Migration to Engage Digital Messaging 1.7.0
------------------------------
+-------------------------------------------
 Engage Digital Messaging 1.7.0 uses a new mandatory domain name setting (first part of your RingCentral Engage Digital URL: **domain-name**.engagement.dimelo.com), so these changes **must** be taken into consideration:
 * `setApiSecret(String apiSecret)` is now deprecated in favor of `initWithApiSecret(String secret, String domainName, DimeloListener dimeloListener)`.
 * `setApiKey(String apiKey)` is now deprecated in favor of `initWithApiKey(String apiKey, String domainName, DimeloListener dimeloListener)`.
@@ -82,7 +82,7 @@ Engage Digital Messaging 1.7.0 uses a new mandatory domain name setting (first p
 
 
 Migration to Engage Digital Messaging 2.1.0
------------------------------
+-------------------------------------------
 To support multi threads in Engage Digital Messaging 2.1.0, these changes **must** be taken into consideration:
 * When integrating the SDK as a fragment:
     - `newChatFragment()` method has been removed in favor of the new `newRcFragment()` method.
@@ -94,7 +94,7 @@ To support multi threads in Engage Digital Messaging 2.1.0, these changes **must
 
 
 Authentication and SDK initialization
---------------
+-------------------------------------
 
 With each HTTP request, Engage Digital Messaging sends a JWT ([JSON Web Token](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)).
 This token contains user-specific info that you specify (`userIdentifier`, `userName` etc.) and a HMAC signature. User identifier allows Engage Digital to identify author of messages from different in the agent's backend.
@@ -194,7 +194,7 @@ user from opening Engage Digital Messaging until you receive a JWT token.
 
 
 Enable/disable multi threads (supported in version 2.1.0)
--------------------
+---------------------------------------------------------
 
 Use `enableThreads` flag to enable/disable multi threads.
 
@@ -204,7 +204,7 @@ Programmatically: set `Dimelo.enableThreads` property
 
 
 Displaying Engage Digital Messaging
--------------------
+-----------------------------------
 
 Dimelo provides different ways to display Engage Digital Messaging.
 
@@ -230,8 +230,8 @@ You can change those by overriding `dimelo_color_primary` and `dimelo_color_prim
 *Note:* This is an example on how to declare Engage Digital Messaging activities in `AndroidManifest.xml`:
 - When threading is enabled:
 
-```java
-<activity android:name="com.dimelo.dimelosdk.main.ChatActivity" /> 
+```xml
+<activity android:name="com.dimelo.dimelosdk.main.ChatActivity" />
 
 <activity android:name="com.dimelo.dimelosdk.main.ThreadsListActivity">
   <meta-data
@@ -239,19 +239,19 @@ You can change those by overriding `dimelo_color_primary` and `dimelo_color_prim
     android:value="com.dimelo.sampleapp.MainActivity" />
 </activity>
 
-  // ...
+...
 ```
 
 - When threading is disabled:
 
-```java
+```xml
 <activity android:name="com.dimelo.dimelosdk.main.ChatActivity">
   <meta-data
     android:name="android.support.PARENT_ACTIVITY"
     android:value="com.dimelo.sampleapp.MainActivity" />
 </activity>
 
-  // ...
+...
 ```
 
 #### As a Fragment:
@@ -290,7 +290,7 @@ Please refer to [Localization.md](Localization.md) for guidance on strings custo
 
 
 Customizing Engage Digital Messaging Appearance
----------------------------
+-----------------------------------------------
 
 [See how to customize Engage Digital Messaging using the Android Resource folders](Customization.md).
 
@@ -369,25 +369,24 @@ If you'd like to have the full control on the notification (appearance and behav
 *Note:* This is an example on how to initialize the Dimelo instance:
 ```java
 public class MainActivity extends AppCompatActivity {
+    public static Dimelo setupDimelo(Context context) {
+        Dimelo.setup(context);
+        Dimelo dimelo = Dimelo.getInstance();
 
-  @Override
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.your_layout);
-    // Setup Dimelo
-    Dimelo dimelo = setupDimelo(this);
-  }
+        dimelo.initWithApiSecret(CHANNEL_API_SECRET, ENGAGE_DIGITAL_DOMAIN_NAME, DIMELO_LISTENER);
+        dimelo.setPushNotificationService("fcm");
+        return dimelo;
+    }
 
-  public static Dimelo setupDimelo(Context context) {
-    Dimelo.setup(context);
-    Dimelo dimelo = Dimelo.getInstance();
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.your_layout);
+        // Setup Dimelo
+        Dimelo dimelo = setupDimelo(this);
+    }
 
-    dimelo.initWithApiSecret(CHANNEL_API_SECRET, ENGAGE_DIGITAL_DOMAIN_NAME, DIMELO_LISTENER);
-    dimelo.setPushNotificationService("fcm");
-    return dimelo;
-  }
-
-  // ...
+    ...
 }
 ```
 1. Download the `google-services.json` file from your [firebase console](https://support.google.com/firebase/answer/7015592) and copy it in your project's `/app` folder
@@ -408,22 +407,22 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService
 ```java
 @Override
 public void onNewToken(String token) {
-  if (Dimelo.isInstantiated())
-    Dimelo.getInstance().setDeviceToken(token);
+    if (Dimelo.isInstantiated())
+        Dimelo.getInstance().setDeviceToken(token);
 }
 ```
 5.  Finally intercept the notification and pass it to your Dimelo instance by overring the `onMessageReceived` method:
 ```java
 @Override
 public void onMessageReceived(RemoteMessage remoteMessage) {
-  // You have to configure the Dimelo instance before calling the Dimelo.consumeReceivedRemoteNotification() method.
-  MainActivity.setupDimelo(MyFirebaseMessagingService.this);
-  if (Dimelo.consumeReceivedRemoteNotification(MyFirebaseMessagingService.this, remoteMessage.getData(), null)){
-    // The notification will be handled by the Dimelo instance
-  }
-  else {
-    // It is not a Dimelo notification.
-  }
+    // You have to configure the Dimelo instance before calling the Dimelo.consumeReceivedRemoteNotification() method.
+    MainActivity.setupDimelo(MyFirebaseMessagingService.this);
+    if (Dimelo.consumeReceivedRemoteNotification(MyFirebaseMessagingService.this, remoteMessage.getData(), null)){
+        // The notification will be handled by the Dimelo instance
+    }
+    else {
+        // It is not a Dimelo notification.
+    }
 }
 ```
 
@@ -451,57 +450,54 @@ FirebaseInstanceId.getInstance().getInstanceId()
 *Note:* This is an example on how to initialize the Dimelo instance:
 ```java
 public class MainActivity extends AppCompatActivity {
+    public static Dimelo setupDimelo(Context context) {
+        Dimelo.setup(context);
+        Dimelo dimelo = Dimelo.getInstance();
+        dimelo.initWithApiSecret(CHANNEL_API_SECRET, ENGAGE_DIGITAL_DOMAIN_NAME, DIMELO_LISTENER);
+        dimelo.setPushNotificationService("hms");
+        return dimelo;
+    }
 
-  @Override
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.your_layout);
-    // Setup Dimelo
-    Dimelo dimelo = setupDimelo(this);
-  }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.your_layout);
+        // Setup Dimelo
+        Dimelo dimelo = setupDimelo(this);
+    }
 
-  public static Dimelo setupDimelo(Context context) {
-    Dimelo.setup(context);
-    Dimelo dimelo = Dimelo.getInstance();
-    dimelo.initWithApiSecret(CHANNEL_API_SECRET, ENGAGE_DIGITAL_DOMAIN_NAME, DIMELO_LISTENER);
-    dimelo.setPushNotificationService("hms");
-    return dimelo;
-  }
-
-  // ...
+    ...
 }
 ```
 
 1. Add `Dimelo.setPushNotificationService("hms")` to your rc configuration to support the Huawei push notifications (Default is `fcm`)
-
 2. Configuring App Information in [AppGallery Connect](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-config-agc-0000001050170137)
 - Sign in to AppGallery Connect and click My projects.
 - Find your app project and click the app that needs to integrate the HMS Core SDK.
 <p align="center">
   <img src="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20210802090814.80931510641674637684723202830368:50520801015821:2800:FF259F927F95CBD1CD9152A63AF4D20D9BEC1063B202121BBFE1A8B6D2D67383.png?needInitFileName=true?needInitFileName=true"/>
 </p>
-
 3. Download the `agconnect-services.json` file from your [AppGallery Connect](https://developer.huawei.com/consumer/en/doc/development/quickApp-Guides/quickapp-get-agconnectfile-0000001117853750) and copy it in your project's `/app` folder
-
 <p align="center">
   <img src="https://i.postimg.cc/hjCJ2mHm/agconnect-services.png"/>
 </p>
-
 4. Configuring the Maven Repository Address for the [HMS Core SDK](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-integrating-sdk-0000001050040084#section813910382284)
 - Add the AppGallery Connect plugin and the Maven repository.
 - Go to buildscript > repositories and configure the Maven repository address for the HMS Core SDK.
 - Go to allprojects > repositories and configure the Maven repository address for the HMS Core SDK.
 - If the agconnect-services.json file has been added to the app, go to buildscript > dependencies and add the AppGallery Connect plugin configuration.
-```
+```java
 buildscript {
     repositories {
         google()
         jcenter()
+
         // Configure the Maven repository address for the HMS Core SDK.
-        maven {url 'https://developer.huawei.com/repo/'}
+        maven { url 'https://developer.huawei.com/repo/' }
     }
     dependencies {
         ...
+
         // Add the AppGallery Connect plugin configuration.
         classpath 'com.huawei.agconnect:agcp:1.4.2.300'
     }
@@ -511,53 +507,50 @@ allprojects {
     repositories {
         google()
         jcenter()
+
         // Configure the Maven repository address for the HMS Core SDK.
-        maven {url 'https://developer.huawei.com/repo/'}
+        maven { url 'https://developer.huawei.com/repo/' }
     }
 }
 ```
-
 5. Add the [build dependencies](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-integrating-sdk-0000001050040084#section12051333182410)
 - Add a build dependency in the dependencies block.
-```
+```java
 dependencies {
     implementation 'com.huawei.hms:push:{version}'
 }
 ```
-
 - Add the AppGallery Connect plugin configuration:
-```
+```java
 apply plugin: 'com.huawei.agconnect'
 ```
-
 6. Configure the signing information in the build.gradle File https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-integrating-sdk-0000001050040084
 - Copy the keystore file generated in Generating a Signing Certificate Fingerprint to the app directory of your project and configure the signing information in the build.gradle file in the directory.
-```
+```java
 android {
-     signingConfigs {
-         config {
-             // Set the parameters based on the actual signing information.
-             keyAlias 'xxx'
-             keyPassword 'xxxx'
-             storeFile file('xxx.jks')
-             storePassword 'xxxx'
-         }
-     }
-     buildTypes {
-         debug {
-             signingConfig signingConfigs.config
-         }
-         release {
-             signingConfig signingConfigs.config
-             minifyEnabled false
-             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-         }
-     }
+    signingConfigs {
+        config {
+            // Set the parameters based on the actual signing information.
+            keyAlias 'xxx'
+            keyPassword 'xxxx'
+            storeFile file('xxx.jks')
+            storePassword 'xxxx'
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+        }
+
+        release {
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
  }
  ```
-
 7. set the `minSdkVersion` to 17 or above in the build.gradle File
-
 8. Declare a `HmsMessageService` [service](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References/hmsmessageservice-0000001050173839) in your project's `AndroidManifest.xml`:
 ```xml
 <service
@@ -568,7 +561,6 @@ android {
     </intent-filter>
 </service>
 ```
-
 9. Declare a `push_kit_auto_init_enabled` meta data (https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-client-dev-0000001050042041) in your project's `AndroidManifest.xml`:
 ```xml
 <manifest ...>
@@ -582,76 +574,77 @@ android {
 ...
 </manifest>
 ```
+
 10. Create a class that extends `HmsMessageService`:
 ```java
 public class MyHmsMessageService extends HmsMessageService
 ```
+
 11. Retrieve the device token and pass it to your Dimelo instance by overriding the `onNewToken` method if `push_kit_auto_init_enabled=true`:
 ```java
 @Override
 public void onNewToken(String token) {
-  if (Dimelo.isInstantiated())
-    Dimelo.getInstance().setDeviceToken(token);
+    if (Dimelo.isInstantiated())
+        Dimelo.getInstance().setDeviceToken(token);
 }
 ```
+
 12. Finally intercept the notification and pass it to your Engage Digital Messaging SDK by overriding the `onMessageReceived` method:
 ```java
 @Override
 public void onMessageReceived(RemoteMessage remoteMessage) {
-  // You have to configure the Dimelo instance before calling the Dimelo.consumeReceivedRemoteNotification() method.
-  MainActivity.setupDimelo(MyFirebaseMessagingService.this);
-  if (Dimelo.consumeReceivedRemoteNotification(MyHmsMessageService.this, remoteMessage.getDataOfMap(), null)){
-    // The notification will be handled by the Engage Digital Messaging SDK
-  }
-  else {
-    // It is not a RingCentral Engage Digital Messaging notification.
-  }
+    // You have to configure the Dimelo instance before calling the Dimelo.consumeReceivedRemoteNotification() method.
+    MainActivity.setupDimelo(MyFirebaseMessagingService.this);
+    if (Dimelo.consumeReceivedRemoteNotification(MyHmsMessageService.this, remoteMessage.getDataOfMap(), null)){
+        // The notification will be handled by the Engage Digital Messaging SDK
+    }
+    else {
+        // It is not a RingCentral Engage Digital Messaging notification.
+    }
 }
 ```
+
 *Note:* You can also retrieve the current device token by calling `HmsInstanceId.getInstance(Context).getToken(appId, tokenScope)` if `push_kit_auto_init_enabled=false`. Here is an example on how to retrieve the device token and pass it to the Dimelo instance (as [described here](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-client-dev-0000001050042041#section11455525765)):
+
 ```java
 private void getToken() {
     new Thread() {
         @Override
         public void run() {
-          try {
-            String appId = "your_app_gallery_connect_app_id";
-            String tokenScope = "HCM";
-            String token = HmsInstanceId.getInstance(MainActivity.this).getToken(appId, tokenScope);
+            try {
+                String appId = "your_app_gallery_connect_app_id";
+                String tokenScope = "HCM";
+                String token = HmsInstanceId.getInstance(MainActivity.this).getToken(appId, tokenScope);
 
-            if (!TextUtils.isEmpty(token) && Dimelo.isInstantiated()) {
-                Dimelo.getInstance().setDeviceToken(token);
-            }
-          } catch (ApiException e) {}
+                if (!TextUtils.isEmpty(token) && Dimelo.isInstantiated()) {
+                    Dimelo.getInstance().setDeviceToken(token);
+                }
+            } catch (ApiException e) {}
         }
     }.start();
 }
 ```
 
-Activate location messages
------------------------------
-Activating location messages allow users to send a map containing their location.
+Enable location messages
+------------------------
+Please refer to the [Engage Digital Messaging Maps SDK for Android documentation](https://github.com/ringcentral/engage-digital-messaging-android-location) for guidande on how to allow your users to send location messages (only compatible with **version 2.3.0 and above**).
 
-**Note**: This feature uses [Google Places API](https://developers.google.com/places/android-api/)  which is by default limited to 1000 requests per day. you can increase this limitation to 150 000 requests per day ([Enable billing to get 150 000 requests per 24 hour period](https://developers.google.com/places/android-api/usage#enable-billing))
+Enable static maps for location messages
+----------------------------------------
+Along with allowing your users to send location messages through the Engage Digital Messaging SDK you can also allow your users to see the location they sent as [a static map generated using Google's APIs](https://developers.google.com/maps/documentation/maps-static/overview)
 
-
-1. Connect to [Google API console](https://console.developers.google.com/)
-2. Access to API Manager pannel
-3. Search for **Google Maps Android API** and **Google Places API for Android**
-4. Enable both APIs
-5. Access to Credentials pannel and create an API key for Android
-6. Add your API key to your application manifest
-```
-<application
-  <meta-data
-  android:name="com.google.android.geo.API_KEY"
-  android:value="YOUR_API_KEY">
-</application>
+Here are the step you need to follow in order to enable this feature:
+1. Generate a Google API key with the [**Maps Static API**](https://developers.google.com/maps/documentation/maps-static/overview) enabled
+2. Provide the API key to your `Dimelo` instance:
+```java
+Dimelo dimelo = Dimelo.getInstance();
+dimelo.setStaticMapsApiKey("YOUR_API_KEY");
 ```
 
+Please note that if the API key is not present or if it doesn't have the correct permission to display a static map we'll only display a link to Google Maps containing the address that was sent by the user.
 
 Reacting To Engage Digital Messaging Events
------------------------
+-------------------------------------------
 
 You can react to various events in Engage Digital Messaging by implementing a `DimeloListener`.
 
@@ -663,11 +656,11 @@ Please refer to [Engage Digital Messaging SDK Android API Reference](https://raw
 
 
 Enabling the camera in Android 11+
------------------------
+----------------------------------
 
 Starting in Android 11, you must add the <queries> to your manifest application for the camera to work.
 
-```
+```xml
 <queries>
    <intent>
      <action android:name="android.media.action.IMAGE_CAPTURE" />
