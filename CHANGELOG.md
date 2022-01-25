@@ -2,6 +2,7 @@
 
 ## Engage Digital Messaging - Android 2.3.0 (January 21st, 2022) ##
 - Feature: add integration with [Engage Digital Messaging Maps SDK](https://github.com/ringcentral/engage-digital-messaging-android-location). RD-19661
+- Minor: Bump Google support libraries to `v28.0.0`. RD-16301
 
 ## Engage Digital Messaging - Android 2.2.2 (October 20th, 2021) ##
 - Minor: Bump `targetSdkVersion` to **API 31** (was **API 30**). RD-19785
