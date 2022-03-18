@@ -1,5 +1,13 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 2.3.1 (March 18th, 2022) ##
+- Fix: customization of openGalleryIcon, attachmentIcon, backToAllChatsImage and lockedThreadImage were broken while having threads enabled. RD-21090
+- Fix: Prevent the input zone from moving when asking for permissions. RD-19164
+- Fix: prevent quick reply usage while being in a locked thread when threads are enabled. RD-18410
+- Improvement: prevent opening multiple webViews/browser pages when opening a URL through a structured message. RD-20877
+- Feature: url sent in a structured message (richlink, carousel or template) can now be displayed as an embedded WebView. RD-20877
+    - The WebView is opened in full height mode when `target` is equal to `current`
+
 ## Engage Digital Messaging - Android 2.3.0 (January 21st, 2022) ##
 - Feature: add integration with [Engage Digital Messaging Maps SDK](https://github.com/ringcentral/engage-digital-messaging-android-location). RD-19661
 - Minor: Bump Google support libraries to `v28.0.0`. RD-16301

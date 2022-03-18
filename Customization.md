@@ -88,7 +88,116 @@ Programmatically: use `Customization.setOpenGalleryIcon` method
    <img src="https://i.postimg.cc/WtLQ8cbf/Open-Gallery-Icon.png"/>
 </p>
 
+### webViewCloseButtonIcon
+Drawable used to represent the webView "close" button that is displayed in the header.
+
+Programmatically: use `Customization.setWebViewCloseButtonIcon` method
+
+<p align="center">
+   <img src="https://i.postimg.cc/3R68GL0w/web-View-Close-Icon.png"/>
+</p>
+
+### webViewPreviousButtonIcon
+Drawable used to represent the webView "previous" button that is displayed in the header.
+
+Programmatically: use `Customization.setWebViewPreviousButtonIcon` method
+
+<p align="center">
+   <img src="https://i.postimg.cc/htjrTx4Y/previous-Web-View-Icon.png"/>
+</p>
+
+### webViewNextButtonIcon
+Drawable used to represent the webView "next" button that is displayed in the header.
+
+Programmatically: use `Customization.setWebViewNextButtonIcon` method
+
+<p align="center">
+   <img src="https://i.postimg.cc/sxmYZfky/forward-Web-View-Icon.png"/>
+</p>
+
 # Attributes < color />
+
+### webViewProgressBarColor
+Color applied to the horizontal and the circular progress bar that is displayed in the webView when the page is loading or when internet is down.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_web\_view\_progress\_bar\_color
+
+Programmatically: set `Customization.webViewProgressBarColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/k4r9X20V/web-View-Progress-Bar-Color.png"/>
+</p>
+
+<p align="center">
+   <img src="https://i.postimg.cc/LXV7Kh2F/web-View-Progress-Bar-Color2.png"/>
+</p>
+
+### webViewTitleTextColor
+Color applied to the webView title.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_web\_view\_title\_text\_color
+
+Programmatically: set `Customization.webViewTitleTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/3RLBFG3N/web-View-Title-Text-Color.png"/>
+</p>
+
+### webViewNextPreviousButtonIconDisabledColor
+Color applied to the disabled webView "previous" and "next" image.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_web\_view\_next\_previous\_button\_icon\_disabled\_color
+
+Programmatically: set `Customization.webViewNextPreviousButtonIconDisabledColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/jSr1MBp7/forward-Previous-Icon-Disabled-Color.png"/>
+</p>
+
+### webViewNextPreviousButtonIconEnabledColor
+Color applied to the enabled webView "previous" and "next" image.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_web\_view\_next\_previous\_button\_icon\_enabled\_color
+
+Programmatically: set `Customization.webViewNextPreviousButtonIconEnabledColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/QtP41zgV/forward-Previous-Icon-Enabled-Color.png"/>
+</p>
+
+### webViewHeaderBackgroundColor
+Color applied to the webView header background.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_web\_view\_Header\_background\_color
+
+Programmatically: set `Customization.webViewHeaderBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/pXBQt798/web-View-Header-Background-Color.png"/>
+</p>
+
+### webViewBodyBackgroundColor
+Color applied to the webView body background.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_web\_view\_body\_background\_color
+
+Programmatically: set `Customization.webViewBodyBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/L5DJGcy8/web-View-Body-Background-Color.png"/>
+</p>
 
 ### badgeTextColor
 Text color for the badge text view.
@@ -283,6 +392,21 @@ Color must be in hex format, e.g. `#007AFF`.
 Xml attribute name: dimelo\_inputbar\_background\_color
 
 Programmatically: set `Customization.inputbarBackgroundColor` property
+
+### webViewCloseButtonIconColor
+Color applied to the webView "close" image.
+
+If not specified, white color is applied
+
+Color must be in hex format, e.g. `#007AFF`
+
+Xml attribute name: rc\_web\_view\_close\_button\_icon\_color
+
+Programmatically: set `Customization.webViewCloseButtonIconColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/635JYFG0/web-View-Close-Icon-Color.png"/>
+</p>
 
 ### Open gallery icon color
 Define the icon color of the open gallery button.
@@ -889,6 +1013,17 @@ Xml attribute name: None
    <img src="https://i.postimg.cc/MXkshczv/hour-Time-Font.png"/>
 </p>
 
+### webViewTitleFont
+Font applied to the webView title.
+
+Programmatically: set `Customization.webViewTitleFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/v8tXQDkc/web-View-Title-Font.png"/>
+</p>
+
 ### agent Name color
 Text color for agent's name.
 
@@ -1189,6 +1324,17 @@ Programmatically: set `Customization.agentNameFont` property
 Xml attribute name: None
 
 # Text Size
+
+### webViewTitleTextSize
+webView title text size.
+
+Programmatically: set `Customization.webViewTitleTextSize` property
+
+Xml attribute name: dimen/rc_web_view_title_text_size
+
+<p align="center">
+   <img src="https://i.postimg.cc/dQhdf3Fb/web-View-Title-Text-Size.png"/>
+</p>
 
 ### badgeTextSize
 Badge text size.
