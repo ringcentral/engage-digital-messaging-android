@@ -1,6 +1,11 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 2.3.2 (March 31th, 2022) ##
+- Fix: structured message items cannot be used anymore after using a "reply" item. RD-21705
+- Improvement: localize the cancel button text when asking for permissions. RD-19410
+
 ## Engage Digital Messaging - Android 2.3.1 (March 18th, 2022) ##
+- Bug introduced: structured message items cannot be used anymore after using a "reply" item. Fixed in `v2.3.2`. RD-21705
 - Fix: customization of openGalleryIcon, attachmentIcon, backToAllChatsImage and lockedThreadImage were broken while having threads enabled. RD-21090
 - Fix: Prevent the input zone from moving when asking for permissions. RD-19164
 - Fix: prevent quick reply usage while being in a locked thread when threads are enabled. RD-18410
