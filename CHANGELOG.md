@@ -1,5 +1,10 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 2.3.3 (April 6th, 2022) ##
+- Improvement: automatically close the keyboard before opening a WebView. RD-21729
+- Fix: webview opened through an image in a structured message header was causing the application to crash when it was closed using the close button or by clicking outside the webview. RD-21772
+- Feature: support the company message view in the threads list. RD-16265
+
 ## Engage Digital Messaging - Android 2.3.2 (March 31th, 2022) ##
 - Fix: structured message items cannot be used anymore after using a "reply" item. RD-21705
 - Improvement: localize the cancel button text when asking for permissions. RD-19410

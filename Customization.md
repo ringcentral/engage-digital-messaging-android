@@ -117,6 +117,45 @@ Programmatically: use `Customization.setWebViewNextButtonIcon` method
 
 # Attributes < color />
 
+### threadsListCompanyMessageBackgroundColor
+Background color of the company message displayed in the threads list.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_threads\_list\_company\_message\_background\_color
+
+Programmatically: set `Customization.threadsListCompanyMessageBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/13p3xx3b/threads-List-Company-Message-Background-Color.png"/>
+</p>
+
+### threadsListCompanyMessageTitleTextColor
+Text color applied to the title of the company message that is displayed in the threads list.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_threads\_list\_company\_message\_title\_text\_color
+
+Programmatically: set `Customization.threadsListCompanyMessageTitleTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/7P261Tyx/threads-List-Company-Message-Title-Text-Color.png"/>
+</p>
+
+### threadsListCompanyMessageSubtitleTextColor
+Text color applied to the subtitle of the company message that is displayed in the threads list.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_threads\_list\_company\_message\_subtitle\_text\_color
+
+Programmatically: set `Customization.threadsListCompanyMessageSubtitleTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/k4W0GCkd/threads-List-Company-Message-Subtitle-Text-Color.png"/>
+</p>
+
 ### webViewProgressBarColor
 Color applied to the horizontal and the circular progress bar that is displayed in the webView when the page is loading or when internet is down.
 
@@ -1225,6 +1264,28 @@ customisation.dateFormatter = dateFormatter;
 
 # Typeface
 
+### threadsListCompanyMessageTitleFont
+Font used for the company message title that is displayed in the threads list.
+
+Programmatically: set `Customization.threadsListCompanyMessageTitleFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/wTnQfN10/threads-List-Company-Message-Title-Font.png"/>
+</p>
+
+### threadsListCompanyMessageSubtitleFont
+Font used for the company message subtitle that is displayed in the threads list.
+
+Programmatically: set `Customization.threadsListCompanyMessageSubtitleFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/4dnKR8Mt/threads-List-Company-Message-Subtitle-Font.png"/>
+</p>
+
 ### badgeFont
 Badge text font.
 
@@ -1324,6 +1385,28 @@ Programmatically: set `Customization.agentNameFont` property
 Xml attribute name: None
 
 # Text Size
+
+### threadsListCompanyMessageTitleTextSize
+Text size used for the company message title that is displayed in the threads list.
+
+Programmatically: set `Customization.threadsListCompanyMessageTitleTextSize` property
+
+Xml attribute name: dimen/rc_threads_list_company_message_title_text_size
+
+<p align="center">
+   <img src="https://i.postimg.cc/y6gnzKwf/threads-List-Company-Message-Title-Text-Size.png"/>
+</p>
+
+### threadsListCompanyMessageSubtitleTextSize
+Text size used for the company message subtitle that is displayed in the threads list.
+
+Programmatically: set `Customization.threadsListCompanyMessageSubtitleTextSize` property
+
+Xml attribute name: dimen/rc_threads_list_company_message_subtitle_text_size
+
+<p align="center">
+   <img src="https://i.postimg.cc/fL0d1zJm/threads-List-Company-Message-Subtitle-Text-Size.png"/>
+</p>
 
 ### webViewTitleTextSize
 webView title text size.
