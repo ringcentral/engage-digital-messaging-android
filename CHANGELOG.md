@@ -1,5 +1,13 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 2.3.4 (May 31th, 2022) ##
+- Feature: add the `openWebView(URL url, RC_WEB_VIEW_SIZE height)` method to allow to manually open a WebView within the chat. RD-21672
+- Feature: add the `rcShouldDelegateUrlOpening(URL url)` method to `DimeloListener` to control whether the Engage Messaging SDK should open a URL or not. RD-21672
+- Fix: Remove highlight from the attachment icon when gallery preview is closed because of a swipe. RD-19559
+- Fix: text input flickers when thread is locked and conversation is scrolled from top to bottom. RD-21508
+- Fix: Prevent template/carousel reply usage while being in a locked thread when threads are enabled and leave the other url clickable. RD-18412
+- Fix: full-sized WebView has an inconsistent size across various devices. RD-21712
+
 ## Engage Digital Messaging - Android 2.3.3 (April 6th, 2022) ##
 - Improvement: automatically close the keyboard before opening a WebView. RD-21729
 - Fix: webview opened through an image in a structured message header was causing the application to crash when it was closed using the close button or by clicking outside the webview. RD-21772
@@ -11,6 +19,7 @@
 
 ## Engage Digital Messaging - Android 2.3.1 (March 18th, 2022) ##
 - Bug introduced: structured message items cannot be used anymore after using a "reply" item. Fixed in `v2.3.2`. RD-21705
+- Fix: prevent template/carousel "reply" items usage while being in a locked thread. RD-18412
 - Fix: customization of openGalleryIcon, attachmentIcon, backToAllChatsImage and lockedThreadImage were broken while having threads enabled. RD-21090
 - Fix: Prevent the input zone from moving when asking for permissions. RD-19164
 - Fix: prevent quick reply usage while being in a locked thread when threads are enabled. RD-18410

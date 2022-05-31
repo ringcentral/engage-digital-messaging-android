@@ -650,7 +650,11 @@ You can react to various events in Engage Digital Messaging by implementing a `D
 
 Two particular events that might be interesting to you are `dimeloDidBeginNetworkActivity()` and `dimeloDidEndNetworkActivity()`.
 
-Use `-onOpen:` and `-onClose:` events to get informations using `dimelo` parameter when Engage Digital Messaging view is just opened or closed.
+Use `onOpen(Dimelo dimelo)` and `onClose(Dimelo dimelo)` events to get informations using `dimelo` parameter when Engage Digital Messaging view is just opened or closed.
+
+You can use the `rcShouldDelegateUrlOpening(URL url)` event that will be fired by `DimeloListener` when a URL is going to be opened by the Engage Digital Messaging Android SDK:
+- return `false` to let the Engage Digital Messaging Android SDK open the URL.
+- return `true` to prevent the Engage Digital Messaging Android SDK from opening the URL so that you can apply your own logic.
 
 Please refer to [Engage Digital Messaging SDK Android API Reference](https://rawcdn.githack.com/ringcentral/engage-digital-messaging-android/7d284444a3704d0faa72c1aa6ba24975fb81a90c/JavaDoc/index.html) documentation for more information.
 
@@ -667,3 +671,19 @@ Starting in Android 11, you must add the <queries> to your manifest application 
    </intent>
 </queries>
 ```
+
+
+Manually opening a WebView
+--------------------------
+
+The Engage Digital Messaging Android SDK exposes the `openWebView(URL url, RC_WEB_VIEW_SIZE height)` method to allow you to manually open a WebView.
+
+This method takes 2 parameters:
+- The `url` parameter is a `URL` that represents the URL you want to open in the WebView.
+- The `height` parameter is a `RC_WEB_VIEW_SIZE` that represents the height of the WebView (based on the WebView's container size), its value can be:
+
+|Value|Container's height|
+|-----|------------------|
+|`FULL_MODE`|100%|
+|`TALL_MODE`|75%|
+|`COMPACT_MODE`|50%|
