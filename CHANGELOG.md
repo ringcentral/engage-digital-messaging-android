@@ -1,6 +1,6 @@
 # Engage Digital Messaging - Android master #
 
-## Engage Digital Messaging - Android 2.4.0 (August 3st, 2022) ##
+## Engage Digital Messaging - Android 2.4.0 (August 3rd, 2022) ##
 - Feature: add support for Embedded Video. RD-22097
 
 ## Engage Digital Messaging - Android 2.3.4 (May 31th, 2022) ##
