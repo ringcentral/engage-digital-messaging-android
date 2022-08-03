@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 2.4.0 (August 3st, 2022) ##
+- Feature: add support for Embedded Video. RD-22097
+
 ## Engage Digital Messaging - Android 2.3.4 (May 31th, 2022) ##
 - Feature: add the `openWebView(URL url, RC_WEB_VIEW_SIZE height)` method to allow to manually open a WebView within the chat. RD-21672
 - Feature: add the `rcShouldDelegateUrlOpening(URL url)` method to `DimeloListener` to control whether the Engage Messaging SDK should open a URL or not. RD-21672

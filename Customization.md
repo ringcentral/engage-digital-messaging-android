@@ -27,6 +27,17 @@ Programmatically: None
 
 # Attributes < drawable />
 
+### videoCallRequestButtonImage
+A drawable used to represent the button to request a video call.
+
+Xml attribute name: None
+
+Programmatically: use `Customization.setVideoCallRequestButtonImage` method
+
+<p align="center">
+   <img src="https://i.postimg.cc/nht3PdW0/video-Call-Request-Button-Image.png"/>
+</p>
+
 ### createNewThreadImage
 A drawable for the create new conversation button.
 
@@ -116,6 +127,33 @@ Programmatically: use `Customization.setWebViewNextButtonIcon` method
 </p>
 
 # Attributes < color />
+
+### videoCallRequestButtonTintColor
+Color applied to the video call request button.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_video\_call\_request\_button\_tint\_color
+
+Programmatically: set `Customization.videoCallRequestButtonTintColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/XJfmhMZT/video-Call-Request-Button-Tint-Color.png"/>
+</p>
+
+
+### videoCallRequestedStatusMessageTextColor
+Color applied to the status message text when a video call is requested.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_video\_call\_requested\_status\_message\_text\_color
+
+Programmatically: set `Customization.videoCallRequestedStatusMessageTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/tCpm2qMY/video-Call-Requested-Status-Message-Text-Color.png"/>
+</p>
 
 ### threadsListCompanyMessageBackgroundColor
 Background color of the company message displayed in the threads list.
@@ -1063,6 +1101,18 @@ Xml attribute name: None
    <img src="https://i.postimg.cc/v8tXQDkc/web-View-Title-Font.png"/>
 </p>
 
+
+### videoCallRequestedStatusMessageTextFont
+Font applied to the status message when a video call is requested.
+
+Programmatically: set `Customization.videoCallRequestedStatusMessageTextFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/zfDVDgvT/video-Call-Requested-Status-Message-Text-Font.png"/>
+</p>
+
 ### agent Name color
 Text color for agent's name.
 
@@ -1385,6 +1435,18 @@ Programmatically: set `Customization.agentNameFont` property
 Xml attribute name: None
 
 # Text Size
+
+
+### videoCallRequestedStatusMessageTextSize
+Text size used for the status message when a video call is requested.
+
+Programmatically: set `Customization.videoCallRequestedStatusMessageTextSize` property
+
+Xml attribute name: dimen/rc_video_call_requested_status_message_text_size
+
+<p align="center">
+   <img src="https://i.postimg.cc/qBCJcLC1/video-Call-Requested-Status-Message-Text-Size.png"/>
+</p>
 
 ### threadsListCompanyMessageTitleTextSize
 Text size used for the company message title that is displayed in the threads list.

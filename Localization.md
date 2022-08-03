@@ -272,3 +272,13 @@ This will be used as `<string name="rc_waiting_for_agent">Back to all chats</str
 <p align="center">
 <img src="https://i.postimg.cc/QxJ1MKsR/rc-back-to-all-chats.png"/>
 </p>
+
+### rc_video_call_requested_status_message
+Text displayed in the status message when a video call is requested.
+
+This will be used as `<string name="rc_video_call_requested_status_message">You will be connected to a video call shortly</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/3RBhk4vH/rc-video-call-requested-status-message.png"/>
+</p>
