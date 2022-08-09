@@ -652,7 +652,7 @@ Two particular events that might be interesting to you are `dimeloDidBeginNetwor
 
 Use `onOpen(Dimelo dimelo)` and `onClose(Dimelo dimelo)` events to get informations using `dimelo` parameter when Engage Digital Messaging view is just opened or closed.
 
-You can use the `rcShouldDelegateUrlOpening(URL url)` event that will be fired by `DimeloListener` when a URL is going to be opened by the Engage Digital Messaging Android SDK:
+You can use the `rcShouldDelegateUrlOpening(URI uri)` event that will be fired by `DimeloListener` when a URL is going to be opened by the Engage Digital Messaging Android SDK:
 - return `false` to let the Engage Digital Messaging Android SDK open the URL.
 - return `true` to prevent the Engage Digital Messaging Android SDK from opening the URL so that you can apply your own logic.
 
