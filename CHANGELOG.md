@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 2.4.2 (August 18th, 2022) ##
+- Fix: links in message weren't clickable without reloading the application on phone using Android 10 and lower. RD-23148
+
 ## Engage Digital Messaging - Android 2.4.1 (August 9th, 2022) ##
 - BREAKING CHANGE: change the `rcShouldDelegateUrlOpening` method signature in `DimeloListener` from `rcShouldDelegateUrlOpening(URL url)` to `rcShouldDelegateUrlOpening(URI uri)` to allow usage of Uri with custom scheme. RD-22996
 - Fix: in some conditions the Switch to Video icon was still slightly visible after being hidden. RD-23117
@@ -10,6 +13,7 @@
 - Feature: add support for Switch to Video. RD-22097
 
 ## Engage Digital Messaging - Android 2.3.4 (May 31th, 2022) ##
+- Bug introduced: links in message weren't clickable without reloading the application on phone using Android 10 and lower. Fixed in `v2.4.2`. RD-23148
 - Feature: add the `openWebView(URL url, RC_WEB_VIEW_SIZE height)` method to allow to manually open a WebView within the chat. RD-21672
 - Feature: add the `rcShouldDelegateUrlOpening(URL url)` method to `DimeloListener` to control whether the Engage Messaging SDK should open a URL or not. RD-21672
 - Fix: Remove highlight from the attachment icon when gallery preview is closed because of a swipe. RD-19559
