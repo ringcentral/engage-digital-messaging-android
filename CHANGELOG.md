@@ -1,5 +1,10 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 2.4.3 (October 18th, 2022) ##
+- Fix: auto scroll to the bottom when receiving a quick replies structured message. RD-20309
+- Fix: structured messages reply items couldn't be used before the thread status was fetched. RD-23256
+- Improvement: in some cases the conversation was disappearing as soon as an agent response was received on device running on Android 9+. RD-23145
+
 ## Engage Digital Messaging - Android 2.4.2 (August 18th, 2022) ##
 - Fix: links in message weren't clickable without reloading the application on phone using Android 10 and lower. RD-23148
 
@@ -13,6 +18,7 @@
 - Feature: add support for Switch to Video. RD-22097
 
 ## Engage Digital Messaging - Android 2.3.4 (May 31th, 2022) ##
+- Bug introduced: structured messages reply items couldn't be used before the thread status was fetched. Fixed in `v2.4.3`. RD-23256
 - Bug introduced: links in message weren't clickable without reloading the application on phone using Android 10 and lower. Fixed in `v2.4.2`. RD-23148
 - Feature: add the `openWebView(URL url, RC_WEB_VIEW_SIZE height)` method to allow to manually open a WebView within the chat. RD-21672
 - Feature: add the `rcShouldDelegateUrlOpening(URL url)` method to `DimeloListener` to control whether the Engage Messaging SDK should open a URL or not. RD-21672
