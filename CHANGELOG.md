@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 2.4.4 (October 28th, 2022) ##
+- Fix: prevent NullPointerException when clicking on a link without having a DimeloListener implemented. RD-23876
+
 ## Engage Digital Messaging - Android 2.4.3 (October 18th, 2022) ##
 - Fix: auto scroll to the bottom when receiving a quick replies structured message. RD-20309
 - Fix: structured messages reply items couldn't be used before the thread status was fetched. RD-23256
