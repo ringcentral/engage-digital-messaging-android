@@ -551,6 +551,11 @@ Specify a drawable to use for the attachment icon.
 
 Programmatically: use `Customization.setAttachmentIcon` method
 
+### document Icon Button
+Specify a drawable to use for the document icon.
+
+Programmatically: use `Customization.setAttachmentDocumentIcon` method
+
 ### Bottom sheet disabled state icons color
 Define the color of the icons placed in the bottom sheet when they are disabled.
 

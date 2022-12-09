@@ -1,5 +1,9 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 2.5.0 (December 9th, 2022) ##
+- Feature: add support for videos in the gallery selection. RD-23883
+- Feature: add the ability to send document files. RD-23884
+
 ## Engage Digital Messaging - Android 2.4.4 (October 28th, 2022) ##
 - Fix: prevent NullPointerException when clicking on a link without having a DimeloListener implemented. RD-23876
 

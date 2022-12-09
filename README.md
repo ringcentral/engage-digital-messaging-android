@@ -43,6 +43,7 @@ If your app is targeting API level 28 (Android 9.0) or above, you must include t
 These are minimal steps to make Engage Digital Messaging work in your app.\
 Read on how to customize the appearance and the behavior of Engage Digital Messaging to perfectly fit in your app:
 - [Customize Engage Digital Messaging appearance](#customizing-mobile-messaging-appearance)
+- [Allow to send videos](#allow-to-pick-videos-from-the-gallery)
 - [Add push notifications support](#push-notifications)
 - [Enable location messages using the Google APIs](#enable-location-messages)
 - [Enable static maps display for location messages](#enable-static-maps-for-location-messages)
@@ -332,6 +333,15 @@ message bubble padding properties to arrange your text correctly within a bubble
 Check the [Engage Digital Messaging SDK Android API Reference](https://rawcdn.githack.com/ringcentral/engage-digital-messaging-android/7d284444a3704d0faa72c1aa6ba24975fb81a90c/JavaDoc/index.html) to learn about all customization options.
 
 
+Allow to pick videos from the gallery
+-------------------------------------
+
+To allow your users to select and send videos from their gallery to their agents you'll need to add the following permissions to your `AndroidManifest.xml` file:
+```xml
+<uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+```
+
+
 Push Notifications
 ------------------
 
@@ -474,13 +484,17 @@ public class MainActivity extends AppCompatActivity {
 2. Configuring App Information in [AppGallery Connect](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-config-agc-0000001050170137)
 - Sign in to AppGallery Connect and click My projects.
 - Find your app project and click the app that needs to integrate the HMS Core SDK.
+
 <p align="center">
   <img src="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20210802090814.80931510641674637684723202830368:50520801015821:2800:FF259F927F95CBD1CD9152A63AF4D20D9BEC1063B202121BBFE1A8B6D2D67383.png?needInitFileName=true?needInitFileName=true"/>
 </p>
+
 3. Download the `agconnect-services.json` file from your [AppGallery Connect](https://developer.huawei.com/consumer/en/doc/development/quickApp-Guides/quickapp-get-agconnectfile-0000001117853750) and copy it in your project's `/app` folder
+
 <p align="center">
   <img src="https://i.postimg.cc/hjCJ2mHm/agconnect-services.png"/>
 </p>
+
 4. Configuring the Maven Repository Address for the [HMS Core SDK](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-integrating-sdk-0000001050040084#section813910382284)
 - Add the AppGallery Connect plugin and the Maven repository.
 - Go to buildscript > repositories and configure the Maven repository address for the HMS Core SDK.
@@ -627,7 +641,7 @@ private void getToken() {
 
 Enable location messages
 ------------------------
-Please refer to the [Engage Digital Messaging Maps SDK for Android documentation](https://github.com/ringcentral/engage-digital-messaging-android-location) for guidande on how to allow your users to send location messages (only compatible with **version 2.3.0 and above**).
+Please refer to the [Engage Digital Messaging Maps SDK for Android documentation](https://github.com/ringcentral/engage-digital-messaging-android-location) for guidance on how to allow your users to send location messages (only compatible with **version 2.3.0 and above**).
 
 Enable static maps for location messages
 ----------------------------------------
