@@ -42,8 +42,8 @@ If your app is targeting API level 28 (Android 9.0) or above, you must include t
 \
 These are minimal steps to make Engage Digital Messaging work in your app.\
 Read on how to customize the appearance and the behavior of Engage Digital Messaging to perfectly fit in your app:
+- [Add the right permissions to your application](#add-the-right-permissions-to-your-application)
 - [Customize Engage Digital Messaging appearance](#customizing-mobile-messaging-appearance)
-- [Allow to send videos](#allow-to-pick-videos-from-the-gallery)
 - [Add push notifications support](#push-notifications)
 - [Enable location messages using the Google APIs](#enable-location-messages)
 - [Enable static maps display for location messages](#enable-static-maps-for-location-messages)
@@ -290,6 +290,49 @@ Localization
 Please refer to [Localization.md](Localization.md) for guidance on strings customization
 
 
+Add the right permissions to your application
+---------------------------------------------
+
+### Gallery
+
+#### Android 13+
+
+In order to add access to images in the gallery you need to add the `READ_MEDIA_IMAGES` permission to your `AndroidManifest.xml`:
+```xml
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+```
+
+If you also want to add access to videos in the gallery you need to add the `READ_MEDIA_VIDEO` permission to your `AndroidManifest.xml`:
+```xml
+<uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+```
+
+#### Android < 13
+
+To add access to images and videos in the gallery you need to add the `READ_EXTERNAL_STORAGE` permission to your `AndroidManifest.xml`:
+```xml
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+```
+
+### Camera
+
+#### Android 11+
+
+In order for the camera to be enabled you'll need to add the `CAMERA` permission to your `AndroidManifest.xml`:
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+```
+
+#### Android < 11
+
+Just like in Android 11+ you'll need to add the `CAMERA` permission to your `AndroidManifest.xml` but you'll also need to add the `WRITE_EXTERNAL_STORAGE` permission:
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.WRITE_EXTENAL_STORAGE" />
+```
+
+
+
 Customizing Engage Digital Messaging Appearance
 -----------------------------------------------
 
@@ -331,15 +374,6 @@ If you provide a custom bubble image for text, you should also update
 message bubble padding properties to arrange your text correctly within a bubble.
 
 Check the [Engage Digital Messaging SDK Android API Reference](https://rawcdn.githack.com/ringcentral/engage-digital-messaging-android/7d284444a3704d0faa72c1aa6ba24975fb81a90c/JavaDoc/index.html) to learn about all customization options.
-
-
-Allow to pick videos from the gallery
--------------------------------------
-
-To allow your users to select and send videos from their gallery to their agents you'll need to add the following permissions to your `AndroidManifest.xml` file:
-```xml
-<uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-```
 
 
 Push Notifications
@@ -637,6 +671,11 @@ private void getToken() {
         }
     }.start();
 }
+```
+
+*Note:* With Android 13: you'll need to add the `POST_NOTIFICATIONS` permission in your `AndroidManifest.xml` file then accept the alert dialog to continue receiving push notifications:
+```xml
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 ```
 
 Enable location messages

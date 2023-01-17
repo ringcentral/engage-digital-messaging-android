@@ -1,5 +1,13 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 2.5.1 (January 17th, 2023) ##
+- Fix: some files were sent with an incorrect Content-Type header to the server. RD-24441
+- Fix: use new API 33 permissions for media access when running on an Android 13+ device. RD-24668
+- Feature: support auto open of richlink survey webview link. RD-24458
+- Minor: bump `targetSdkVersion` to **API 33** (was **API 31**). RD-24685
+- Fix: ask for push notification permission for device running on Android 13+. RD-24685
+- Improvement: keep the carousel horizontal scroll position in memory even after scrolling into the conversation. RD-21103
+
 ## Engage Digital Messaging - Android 2.5.0 (December 9th, 2022) ##
 - Feature: add support for videos in the gallery selection. RD-23883
 - Feature: add the ability to send document files. RD-23884
