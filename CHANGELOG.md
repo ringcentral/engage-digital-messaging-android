@@ -1,5 +1,17 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 2.5.2 (April 17th, 2023) ##
+- Fix: prevent a crash when clicking on a retry button just after internet connection has been restored. RD-26101
+- Fix: fix deprecated methods for push notification on Android 6+. RD-23388
+- Fix: messages list was sometimes empty when rotating the device while internet connection was off. RD-23445
+- Fix: in some cases messages couldn't be sent after disabling and re-enabling internet connection. RD-23228
+- Fix: in some rare cases fullsize WebView can be displayed with the wrong size on some devices. RD-22557
+- Fix: some pictures were displayed with a wrong orientation. RD-22142
+- Fix: in some cases rotating while in the Android gallery was causing the horizontal gallery to be empty. RD-25033
+- Fix: in some cases rotating while in the Android gallery was causing the attachment buttons to be disabled. RD-25035
+- Fix: Prevent the horizontal gallery from being empty after sending an attachment. RD-24297
+- Fix: prevent going back to the threads list when there's no thread created yet. RD-23127
+
 ## Engage Digital Messaging - Android 2.5.1 (January 17th, 2023) ##
 - Fix: some files were sent with an incorrect Content-Type header to the server. RD-24441
 - Fix: use new API 33 permissions for media access when running on an Android 13+ device. RD-24668
@@ -16,6 +28,7 @@
 - Fix: prevent NullPointerException when clicking on a link without having a DimeloListener implemented. RD-23876
 
 ## Engage Digital Messaging - Android 2.4.3 (October 18th, 2022) ##
+- Fix: in some cases links were not clickable anymore when coming back to the chat. RD-24065
 - Fix: auto scroll to the bottom when receiving a quick replies structured message. RD-20309
 - Fix: structured messages reply items couldn't be used before the thread status was fetched. RD-23256
 - Improvement: in some cases the conversation was disappearing as soon as an agent response was received on device running on Android 9+. RD-23145
