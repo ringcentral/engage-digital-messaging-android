@@ -18,7 +18,7 @@ Please refer to [Engage Digital Messaging SDK Android API Reference](https://raw
 Supported Versions
 ------------------
 
-The Engage Digital Messaging SDK Android is currently supporting **Android 4.0.3 (API 15) and above**.
+The Engage Digital Messaging SDK Android is currently supporting **Android 4.4 (API 19) and above**.
 
 
 Getting Started
