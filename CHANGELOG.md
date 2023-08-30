@@ -1,5 +1,11 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.0.0 (August 30th, 2023) ##
+- BREAKING CHANGE: Migrate SDK to AndroidX. RD-25847 RD-26687
+- Minor: bump `minSdk` to **API 19** (was **API 16**). RD-25847
+- Fix: in some cases a nullPointerException was thrown when using webview (introduced in v2.5.2). RD-27154
+- Fix: in some cases rotating the device while sending a picture was causing the chat to be empty. RD-24448
+
 ## Engage Digital Messaging - Android 2.5.2 (April 17th, 2023) ##
 - Fix: prevent a crash when clicking on a retry button just after internet connection has been restored. RD-26101
 - Fix: fix deprecated methods for push notification on Android 6+. RD-23388
