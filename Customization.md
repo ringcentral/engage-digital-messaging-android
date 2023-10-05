@@ -141,6 +141,45 @@ Programmatically: set `Customization.videoCallRequestButtonTintColor` property.
    <img src="https://i.postimg.cc/XJfmhMZT/video-Call-Request-Button-Tint-Color.png"/>
 </p>
 
+### deletedMessageBackgroundColor
+Color applied to the background of a message that was deleted by its author.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_deleted\_message\_background\_color
+
+Programmatically: set `Customization.deletedMessageBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/CKj3MgJL/deleted-Message-Background-Color.png"/>
+</p>
+
+### deletedMessageTextColor
+Color applied to the text of a message that was deleted by its author.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_deleted\_message\_text\_color
+
+Programmatically: set `Customization.deletedMessageTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/7L3ZFj2S/deleted-Message-Text-Color.png"/>
+</p>
+
+### selectedMessageCellBackgroundColor
+Color applied to the background of a selected message's cell.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_selected\_message\_cell\_background\_color
+
+Programmatically: set `Customization.selectedMessageCellBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/sfw4FNPF/selected-Message-Cell-Background-Color.png"/>
+</p>
+
 
 ### videoCallRequestedStatusMessageTextColor
 Color applied to the status message text when a video call is requested.
@@ -650,40 +689,40 @@ Programmatically: set `Customization.navigationBarItemTintColor` property
 
 - For the back item tint color customization, you can use this code into your application (it will be applied for all activities)
 
-	```
-	Drawable backItem = getResources().getDrawable(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
-	backItem.setColorFilter(your_color, PorterDuff.Mode.SRC_IN);
-	getSupportActionBar().setHomeAsUpIndicator(backItem);
-	```
+   ```java
+   Drawable backItem = getResources().getDrawable(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+   backItem.setColorFilter(your_color, PorterDuff.Mode.SRC_IN);
+   getSupportActionBar().setHomeAsUpIndicator(backItem);
+   ```
 
 - You can directly apply a custom theme if it's supported without using `Customization.navigationBarItemTintColor` and `Customization.navigationBarTitleColor`
 
  1. Add this code to your custom theme in **themes.xml**
 
-		<item name="android:drawableTint">your_navigation_bar_item_tint_color</item>
-		<item name="toolbarStyle">@style/toolbar.titleTextStyle</item>
-		<item name="android:textColor">your_navigation_bar_Title_color</item>
-		<style name="toolbar.titleTextStyle" parent="@style/Widget.AppCompat.Toolbar" />
+      <item name="android:drawableTint">your_navigation_bar_item_tint_color</item>
+      <item name="toolbarStyle">@style/toolbar.titleTextStyle</item>
+      <item name="android:textColor">your_navigation_bar_Title_color</item>
+      <style name="toolbar.titleTextStyle" parent="@style/Widget.AppCompat.Toolbar" />
 
   2.  Apply your custom theme to the activity in **AndroidManifest.xml**
 
-		* For ChatActivity
+      * For ChatActivity
 
-			```
-			<activity android:name="com.dimelo.dimelosdk.main.ChatActivity"
+         ```xml
+         <activity android:name="com.dimelo.dimelosdk.main.ChatActivity"
                       tools:replace="android:theme"
                       android:theme="@style/your_theme">
-			</activity>
-			```
+         </activity>
+         ```
 
-		* For AttachmentActivity
+      * For AttachmentActivity
 
-			```
-			<activity android:name="com.dimelo.dimelosdk.main.AttachmentActivity"
+         ```xml
+         <activity android:name="com.dimelo.dimelosdk.main.AttachmentActivity"
                       tools:replace="android:theme"
                       android:theme="@style/your_theme">
-			</activity>
-			```
+         </activity>
+         ```
 
        - You should use `tools:replace="android:theme"` to replace the default Dimelo theme
 
@@ -1118,6 +1157,17 @@ Xml attribute name: None
    <img src="https://i.postimg.cc/zfDVDgvT/video-Call-Requested-Status-Message-Text-Font.png"/>
 </p>
 
+### deletedMessageTextFont
+Font applied to to a message that was deleted by its author.
+
+Programmatically: set `Customization.deletedMessageTextFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/Nj714CjP/deleted-Message-Text-Font.png"/>
+</p>
+
 ### agent Name color
 Text color for agent's name.
 
@@ -1451,6 +1501,17 @@ Xml attribute name: dimen/rc_video_call_requested_status_message_text_size
 
 <p align="center">
    <img src="https://i.postimg.cc/qBCJcLC1/video-Call-Requested-Status-Message-Text-Size.png"/>
+</p>
+
+### deletedMessageTextSize
+Text size applied to a message that was deleted by its author.
+
+Programmatically: set `Customization.deletedMessageTextSize` property
+
+Xml attribute name: dimen/rc_deleted_message_text_size
+
+<p align="center">
+   <img src="https://i.postimg.cc/4yNq2mDH/deleted-Message-Text-Size.png"/>
 </p>
 
 ### threadsListCompanyMessageTitleTextSize

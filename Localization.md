@@ -282,3 +282,73 @@ This will be used as `<string name="rc_video_call_requested_status_message">You 
 <p align="center">
 <img src="https://i.postimg.cc/3RBhk4vH/rc-video-call-requested-status-message.png"/>
 </p>
+
+### rc_delete_message_button_title
+"Delete for everyone" button title.
+
+This will be used as `<string name="rc_delete_message_button_title">Delete for everyone</string>`.
+
+
+<p align="center">
+<img src="hhttps://i.postimg.cc/pTVNDmk7/rc-delete-message-button-title.png"/>
+</p>
+
+### rc_delete_message_confirmation_dialog_title
+Message deletion confirmation dialog title.
+
+This will be used as `<string name="rc_delete_message_confirmation_dialog_title">Delete message for everyone</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/CLbWQydS/rc-delete-message-confirmation-dialog-title.png"/>
+</p>
+
+### rc_delete_message_confirmation_dialog_description
+Message deletion confirmation dialog description.
+
+This will be used as `<string name="rc_delete_message_confirmation_dialog_description">Are you sure you would like to delete this message for everyone?</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/1548GHzG/rc-delete-message-confirmation-dialog-description.png"/>
+</p>
+
+### rc_delete_message_confirmation_dialog_delete_button_title
+Message deletion confirmation dialog delete button title.
+
+This will be used as `<string name="rc_delete_message_confirmation_dialog_delete_button_title">DELETE</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/yYWTD045/rc-delete-message-confirmation-dialog-delete-button-title.png"/>
+</p>
+
+### rc_delete_message_confirmation_dialog_cancel_button_title
+Message deletion confirmation dialog cancel button title.
+
+This will be used as `<string name="rc_delete_message_confirmation_dialog_cancel_button_title">CANCEL</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/WbrxDRPx/rc-delete-message-negation-dialog-delete-button-title.png"/>
+</p>
+
+### rc_copy_message_button_title
+"Copy" button title.
+
+This will be used as `<string name="rc_copy_message_button_title">Copy</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/cJLCJLwx/rc-copy-message-button-title.png"/>
+</p>
+
+### rc_deleted_message_replacement_text
+Text to display to replace a deleted message's body.
+
+This will be used as `<string name="rc_deleted_message_replacement_text">You deleted this message for everyone.</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/4Ngbfj48/rc-deleted-message-replacement-text.png"/>
+</p>

@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.0.1 (October 5th, 2023) ##
+- Feature: add support for message deletion. RD-27258
+
 ## Engage Digital Messaging - Android 3.0.0 (August 30th, 2023) ##
 - BREAKING CHANGE: Migrate SDK to AndroidX. RD-25847 RD-26687
 - Minor: bump `minSdk` to **API 19** (was **API 16**). RD-25847
