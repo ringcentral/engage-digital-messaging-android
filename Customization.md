@@ -38,6 +38,17 @@ Programmatically: use `Customization.setVideoCallRequestButtonImage` method
    <img src="https://i.postimg.cc/nht3PdW0/video-Call-Request-Button-Image.png"/>
 </p>
 
+### scrollToBottomImage
+A drawable used to represent the button to scroll to the bottom of the conversation.
+
+Xml attribute name: None
+
+Programmatically: use `Customization.setScrollToBottomImage` method
+
+<p align="center">
+   <img src="https://i.postimg.cc/GmXvsbdX/scroll-to-bottom-image.png"/>
+</p>
+
 ### createNewThreadImage
 A drawable for the create new conversation button.
 
@@ -139,6 +150,32 @@ Programmatically: set `Customization.videoCallRequestButtonTintColor` property.
 
 <p align="center">
    <img src="https://i.postimg.cc/XJfmhMZT/video-Call-Request-Button-Tint-Color.png"/>
+</p>
+
+### scrollToBottomBackgroundColor
+Color applied to the background of the button to scroll to the bottom of the conversation.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_down\_scroll\_background\_color
+
+Programmatically: set `Customization.scrollToBottomBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/gc3RHVGX/scroll-to-bottom-background-color.png"/>
+</p>
+
+### scrollToBottomImageColor
+Color applied to the button to scroll to the bottom of the conversation.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_scroll\_down\_image\_color
+
+Programmatically: set `Customization.scrollToBottomImageColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/Y2L8KLMM/scroll-to-bottom-image-color.png"/>
 </p>
 
 ### deletedMessageBackgroundColor
@@ -1668,3 +1705,14 @@ Xml attribute name: None
 <p align="center">
 <img src="https://i.postimg.cc/pdvZQbdM/2.png"/>
 </p>
+
+### showScrollToBottomButton
+Flag to enable/disable the button to scroll to the bottom of the conversation.
+
+Must be a boolean, default is `false`.
+
+Programmatically: set `Customization.showScrollToBottomButton` property.
+
+Xml attribute name: None
+
+

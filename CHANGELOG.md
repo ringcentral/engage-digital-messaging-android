@@ -1,5 +1,13 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.0.2 (January 15th, 2024) ##
+- Feature: add a button to scroll to the bottom of the conversation (disabled by default). RD-27768
+- Fix: a nullPointerException was thrown when closing the app in the middle of a screen rotation. RD-28575
+- Fix: in some cases the text input wasn't hidden when the context menu was open. RD-27844
+- Improvement: update the notification badge with the number of unread messages. RD-18575
+- Fix: quick replies sent with `disable_text_input` option are not correctly displayed for fragment integration when only threading are disabled. RD-27283
+- Fix: in some rare cases when threads are enabled, default customization instance was causing the application to crash. RD-27923
+
 ## Engage Digital Messaging - Android 3.0.1 (October 5th, 2023) ##
 - Feature: add support for message deletion. RD-27258
 
