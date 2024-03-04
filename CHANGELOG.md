@@ -1,5 +1,12 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.0.3 (March 4th, 2024) ##
+- Fix: the button to scroll to the bottom of the conversation's position wasn't correctly updated when the text input was hidden when closing a thread. RD-28894
+- Fix: opening the attachment menu was making the text input disappear (introduced in v3.0.2). RD-29148
+- Fix: the button to scroll to the bottom of the conversation was still displayed after the auto-scroll when sending/receiving a new message. RD-28907
+- Improvement: removed the blank space on top and at the bottom on the conversation. RD-18441
+- Improvement: calling `sendMessage(String message)` will now trigger the `dimeloChatDidSendMessage()` callback. RD-28914
+
 ## Engage Digital Messaging - Android 3.0.2 (January 15th, 2024) ##
 - Feature: add a button to scroll to the bottom of the conversation (disabled by default). RD-27768
 - Fix: a nullPointerException was thrown when closing the app in the middle of a screen rotation. RD-28575
