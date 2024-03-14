@@ -352,3 +352,23 @@ This will be used as `<string name="rc_deleted_message_replacement_text">You del
 <p align="center">
 <img src="https://i.postimg.cc/4Ngbfj48/rc-deleted-message-replacement-text.png"/>
 </p>
+
+### rc_thumbs_up_button_title
+"Thumbs up" button title.
+
+This will be used as `<string name="rc_thumbs_up_button_title">Like</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/wT6MmyQd/rc-thumbs-up-button-title.png"/>
+</p>
+
+### rc_thumbs_down_button_title
+"Thumbs down" button title.
+
+This will be used as `<string name="rc_thumbs_down_button_title">Dislike</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/TwDLCzKM/rc-thumbs-down-button-title.png"/>
+</p>
