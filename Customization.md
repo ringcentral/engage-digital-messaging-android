@@ -713,6 +713,15 @@ Xml attribute name: dimelo\_navigation\_bar\_title\_color
 
 Programmatically: set `Customization.navigationBarTitleColor` property
 
+### navigation bar back item tint color
+Tint color for navigation bar back item.
+
+Color must be in hex format, e.g. `#007AFF`.
+
+Xml attribute name: rc\_navigation\_bar\_back\_item\_tint\_color
+
+Programmatically: set `Customization.navigationBarBackItemTintColor` property
+
 ### navigation bar item tint color (share icon)
 Tint color for navigation bar item.
 

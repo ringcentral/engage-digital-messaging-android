@@ -1,5 +1,15 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.1.1 (June 21th, 2024) ##
+- Fix: previously sent locations are not fully displayed if connection was lost. RD-23649
+- Fix: unread messages count badge disappears after screen rotation. RD-23248
+- Improvement: `consumeReceivedRemoteNotification` will check the notification payload before initializing the SDK. RD-29984
+- Fix: application crashed when receiving a message while the button to scroll to the end of conversation was visible. RD-29244
+- Improvement: add `setDefaultLanguage(Locale locale)` to set the application language. RD-29788
+- Fix: prevent empty thread from being displayed in threads list. RD-29706
+- Improvement: add the ability to customize the toolbar title color and the back button color. RD-29816
+- Fix: the loading popup was shown endlessly when selecting some type of files. RD-29453
+
 ## Engage Digital Messaging - Android 3.1.0 (April 23th, 2024) ##
 - Feature: add support for FCM HTTP v1 API. RD-29454
 
