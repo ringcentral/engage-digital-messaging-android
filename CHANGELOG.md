@@ -1,5 +1,10 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.0 (July 8th, 2024) ##
+- Feature: allow to initialize the SDK using the Engage Messaging channel's token. RD-28848
+*  add `initializeWithToken(String token, String hostname, String jwtKeyId, String jwtSecret, DimeloListener dimeloListener)` (for adhoc JWT signing).
+*  add `initializeWithToken(String token, String hostname, DimeloListener dimeloListener)` (for remote JWT signing).
+
 ## Engage Digital Messaging - Android 3.1.1 (June 21th, 2024) ##
 - Fix: previously sent locations are not fully displayed if connection was lost. RD-23649
 - Fix: unread messages count badge disappears after screen rotation. RD-23248
