@@ -139,6 +139,18 @@ Programmatically: use `Customization.setWebViewNextButtonIcon` method
 
 # Attributes < color />
 
+### closedThreadMessageTextColor
+Color applied to the message that is displayed when the thread is closed.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_closed\_thread\_message\_text\_color
+
+Programmatically: set `Customization.closedThreadMessageTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/t7GgFswB/closed-Thread-Message-Text-Color.png"/>
+
 ### videoCallRequestButtonTintColor
 Color applied to the video call request button.
 
@@ -1415,6 +1427,11 @@ customisation.dateFormatter = dateFormatter;
 
 # Typeface
 
+### closedThreadMessageTextFont
+Font applied to the message that is displayed when the thread is closed.
+
+Programmatically: set `Customization.closedThreadMessageTextFont` property
+
 ### threadsListCompanyMessageTitleFont
 Font used for the company message title that is displayed in the threads list.
 
@@ -1423,6 +1440,7 @@ Programmatically: set `Customization.threadsListCompanyMessageTitleFont` propert
 Xml attribute name: None
 
 <p align="center">
+   <img src="https://i.postimg.cc/JhrqCqK5/closed-Thread-Message-Font.png"/>
    <img src="https://i.postimg.cc/wTnQfN10/threads-List-Company-Message-Title-Font.png"/>
 </p>
 
@@ -1537,6 +1555,15 @@ Xml attribute name: None
 
 # Text Size
 
+### closedThreadMessageTextSize
+Text size applied to the message that is displayed when the thread is closed.
+
+Programmatically: set `Customization.closedThreadMessageTextSize` property
+
+Xml attribute name: dimen/rc_closed_thread_message_text_size
+
+<p align="center">
+   <img src="https://i.postimg.cc/L4YVShkw/closed-Thread-Message-Text-Size.png"/>
 
 ### videoCallRequestedStatusMessageTextSize
 Text size used for the status message when a video call is requested.

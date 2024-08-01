@@ -1,5 +1,9 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.1 (August 1st, 2024) ##
+- Improvement: add a customizable informative text below the last message when the thread is closed. RD-16691
+- Fix: the chat fails to display when integrated as an activity (introduced in v3.2.0). RD-30334
+
 ## Engage Digital Messaging - Android 3.2.0 (July 8th, 2024) ##
 - Feature: allow to initialize the SDK using the Engage Messaging channel's token. RD-28848
 *  add `initializeWithToken(String token, String hostname, String jwtKeyId, String jwtSecret, DimeloListener dimeloListener)` (for adhoc JWT signing).

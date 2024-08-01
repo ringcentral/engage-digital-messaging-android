@@ -273,6 +273,16 @@ This will be used as `<string name="rc_waiting_for_agent">Back to all chats</str
 <img src="https://i.postimg.cc/QxJ1MKsR/rc-back-to-all-chats.png"/>
 </p>
 
+### rc_closed_thread_message
+Content of the message that is displayed when the thread is closed.
+
+This will be used as `<string name="rc_closed_thread_message">The conversation has ended</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/FsXCnjtD/rc-closed-thread-message.png"/>
+</p>
+
 ### rc_video_call_requested_status_message
 Text displayed in the status message when a video call is requested.
 
