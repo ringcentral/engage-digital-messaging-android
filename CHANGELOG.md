@@ -1,5 +1,14 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.2 (August 21th, 2024) ##
+- Feature: extend support for identity fields. RD-29583:
+    - Add the `setCompany` method. RD-29799
+    - Add the `setEmail` method. RD-29800
+    - Add the `setFirstname` method. RD-29801
+    - Add the `setLastname` method. RD-29802
+    - Add the `setHomePhone` method. RD-30548
+    - Add the `setMobilePhone` method. RD-30550
+
 ## Engage Digital Messaging - Android 3.2.1 (August 1st, 2024) ##
 - Improvement: add a customizable informative text below the last message when the thread is closed. RD-16691
 - Fix: the chat fails to display when integrated as an activity (introduced in v3.2.0). RD-30334
