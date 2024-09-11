@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.3 (September 11th, 2024) ##
+- Improvement: the chat does not open automatically when all threads are closed when integrated as an activity. RD-30443
+
 ## Engage Digital Messaging - Android 3.2.2 (August 21th, 2024) ##
 - Feature: extend support for identity fields. RD-29583:
     - Add the `setCompany` method. RD-29799
