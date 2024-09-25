@@ -1,5 +1,10 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.4 (September 25th, 2024) ##
+- Fix: in some cases quick reply wasn't disappearing immediately after the thread was closed. RD-23974
+- Fix: location messages can disappear when scrolling while internet is off. RD-30225
+- Improvement: add RTL support for structured messages. RD-30711
+
 ## Engage Digital Messaging - Android 3.2.3 (September 11th, 2024) ##
 - Improvement: the chat does not open automatically when all threads are closed when integrated as an activity. RD-30443
 
