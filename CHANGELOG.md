@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.5 (November 20th, 2024) ##
+- Feature: allow to disable the text input via API. RD-30696
+
 ## Engage Digital Messaging - Android 3.2.4 (September 25th, 2024) ##
 - Fix: in some cases quick reply wasn't disappearing immediately after the thread was closed. RD-23974
 - Fix: location messages can disappear when scrolling while internet is off. RD-30225

@@ -3,8 +3,8 @@
   <groupId>com.dimelo.dimelosdk</groupId>
   <artifactId>dimelosdk</artifactId>
   <versioning>
-    <latest>3.2.4</latest>
-    <release>3.2.4</release>
+    <latest>3.2.5</latest>
+    <release>3.2.5</release>
     <versions>
       <version>1.0.0</version>
       <version>1.0.1</version>
@@ -82,7 +82,8 @@
       <version>3.2.2</version>
       <version>3.2.3</version>
       <version>3.2.4</version>
+      <version>3.2.5</version>
     </versions>
-    <lastUpdated>20240925103323</lastUpdated>
+    <lastUpdated>20241120133853</lastUpdated>
   </versioning>
 </metadata>
