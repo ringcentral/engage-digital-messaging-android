@@ -1,5 +1,10 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.6 (November 22th, 2024) ##
+- Improvement: remove the horizontal gallery and use the native Android photo picker. RD-31553:
+    - The `READ_MEDIA_IMAGES` permission is not needed anymore.
+    - The `READ_MEDIA_VIDEOS` permission is not needed anymore.
+
 ## Engage Digital Messaging - Android 3.2.5 (November 20th, 2024) ##
 - Feature: allow to disable the text input via API. RD-30696
 

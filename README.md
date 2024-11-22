@@ -385,27 +385,6 @@ Please refer to [Localization.md](Localization.md) for guidance on strings custo
 Add the right permissions to your application
 ---------------------------------------------
 
-### Gallery
-
-#### Android 13+
-
-In order to add access to images in the gallery you need to add the `READ_MEDIA_IMAGES` permission to your `AndroidManifest.xml`:
-```xml
-<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-```
-
-If you also want to add access to videos in the gallery you need to add the `READ_MEDIA_VIDEO` permission to your `AndroidManifest.xml`:
-```xml
-<uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-```
-
-#### Android < 13
-
-To add access to images and videos in the gallery you need to add the `READ_EXTERNAL_STORAGE` permission to your `AndroidManifest.xml`:
-```xml
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-```
-
 ### Camera
 
 #### Android 11+
