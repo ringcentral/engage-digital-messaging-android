@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.7 (November 28th, 2024) ##
+- Fix: invalidate cache when user identifier changes. RD-32046
+
 ## Engage Digital Messaging - Android 3.2.6 (November 22th, 2024) ##
 - Improvement: remove the horizontal gallery and use the native Android photo picker. RD-31553:
     - The `READ_MEDIA_IMAGES` permission is not needed anymore.
