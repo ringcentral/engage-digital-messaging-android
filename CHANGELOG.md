@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.8 (November 29th, 2024) ##
+- Fix: revert `Fix: in some cases quick reply wasn't disappearing immediately after the thread was closed. RD-23974` because of a bug in the quick replies display
+
 ## Engage Digital Messaging - Android 3.2.7 (November 28th, 2024) ##
 - Fix: invalidate cache when user identifier changes. RD-32046
 
