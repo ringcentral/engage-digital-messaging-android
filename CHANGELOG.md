@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.9 (December 23th, 2024) ##
+- Fix: the `Dimelo.getJwtDictionary()` was including empty data that prevented the server from correctly authenticating the user when accessing the chat through a notification. RD-32293
+
 ## Engage Digital Messaging - Android 3.2.8 (November 29th, 2024) ##
 - Fix: revert `Fix: in some cases quick reply wasn't disappearing immediately after the thread was closed. RD-23974` because of a bug in the quick replies display
 
