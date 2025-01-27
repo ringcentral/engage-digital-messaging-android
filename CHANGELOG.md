@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.10 (January 27th, 2025) ##
+- Fix: in some cases the threads loader indicator visibility was being changed outside of the UI thread. RD-32438
+
 ## Engage Digital Messaging - Android 3.2.9 (December 23th, 2024) ##
 - Fix: the `Dimelo.getJwtDictionary()` was including empty data that prevented the server from correctly authenticating the user when accessing the chat through a notification. RD-32293
 
