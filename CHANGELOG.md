@@ -1,5 +1,10 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.2.11 (March 12th, 2025) ##
+- Fix: in some rare cases WebView could be displayed with the wrong height on some devices. RD-26103
+- Improvement: subscribe to notification channel when initializing the Dimelo instance. RD-32333
+- Fix: in some cases a nullPointerException was thrown when displaying the avatar. RD-32539
+
 ## Engage Digital Messaging - Android 3.2.10 (January 27th, 2025) ##
 - Fix: in some cases the threads loader indicator visibility was being changed outside of the UI thread. RD-32438
 
