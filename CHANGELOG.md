@@ -1,5 +1,9 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.0 (March 18th, 2025) ##
+- Feature: add support for messaging pre-chat forms. RD-31550
+- Improvement: in some cases opening the chat via a push notification was showing an empty conversation. RD-32770
+
 ## Engage Digital Messaging - Android 3.2.11 (March 12th, 2025) ##
 - Fix: in some rare cases WebView could be displayed with the wrong height on some devices. RD-26103
 - Improvement: subscribe to notification channel when initializing the Dimelo instance. RD-32333
