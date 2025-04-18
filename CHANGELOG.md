@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.2 (April 18th, 2025) ##
+- Feature: allow chatbot to use a different avatar than the channel. RD-32238
+
 ## Engage Digital Messaging - Android 3.3.1 (April 10th, 2025) ##
 - Fix: having no pre-chat form configured on the channel was causing the SDK to open a blank webview. RD-33109
 
