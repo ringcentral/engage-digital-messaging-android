@@ -1,5 +1,9 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.3 (April 29th, 2025) ##
+- Fix: opening and closing the keyboard repeatedly makes the keyboard intermittently overlap on messages. RD-21615
+- Fix: pre-chat form configuration lag can prevent the user from entering the chat. RD-33252
+
 ## Engage Digital Messaging - Android 3.3.2 (April 18th, 2025) ##
 - Feature: allow chatbot to use a different avatar than the channel. RD-32238
 
