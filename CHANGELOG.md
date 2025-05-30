@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.4 (May 30th, 2025) ##
+- Improvement: replace Trebuchet bold font with Roboto bold. RD-33273
+
 ## Engage Digital Messaging - Android 3.3.3 (April 29th, 2025) ##
 - Fix: opening and closing the keyboard repeatedly makes the keyboard intermittently overlap on messages. RD-21615
 - Fix: pre-chat form configuration lag can prevent the user from entering the chat. RD-33252
