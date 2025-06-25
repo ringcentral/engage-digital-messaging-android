@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.5 (June 25th, 2025) ##
+- Feature: display thumbs up/down choice and allow user to send feedback when rating a message. RD-34095
+
 ## Engage Digital Messaging - Android 3.3.4 (May 30th, 2025) ##
 - Improvement: replace Trebuchet bold font with Roboto bold. RD-33273
 
