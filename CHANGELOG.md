@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.6 (July 3rd, 2025) ##
+- Fix: rating a bot message with a thumbs up was mistakenly showing a thumbs down after providing the feedback. RD-36013
+
 ## Engage Digital Messaging - Android 3.3.5 (June 25th, 2025) ##
 - Feature: display thumbs up/down choice and allow user to send feedback when rating a message. RD-34095
 
