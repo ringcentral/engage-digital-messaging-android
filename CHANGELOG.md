@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.7 (July 11th, 2025) ##
+- Fix: prevent the date from disappearing when scrolling. RD-33320
+
 ## Engage Digital Messaging - Android 3.3.6 (July 3rd, 2025) ##
 - Fix: rating a bot message with a thumbs up was mistakenly showing a thumbs down after providing the feedback. RD-36013
 
