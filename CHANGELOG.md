@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.8 (August 12th, 2025) ##
+- Improvement: add visual clue to show that thumbs up/down button has been pressed. RD-36721
+
 ## Engage Digital Messaging - Android 3.3.7 (July 11th, 2025) ##
 - Fix: prevent the date from disappearing when scrolling. RD-33320
 
