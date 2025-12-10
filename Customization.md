@@ -871,6 +871,32 @@ Programmatically: set `Customization.agentStructuredMessageBodyBackgroundColor` 
    <img src="https://i.postimg.cc/R0FC82Wj/agent-Structured-Message-Body-Background-Color.png"/>
 </p>
 
+### videoMessageBorderColor
+Border color for video message bubbles.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_video\_message\_border\_color
+
+Programmatically: set `Customization.videoMessageBorderColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/zfM6dfQ9/video-Message-Border-Color.png"/>
+</p>
+
+### videoMessageBackgroundColor
+Background color for video message.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_video\_message\_background\_color
+
+Programmatically: set `Customization.videoMessageBackgroundColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/65T2DyG6/video-Message-Background-Color.png"/>
+</p>
+
 ### agent message BackgroundColor
 Background color for agent message bubbles.
 
@@ -1117,6 +1143,19 @@ Xml attribute name: rc\_quick\_replies\_tapped\_background\_color
 
 Programmatically: set `Customization.quickRepliesTappedBackgroundColor` property.
 
+### videoMessageTextColor
+Foreground color for video message text.
+
+Color must be in hex format, e.g. `007AFF` or `#007AFF`.
+
+Xml attribute name: rc\_video_\_message\_text\_color
+
+Programmatically: set `Customization.videoMessageTextColor` property.
+
+<p align="center">
+   <img src="https://i.postimg.cc/Y2DjfMy1/video-Message-Text-Color.png"/>
+</p>
+
 ### date TextColor
 Text color for the date label.
 
@@ -1168,6 +1207,17 @@ Xml attribute name: None
 
 <p align="center">
    <img src="https://i.postimg.cc/6QLNzXLr/agent-Structured-Message-Item-Font.png"/>
+</p>
+
+### videoMessageTextFont
+Font for video message text.
+
+Programmatically: set `Customization.videoMessageTextFont` property
+
+Xml attribute name: None
+
+<p align="center">
+   <img src="https://i.postimg.cc/mgfL8D3r/video-Message-Text-Font.png"/>
 </p>
 
 ### agentTimeFont
@@ -1618,6 +1668,17 @@ Xml attribute name: dimen/rc_web_view_title_text_size
 
 <p align="center">
    <img src="https://i.postimg.cc/dQhdf3Fb/web-View-Title-Text-Size.png"/>
+</p>
+
+### videoMessageTextSize
+Text size used for the video message text.
+
+Programmatically: set `Customization.videoMessageTextSize` property
+
+Xml attribute name: dimen/rc_video_message_text_size
+
+<p align="center">
+   <img src="https://i.postimg.cc/FKP1Wvsg/video-Message-Text-Size.png"/>
 </p>
 
 ### badgeTextSize

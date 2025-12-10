@@ -1,5 +1,9 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.10 (December 10th, 2025) ##
+- Improvement: remove deprecated gradle configuration `android.enableJetifier=true`. RD-38576
+- Feature: allow to play YouTube/Vimeo video link directly from Messaging. RD-37875 RD-37876
+
 ## Engage Digital Messaging - Android 3.3.9 (September 15th, 2025) ##
 - Feature: show a typing animation when conversation is handled by a bot. RD-32157
 
