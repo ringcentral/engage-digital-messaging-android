@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.11 (January 7th, 2026) ##
+- Improvement: bump Glide version to 1.0.1 (was 1.0.0). RD-38912
+
 ## Engage Digital Messaging - Android 3.3.10 (December 10th, 2025) ##
 - Improvement: remove deprecated gradle configuration `android.enableJetifier=true`. RD-38576
 - Feature: allow to play YouTube/Vimeo video link directly from Messaging. RD-37875 RD-37876
