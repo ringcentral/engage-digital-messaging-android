@@ -382,3 +382,83 @@ This will be used as `<string name="rc_thumbs_down_button_title">Dislike</string
 <p align="center">
 <img src="https://i.postimg.cc/TwDLCzKM/rc-thumbs-down-button-title.png"/>
 </p>
+
+### rc_video_call_requested_button_accessibility_label
+"Video call requested" button accessibility label used with voice over (accessibility).
+
+This will be used as `<string name="rc_video_call_requested_button_accessibility_label">Request a video call</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/CxwRw8G8/rc-video-call-requested-button-accessibility-label.png"/>
+</p>
+
+### rc_create_new_thread_button_accessibility_label
+"Create new thread" button accessibility label used with voice over (accessibility).
+
+This will be used as `<string name="rc_create_new_thread_button_accessibility_label">Create a new discussion</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/XJ5jfNfc/rc-create-new-thread-button-accessibility-label.png"/>
+</p>
+
+### rc_scroll_to_bottom_button_accessibility_label
+"Scroll to bottom" button accessibility label used with voice over (accessibility).
+
+This will be used as `<string name="rc_scroll_to_bottom_button_accessibility_label">Scroll to bottom</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/PJ4kyCP9/rc-scroll-to-bottom-button-accessibility-label.png"/>
+</p>
+
+### rc_avatar_image_view_accessibility_label
+"Avatar" image view accessibility label used with voice over (accessibility).
+
+This will be used as `<string name="rc_avatar_image_view_accessibility_label">Avatar</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/tgPwDscs/rc-avatar-image-view-accessibility-label.png"/>
+</p>
+
+### rc_back_accessibility_label
+"Back to threads list" button accessibility label used with voice over (accessibility).
+
+This will be used as `<string name="rc_back_accessibility_label">Back</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/wBd0q0W2/rc-back-accessibility-label.png"/>
+</p>
+
+### rc_close_web_view_button_accessibility_label
+"Close" internl WebView button accessibility label used with voice over (accessibility).
+
+This will be used as `<string name="rc_close_web_view_button_accessibility_label">Close</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/7Y235SJ2/rc-close-web-view-button-accessibility-label.png"/>
+</p>
+
+### rc_previous_web_view_button_accessibility_label
+"Previous" internl WebView button accessibility label used with voice over (accessibility).
+
+This will be used as `<string name="rc_previous_web_view_button_accessibility_label">Previous</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/8sQrRnfh/rc-previous-web-view-button-accessibility-label.png"/>
+</p>
+
+### rc_forward_web_view_button_accessibility_label
+"Forward" internl WebView button accessibility label used with voice over (accessibility).
+
+This will be used as `<string name="rc_forward_web_view_button_accessibility_label">Forward</string>`.
+
+
+<p align="center">
+<img src="https://i.postimg.cc/wvnkr2sj/rc-forward-web-view-button-accessibility-label.png"/>
+</p>

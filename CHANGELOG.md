@@ -1,5 +1,9 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.12 (January 14th, 2026) ##
+- Improvement: better support for accessibility. RD-38688
+- Fix: improve support for edge to edge display for Android 15/16. RD-38578
+
 ## Engage Digital Messaging - Android 3.3.11 (January 7th, 2026) ##
 - Improvement: bump Glide version to 1.0.1 (was 1.0.0). RD-38912
 
