@@ -1,5 +1,9 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.3.13 (March 19th, 2026) ##
+- Improvement: pressing back button while the SDK is open in activity mode no longer recreates the host activity. RD-39880
+- Improvement: make the "Back to all chats" header opaque. RD-36805
+
 ## Engage Digital Messaging - Android 3.3.12 (January 14th, 2026) ##
 - Improvement: better support for accessibility. RD-38688
 - Fix: improve support for edge to edge display for Android 15/16. RD-38578
