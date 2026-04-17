@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.4.0 (April 17th, 2026) ##
+- Feature: add support for HTML messages. RD-38802
+
 ## Engage Digital Messaging - Android 3.3.13 (March 19th, 2026) ##
 - Improvement: pressing back button while the SDK is open in activity mode no longer recreates the host activity. RD-39880
 - Improvement: make the "Back to all chats" header opaque. RD-36805
