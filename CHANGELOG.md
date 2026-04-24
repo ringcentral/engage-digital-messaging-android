@@ -1,5 +1,8 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.4.1 (April 24th, 2026) ##
+- Fix: replying via a push notification to a specific thread while the application is in background was throwing an exception. RD-41538
+
 ## Engage Digital Messaging - Android 3.4.0 (April 17th, 2026) ##
 - Feature: add support for HTML messages. RD-38802
 
