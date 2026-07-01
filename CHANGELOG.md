@@ -1,5 +1,10 @@
 # Engage Digital Messaging - Android master #
 
+## Engage Digital Messaging - Android 3.4.2 (July 1st, 2026) ##
+- Fix: in some cases the map on location messages could not be displayed. RD-42078
+- Fix: using the physical back button was doing nothing on devices running on Android 17. RD-40389
+- Fix: disable debug mode on video player webview. RD-43320
+
 ## Engage Digital Messaging - Android 3.4.1 (April 24th, 2026) ##
 - Fix: replying via a push notification to a specific thread while the application is in background was throwing an exception. RD-41538
 
